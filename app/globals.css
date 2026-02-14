@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Figma Design Tokens as CSS Variables ── */
+:root {
+  /* Colors */
+  --color-dark-green: #094c00;
+  --color-green: #55b947;
+  --color-accent-green: #6ac25e;
+  --color-border-green: #73c668;
+  --color-footer-dark: #041d00;
+  --color-light-gray: #efefef;
+  --color-card-border: #f3f4f6;
+  --color-input-border: #e5e7eb;
+  --color-text-secondary: #4a5565;
+  --color-text-muted: #99a1af;
+  --color-text-footer: #6a7282;
+  --color-divider-dark: #1e2939;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%);
+  --gradient-contact: linear-gradient(130.305deg, rgb(11, 61, 46) 0%, rgb(20, 83, 45) 100%);
+}
+
+/* ── Base Resets ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Lenis Smooth Scroll ── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ── Custom Utility Classes ── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

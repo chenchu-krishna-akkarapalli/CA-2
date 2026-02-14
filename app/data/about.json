@@ -1,0 +1,94 @@
+{
+  "whoWeAre": {
+    "tag": "Who We Are",
+    "title": "Your Trusted Financial Partners",
+    "description1": "CHINNI MALLIKARJUNA AND COMPANY is a Chartered Accountants firm built on a strong foundation of professional integrity and analytical expertise. Led by CA Mallikarjuna CH, who has been in the industry for the past 10 years, we bring deep knowledge of departmental working from lower levels up to the appellate level.",
+    "description2": "We have varied experience in all areas of Audit, Investigation, Due Diligence, Taxation (Direct and Indirect), and Company Law Matters for both domestic and foreign companies, Management Consultancy, and FEMA. Our work with clientele includes companies, firms, banks, trusts, societies, charitable and educational institutions, besides renowned individuals.",
+    "features": [
+      {
+        "title": "Qualified Chartered Accountants",
+        "icon": "Award"
+      },
+      {
+        "title": "Client-Focused Personalized Approach",
+        "icon": "Users"
+      },
+      {
+        "title": "Strong Industry Experience",
+        "icon": "Briefcase"
+      },
+      {
+        "title": "Quality-Driven Professional Services",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  "ourJourney": {
+    "tag": "Our Journey",
+    "title": "Our Story",
+    "timeline": [
+      {
+        "year": "Foundation",
+        "title": "Setting Up Practice",
+        "desc": "Began by setting up own practice and building it up with a vision to deliver reliable financial services."
+      },
+      {
+        "year": "Growth",
+        "title": "Building Expertise",
+        "desc": "Deepened knowledge of departmental working at lower level up to the appellate level."
+      },
+      {
+        "year": "Expansion",
+        "title": "Varied Experience",
+        "desc": "Gained experience in Audit, Investigation, Due Diligence, Taxation, and Company Law Matters."
+      },
+      {
+        "year": "Present",
+        "title": "Diverse Clientele",
+        "desc": "Serving companies, firms, banks, trusts, societies, charitable institutions, and renowned individuals."
+      }
+    ]
+  },
+  "whatDrivesUs": {
+    "tag": "What Drives Us",
+    "title": "Our Core Values",
+    "values": [
+      {
+        "title": "Integrity",
+        "desc": "We maintain the highest standards of ethics, transparency, and professionalism in every engagement."
+      },
+      {
+        "title": "Excellence",
+        "desc": "We strive for accuracy, quality, and continuous improvement in all our services and client interactions."
+      },
+      {
+        "title": "Client-Centric Approach",
+        "desc": "We prioritize understanding each client’s unique needs to deliver tailored and meaningful financial solutions."
+      },
+      {
+        "title": "Knowledge & Expertise",
+        "desc": "Our strength lies in analytical thinking, technical expertise, and a deep understanding of evolving financial regulations."
+      }
+    ]
+  },
+  "meetTheExperts": {
+    "tag": "Meet The Experts",
+    "title": "Key Person",
+    "subtitle": "Led by experienced professionals committed to delivering excellence.",
+    "team": [
+      {
+        "name": "CA Mallikarjuna CH",
+        "role": "B.Com, A.C.A",
+        "bio": "He is in the industry for the past 10 years beginning by setting up own practice and building it up. Thus, he has deep knowledge of departmental working at lower level up to the appellate level. He has varied experience in all areas of Audit, Investigation, Due Diligence, Taxation (Direct and Indirect), and Company Law Matters for both domestic and foreign companies, Management Consultancy, and FEMA. Work with clientele includes companies, firms, banks, trusts, and societies, charitable and educational institutions besides few renowned individuals.",
+        "areasOfPractice": [
+          "Audit & Investigation",
+          "Due Diligence",
+          "Direct & Indirect Taxation",
+          "Company Law Matters",
+          "Management Consultancy",
+          "FEMA"
+        ]
+      }
+    ]
+  }
+}
