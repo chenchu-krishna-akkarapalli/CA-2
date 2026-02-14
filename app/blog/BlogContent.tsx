@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import OptimizedImage from '../components/OptimizedImage';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { BLOG_POSTS, BlogPost } from '../data/blogData';
 
@@ -23,7 +24,7 @@ const BlogHero = () => {
         <section className="relative w-full min-h-[90vh] -mt-[106px] overflow-hidden bg-brand-dark-green">
             {/* Background */}
             <div className="absolute inset-0">
-                <Image
+                <OptimizedImage
                     src={BlogHeroImage}
                     alt="Blog Hero"
                     fill
@@ -93,7 +94,7 @@ const BlogPostCard = ({ post, index }: { post: BlogPost; index: number }) => {
             <Link href={`/blog/${post.slug}`} aria-label={`Read article: ${post.title}`} className="flex flex-col h-full">
                 {/* Image */}
                 <div className="relative h-[240px] overflow-hidden bg-slate-100">
-                    <Image
+                    <OptimizedImage
                         src={post.image}
                         alt={post.title}
                         fill

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import OptimizedImage from '../../components/OptimizedImage';
 import { BLOG_POSTS, BlogPost } from '../../data/blogData';
 
 interface PageProps {
@@ -110,11 +111,12 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
 
                                 {sub.image && (
                                     <div className="my-6 rounded-xl overflow-hidden shadow-md relative h-[300px] w-full">
-                                        <Image
+                                        <OptimizedImage
                                             src={sub.image}
                                             alt={sub.sub_heading || ""}
                                             fill
-                                            className="object-contain bg-slate-50"
+                                            className="bg-slate-50"
+                                            style={{ objectFit: 'contain' }}
                                         />
                                     </div>
                                 )}
@@ -216,7 +218,7 @@ export default function BlogPostPage({ params }: PageProps) {
             <section className="relative w-full min-h-[60vh] lg:min-h-[70vh] -mt-[106px] overflow-hidden">
                 {/* Background */}
                 <div className="absolute inset-0 bg-brand-dark-green">
-                    <Image
+                    <OptimizedImage
                         src={post.image}
                         alt={post.title}
                         fill
@@ -281,7 +283,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             <h3 className="font-outfit font-bold text-[18px] text-brand-dark-green mb-4">About the Author</h3>
                             <div className="flex flex-col items-center text-center">
                                 <div className="w-[100px] h-[100px] rounded-full overflow-hidden border-4 border-white shadow-md mb-4 group relative">
-                                    <Image
+                                    <OptimizedImage
                                         src={post.authorImage}
                                         alt={post.author}
                                         fill

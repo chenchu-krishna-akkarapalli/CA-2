@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import Image from "next/image";
+import OptimizedImage from "../components/OptimizedImage";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -14,7 +14,7 @@ export default function HeroSection() {
     >
       {/* Background Wave */}
       <div className="absolute inset-0">
-        <Image
+        <OptimizedImage
           src="/Assets/Images/Vector 1.png"
           alt=""
           fill
