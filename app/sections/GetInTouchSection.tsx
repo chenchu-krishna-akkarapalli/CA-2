@@ -121,6 +121,7 @@ export default function GetInTouchSection() {
                   placeholder="John"
                   className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
                   aria-required="true"
+                  suppressHydrationWarning
                 />
               </div>
               <div className="flex-1 flex flex-col gap-2">
@@ -137,6 +138,7 @@ export default function GetInTouchSection() {
                   placeholder="Doe"
                   className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
                   aria-required="true"
+                  suppressHydrationWarning
                 />
               </div>
             </div>
@@ -156,6 +158,7 @@ export default function GetInTouchSection() {
                 placeholder="john@example.com"
                 className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
                 aria-required="true"
+                suppressHydrationWarning
               />
             </div>
 
@@ -173,6 +176,7 @@ export default function GetInTouchSection() {
                 type="tel"
                 placeholder="+91 7032 163 646"
                 className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                suppressHydrationWarning
               />
             </div>
 
@@ -191,6 +195,7 @@ export default function GetInTouchSection() {
                 rows={4}
                 className="w-full flex-1 min-h-[100px] border border-surface-input-border rounded-[8px] p-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors resize-none"
                 aria-required="true"
+                suppressHydrationWarning
               />
             </div>
 
@@ -200,6 +205,7 @@ export default function GetInTouchSection() {
               className="mt-5 sm:mt-6 w-full h-[48px] sm:h-[52px] rounded-[8px] bg-gradient-btn-submit text-white font-outfit font-semibold text-[16px] leading-[20px] flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
+              suppressHydrationWarning
             >
               Send Message
               <ArrowRight className="w-5 h-5" strokeWidth={2} />

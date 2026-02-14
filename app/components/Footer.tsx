@@ -12,7 +12,7 @@ const quickLinks = [
 
 const contactItems = [
   {
-    icon: "/Assets/Icon-2.svg", 
+    icon: "/Assets/Icon-2.svg",
     text: "HO: No. 10/31, G1, Ten Downing, Rajalakshmi Nagar 3rd Main Road, Velachery, Chennai – 600 042",
   },
   {
@@ -114,7 +114,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="max-w-[1440px] mx-auto border-t border-white/10 mx-6 sm:mx-8 lg:mx-auto px-6 sm:px-8 lg:px-[104px] py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="font-inter font-light text-[12px] sm:text-[13px] leading-[18px] text-white/40 text-center sm:text-left">
+        <p suppressHydrationWarning className="font-inter font-light text-[12px] sm:text-[13px] leading-[18px] text-white/40 text-center sm:text-left">
           &copy; {currentYear} CHINNI MALLIKARJUNA AND COMPANY. All rights reserved.
         </p>
         <div className="flex items-center gap-4 sm:gap-6">

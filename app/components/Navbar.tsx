@@ -639,6 +639,7 @@ export default function Navbar() {
                         }`}
                       aria-haspopup="true"
                       aria-expanded={isOpen}
+                      suppressHydrationWarning
                     >
                       {item.title}
                       <ChevronDown
