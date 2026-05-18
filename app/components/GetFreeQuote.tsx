@@ -92,8 +92,8 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
     >
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-green/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-accent-green/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-accent-hover/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
         {/* Animated Particles */}
         {[...Array(8)].map((_, i) => (
@@ -123,7 +123,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
             transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-8 backdrop-blur-md border border-white/10 shadow-lg">
-              <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse shadow-[0_0_10px_rgba(85,185,71,0.6)]" />
+              <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse shadow-[0_0_10px_rgba(85,185,71,0.6)]" />
               <span className="font-inter text-[13px] text-white font-medium tracking-wide">
                 Free Consultation
               </span>
@@ -131,7 +131,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
 
             <h2 className="font-outfit font-bold text-[clamp(40px,5vw,64px)] leading-[1.1] text-white mb-6">
               Get a Free
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-white">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-white">
                 {" "}
                 Quote Today
               </span>
@@ -158,9 +158,9 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 * i }}
                 >
-                  <div className="w-10 h-10 rounded-[12px] bg-brand-green/20 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-green transition-colors duration-300">
+                  <div className="w-10 h-10 rounded-[12px] bg-brand-accent/20 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent transition-colors duration-300">
                     <svg
-                      className="w-5 h-5 text-brand-green group-hover:text-white transition-colors duration-300"
+                      className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -169,7 +169,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-outfit font-bold text-[18px] text-white mb-1 group-hover:text-brand-green transition-colors">
+                    <h4 className="font-outfit font-bold text-[18px] text-white mb-1 group-hover:text-brand-accent transition-colors">
                       {benefit.title}
                     </h4>
                     <p className="font-inter text-[14px] text-white/60">{benefit.desc}</p>
@@ -189,7 +189,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
           >
             <div className="bg-white rounded-[30px] shadow-contact p-[30px] md:p-[50px] relative overflow-hidden backdrop-blur-xl">
               <div className="text-center mb-10">
-                <h3 className="font-outfit font-bold text-[32px] text-brand-dark-green mb-3">
+                <h3 className="font-outfit font-bold text-[32px] text-brand-primary mb-3">
                   Request Your Free Quote
                 </h3>
                 <p className="font-inter text-[16px] text-text-muted">
@@ -199,12 +199,12 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
 
               {submitStatus === "success" ? (
                 <div className="text-center py-20 flex flex-col items-center animate-fadeIn">
-                  <div className="w-24 h-24 mb-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-24 h-24 mb-6 rounded-full bg-brand-accent/20 flex items-center justify-center">
+                    <svg className="w-12 h-12 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h4 className="font-outfit font-bold text-[28px] text-brand-dark-green mb-4">
+                  <h4 className="font-outfit font-bold text-[28px] text-brand-primary mb-4">
                     Request Received!
                   </h4>
                   <p className="font-inter text-[16px] text-text-muted max-w-[300px]">
@@ -216,8 +216,8 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                   {/* Name & Email */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="group">
-                      <label className="font-inter font-bold text-[14px] text-brand-dark-green mb-2 block ml-1">
-                        Full Name <span className="text-brand-green">*</span>
+                      <label className="font-inter font-bold text-[14px] text-brand-primary mb-2 block ml-1">
+                        Full Name <span className="text-brand-accent">*</span>
                       </label>
                       <input
                         type="text"
@@ -226,12 +226,12 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                         onChange={handleChange}
                         required
                         placeholder="e.g. John Doe"
-                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-dark-green placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-green focus:bg-white focus:ring-4 focus:ring-brand-green/10 transition-all duration-300"
+                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-primary placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 transition-all duration-300"
                       />
                     </div>
                     <div className="group">
-                      <label className="font-inter font-bold text-[14px] text-brand-dark-green mb-2 block ml-1">
-                        Email Address <span className="text-brand-green">*</span>
+                      <label className="font-inter font-bold text-[14px] text-brand-primary mb-2 block ml-1">
+                        Email Address <span className="text-brand-accent">*</span>
                       </label>
                       <input
                         type="email"
@@ -240,7 +240,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                         onChange={handleChange}
                         required
                         placeholder="john@company.com"
-                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-dark-green placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-green focus:bg-white focus:ring-4 focus:ring-brand-green/10 transition-all duration-300"
+                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-primary placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 transition-all duration-300"
                       />
                     </div>
                   </div>
@@ -248,8 +248,8 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                   {/* Phone & Company */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="group">
-                      <label className="font-inter font-bold text-[14px] text-brand-dark-green mb-2 block ml-1">
-                        Phone Number <span className="text-brand-green">*</span>
+                      <label className="font-inter font-bold text-[14px] text-brand-primary mb-2 block ml-1">
+                        Phone Number <span className="text-brand-accent">*</span>
                       </label>
                       <input
                         type="tel"
@@ -258,11 +258,11 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                         onChange={handleChange}
                         required
                         placeholder="+91 98765 43210"
-                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-dark-green placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-green focus:bg-white focus:ring-4 focus:ring-brand-green/10 transition-all duration-300"
+                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-primary placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 transition-all duration-300"
                       />
                     </div>
                     <div className="group">
-                      <label className="font-inter font-bold text-[14px] text-brand-dark-green mb-2 block ml-1">
+                      <label className="font-inter font-bold text-[14px] text-brand-primary mb-2 block ml-1">
                         Company Name
                       </label>
                       <input
@@ -271,14 +271,14 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Your Company"
-                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-dark-green placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-green focus:bg-white focus:ring-4 focus:ring-brand-green/10 transition-all duration-300"
+                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-primary placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 transition-all duration-300"
                       />
                     </div>
                   </div>
 
                   {/* Service Select */}
                   <div className="group">
-                    <label className="font-inter font-bold text-[14px] text-brand-dark-green mb-2 block ml-1">
+                    <label className="font-inter font-bold text-[14px] text-brand-primary mb-2 block ml-1">
                       Service Interested In
                     </label>
                     <div className="relative">
@@ -286,7 +286,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-dark-green font-inter text-[15px] focus:outline-none focus:border-brand-green focus:bg-white focus:ring-4 focus:ring-brand-green/10 transition-all duration-300 cursor-pointer appearance-none"
+                        className="w-full h-[56px] bg-gray-50 border border-surface-input-border rounded-[14px] px-5 text-brand-primary font-inter text-[15px] focus:outline-none focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 transition-all duration-300 cursor-pointer appearance-none"
                       >
                         <option value={serviceName}>{serviceName}</option>
                         <option value="Private Limited Company">Private Limited Company</option>
@@ -298,7 +298,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                         <option value="Other">Other</option>
                       </select>
                       <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none">
-                        <svg className="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                         </svg>
                       </div>
@@ -307,7 +307,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
 
                   {/* Message */}
                   <div className="group">
-                    <label className="font-inter font-bold text-[14px] text-brand-dark-green mb-2 block ml-1">
+                    <label className="font-inter font-bold text-[14px] text-brand-primary mb-2 block ml-1">
                       Your Message
                     </label>
                     <textarea
@@ -316,7 +316,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
                       onChange={handleChange}
                       rows={3}
                       placeholder="Tell us about your requirements..."
-                      className="w-full bg-gray-50 border border-surface-input-border rounded-[14px] px-5 py-4 text-brand-dark-green placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-green focus:bg-white focus:ring-4 focus:ring-brand-green/10 transition-all duration-300 resize-none"
+                      className="w-full bg-gray-50 border border-surface-input-border rounded-[14px] px-5 py-4 text-brand-primary placeholder:text-text-muted font-inter text-[15px] focus:outline-none focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 transition-all duration-300 resize-none"
                     />
                   </div>
 
@@ -348,7 +348,7 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
 
                   <p className="text-center font-inter text-[13px] text-text-muted/80 mt-4">
                     By submitting, you agree to our{" "}
-                    <a href="#" className="text-brand-green font-semibold hover:underline">
+                    <a href="#" className="text-brand-accent font-semibold hover:underline">
                       Privacy Policy
                     </a>
                   </p>

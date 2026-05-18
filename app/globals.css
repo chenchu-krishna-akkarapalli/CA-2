@@ -5,11 +5,12 @@
 /* ── Figma Design Tokens as CSS Variables ── */
 :root {
   /* Colors */
-  --color-dark-green: #094c00;
-  --color-green: #55b947;
-  --color-accent-green: #6ac25e;
-  --color-border-green: #73c668;
-  --color-footer-dark: #041d00;
+  --color-brand-primary: #0f172a; /* Deep Slate/Navy */
+  --color-brand-accent: #0284c7; /* Sky Blue - Professional & Trustworthy */
+  --color-brand-accent-hover: #0369a1; /* Darker Sky Blue */
+  --color-brand-secondary: #475569; /* Slate Grey */
+  --color-brand-charcoal: #020617; /* Ultra Dark Slate for footers */
+  
   --color-light-gray: #efefef;
   --color-card-border: #f3f4f6;
   --color-input-border: #e5e7eb;
@@ -19,8 +20,8 @@
   --color-divider-dark: #1e2939;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%);
-  --gradient-contact: linear-gradient(130.305deg, rgb(11, 61, 46) 0%, rgb(20, 83, 45) 100%);
+  --gradient-primary: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+  --gradient-contact: linear-gradient(130.305deg, var(--color-brand-charcoal) 0%, var(--color-brand-primary) 100%);
 }
 
 /* ── Base Resets ── */
@@ -57,4 +58,14 @@ html.lenis body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* ── Orbit Animation Keyframes ── */
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orbit-counter-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
 }

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import HeadingReveal from "../components/HeadingReveal";
 
 interface ApproachCardProps {
   iconSrc: string;
@@ -13,7 +14,7 @@ interface ApproachCardProps {
 function ApproachCard({ iconSrc, title, description, delay = 0 }: ApproachCardProps) {
   return (
     <motion.article
-      className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border border-brand-border-green rounded-[20px] sm:rounded-[30px] shadow-strategic flex flex-col items-center px-5 py-6 sm:py-8"
+      className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border border-brand-secondary rounded-[20px] sm:rounded-[30px] shadow-strategic flex flex-col items-center px-5 py-6 sm:py-8"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -32,7 +33,7 @@ function ApproachCard({ iconSrc, title, description, delay = 0 }: ApproachCardPr
       </div>
 
       {/* Title */}
-      <h3 className="mt-4 sm:mt-5 font-outfit font-bold text-[20px] sm:text-[22px] lg:text-[24px] leading-[28px] sm:leading-[30px] lg:leading-[32px] text-center text-brand-dark-green">
+      <h3 className="mt-4 sm:mt-5 font-outfit font-bold text-[20px] sm:text-[22px] lg:text-[24px] leading-[28px] sm:leading-[30px] lg:leading-[32px] text-center text-brand-primary">
         {title}
       </h3>
 
@@ -81,7 +82,7 @@ export default function StrategicApproachSection() {
   return (
     <section
       id="strategic-approach"
-      className="relative w-screen bg-[rgb(223,242,219)] py-12 sm:py-16 lg:py-[90px] px-4 sm:px-8 lg:px-12 overflow-hidden"
+      className="relative w-screen bg-[rgb(215,240,238)] py-12 sm:py-16 lg:py-[90px] px-4 sm:px-8 lg:px-12 overflow-hidden"
       aria-label="Our Strategic Approach"
     >
       {/* Rectangle 1 — white diagonal at top */}
@@ -110,25 +111,21 @@ export default function StrategicApproachSection() {
 
       <div className="relative max-w-[1340px] mx-auto z-10">
         {/* Section Title */}
-        <motion.div
-          className="flex flex-col items-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="font-outfit font-semibold text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[38px] lg:leading-[44px] text-center text-brand-dark-green">
-            OUR STRATEGIC{" "}
-            <span className="text-brand-accent-green">APPROACH</span>
-          </h2>
+        <div className="flex flex-col items-center">
+          <HeadingReveal>
+            <h2 className="font-outfit font-semibold text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[38px] lg:leading-[44px] text-center text-brand-primary">
+              OUR STRATEGIC{" "}
+              <span className="text-brand-accent-hover">APPROACH</span>
+            </h2>
+          </HeadingReveal>
 
           {/* Subtitle */}
-          <p className="mt-3 sm:mt-4 max-w-[848px] font-inter font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-center text-brand-dark-green">
+          <p className="mt-3 sm:mt-4 max-w-[848px] font-inter font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-center text-brand-primary">
             We follow a proven, structured methodology designed to deliver real
             results—built around expert insight, thorough analysis, and
             personalized execution.
           </p>
-        </motion.div>
+        </div>
 
         {/* Cards Grid */}
         <div className="flex flex-wrap justify-center gap-5 sm:gap-6 mt-8 sm:mt-10 lg:mt-12">

@@ -13,14 +13,14 @@ export default function GetInTouchSection() {
     >
       {/* Section Title */}
       <motion.h2
-        className="font-outfit font-semibold text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[38px] lg:leading-[44px] text-center text-brand-dark-green mb-6 sm:mb-8"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        className="font-outfit font-semibold text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[38px] lg:leading-[44px] text-center text-brand-primary mb-6 sm:mb-8"
+        initial={{ opacity: 0, y: 22, filter: "blur(6px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.65, ease: [0.25, 0.4, 0.25, 1] }}
       >
         GET IN TOUCH{" "}
-        <span className="text-brand-accent-green">WITH US</span>
+        <span className="text-brand-accent-hover">WITH US</span>
       </motion.h2>
 
       {/* Contact Container */}
@@ -110,7 +110,7 @@ export default function GetInTouchSection() {
               <div className="flex-1 flex flex-col gap-2">
                 <label
                   htmlFor="firstName"
-                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                 >
                   First Name
                 </label>
@@ -119,7 +119,7 @@ export default function GetInTouchSection() {
                   name="firstName"
                   type="text"
                   placeholder="John"
-                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                   aria-required="true"
                   suppressHydrationWarning
                 />
@@ -127,7 +127,7 @@ export default function GetInTouchSection() {
               <div className="flex-1 flex flex-col gap-2">
                 <label
                   htmlFor="lastName"
-                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                 >
                   Last Name
                 </label>
@@ -136,7 +136,7 @@ export default function GetInTouchSection() {
                   name="lastName"
                   type="text"
                   placeholder="Doe"
-                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                   aria-required="true"
                   suppressHydrationWarning
                 />
@@ -147,7 +147,7 @@ export default function GetInTouchSection() {
             <div className="mt-5 sm:mt-6 flex flex-col gap-2">
               <label
                 htmlFor="email"
-                className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
               >
                 Email
               </label>
@@ -156,7 +156,7 @@ export default function GetInTouchSection() {
                 name="email"
                 type="email"
                 placeholder="john@example.com"
-                className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                 aria-required="true"
                 suppressHydrationWarning
               />
@@ -166,7 +166,7 @@ export default function GetInTouchSection() {
             <div className="mt-5 sm:mt-6 flex flex-col gap-2">
               <label
                 htmlFor="phone"
-                className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
               >
                 Phone Number
               </label>
@@ -175,7 +175,7 @@ export default function GetInTouchSection() {
                 name="phone"
                 type="tel"
                 placeholder="+91 7032 163 646"
-                className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                 suppressHydrationWarning
               />
             </div>
@@ -184,7 +184,7 @@ export default function GetInTouchSection() {
             <div className="mt-5 sm:mt-6 flex flex-col gap-2 flex-1">
               <label
                 htmlFor="message"
-                className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
               >
                 Message
               </label>
@@ -193,7 +193,7 @@ export default function GetInTouchSection() {
                 name="message"
                 placeholder="Write your message..."
                 rows={4}
-                className="w-full flex-1 min-h-[100px] border border-surface-input-border rounded-[8px] p-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors resize-none"
+                className="w-full flex-1 min-h-[100px] border border-surface-input-border rounded-[8px] p-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors resize-none"
                 aria-required="true"
                 suppressHydrationWarning
               />

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(/c/Python313/python -c \"import sys,json; d=json.load(sys.stdin); print(d.get('tool_input',{}).get('file_path',''))\" 2>/dev/null); wt='C:/My-pro/CA-2/.claude/worktrees/admiring-benz-3634cf'; main='C:/My-pro/CA-2'; case \"$f\" in \"$wt\"/*) rel=\"${f#$wt/}\"; dest=\"$main/$rel\"; mkdir -p \"$(dirname \"$dest\")\"; cp \"$f\" \"$dest\";; esac 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

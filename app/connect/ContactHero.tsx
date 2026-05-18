@@ -1,8 +1,9 @@
 "use client";
-import Link from "next/link";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import BlurText from "../components/BlurText";
 
 export default function ContactHero() {
   return (
@@ -41,58 +42,59 @@ export default function ContactHero() {
         <div className="w-full max-w-[848px] flex flex-col items-center text-center">
           {/* Breadcrumb */}
           <motion.div
-            className="font-outfit font-bold text-[12px] leading-[18px] text-brand-dark-green flex items-center gap-1"
+            className="font-outfit font-bold text-[12px] leading-[18px] text-brand-primary flex items-center gap-1"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            <Link href="/" className="hover:text-brand-green transition-colors">Home</Link>
+            <Link href="/" className="hover:text-brand-accent transition-colors">Home</Link>
             <span>/</span>
             <span>Contact Us</span>
           </motion.div>
 
-          {/* Title */}
-          <motion.h1
-            className="mt-6 sm:mt-7 font-outfit font-bold text-[54px] sm:text-[72px] lg:text-[96px] leading-[44px] sm:leading-[55px] text-brand-dark-green"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.1, ease: [0.25, 0.4, 0.25, 1] }}
-          >
-            Contact <span className="text-brand-green">Us</span>
-          </motion.h1>
+          {/* Title — BlurText word-by-word, Direction Bottom, 250 ms delay */}
+          <h1 className="mt-6 sm:mt-7 font-outfit font-bold text-[54px] sm:text-[72px] lg:text-[96px] leading-[44px] sm:leading-[55px] text-center">
+            <BlurText
+              segments={[
+                { text: "Contact", className: "text-brand-primary" },
+                { text: "Us", className: "text-brand-accent" },
+              ]}
+              className="justify-center"
+            />
+          </h1>
 
           {/* Tagline */}
           <motion.p
             className="mt-6 sm:mt-7 max-w-[734px] font-outfit font-bold text-[24px] sm:text-[34px] lg:text-[50px] leading-[30px] sm:leading-[44px] lg:leading-[55px]"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.18, ease: [0.25, 0.4, 0.25, 1] }}
+            transition={{ duration: 0.8, delay: 0.55, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            <span className="text-brand-dark-green">Let&apos;s Start a </span>
-            <span className="text-brand-green">Conversation</span>
+            <span className="text-brand-primary">Let&apos;s Start a </span>
+            <span className="text-brand-accent">Conversation</span>
           </motion.p>
 
           {/* Subtitle */}
           <motion.p
-            className="mt-6 sm:mt-7 font-inter font-light text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-brand-dark-green"
+            className="mt-6 sm:mt-7 font-inter font-light text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-brand-primary"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           >
             Have a question or need expert financial advice? We&apos;re here to help. Reach out
             to our team and we&apos;ll get back to you promptly.
           </motion.p>
 
-          {/* Buttons */}
+          {/* Buttons — adaptive padding replaces fixed w/h */}
           <motion.div
             className="mt-9 flex flex-col sm:flex-row items-center gap-3.5 sm:gap-[41px]"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45, ease: [0.25, 0.4, 0.25, 1] }}
+            transition={{ duration: 0.6, delay: 0.85, ease: [0.25, 0.4, 0.25, 1] }}
           >
             <a
               href="#contact-form"
-              className="w-[160px] h-[36px] rounded-[6px] bg-gradient-btn-services flex items-center justify-center"
+              className="rounded-[6px] bg-gradient-btn-services inline-flex items-center justify-center px-5 py-[8px]"
               aria-label="Send us a message"
             >
               <span className="font-outfit font-medium text-[14px] leading-[20px] text-white">
@@ -101,10 +103,10 @@ export default function ContactHero() {
             </a>
             <a
               href="tel:+917032163646"
-              className="w-[160px] h-[36px] rounded-[6px] border border-brand-green bg-white/50 backdrop-blur-[2px] flex items-center justify-center"
+              className="rounded-[6px] border border-brand-accent bg-white/50 backdrop-blur-[2px] inline-flex items-center justify-center px-5 py-[8px]"
               aria-label="Call us now"
             >
-              <span className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green">
+              <span className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary">
                 Call Now
               </span>
             </a>

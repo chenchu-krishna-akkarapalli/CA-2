@@ -121,8 +121,8 @@ Purpose-driven analytical frameworks aligned with business models, cost structur
       <section className="w-full py-16 px-[5%] bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-outfit font-bold text-[clamp(28px,3vw,40px)] leading-[1.2] text-brand-dark-green mb-4">
-              Service <span className="text-brand-green">Offerings</span>
+            <h2 className="font-outfit font-bold text-[clamp(28px,3vw,40px)] leading-[1.2] text-brand-primary mb-4">
+              Service <span className="text-brand-accent">Offerings</span>
             </h2>
             <p className="font-inter text-gray-600 max-w-2xl mx-auto">
               We provide purpose-driven analytical frameworks to transform your data into actionable insights.
@@ -139,16 +139,16 @@ Purpose-driven analytical frameworks aligned with business models, cost structur
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <h3 className="font-outfit font-bold text-xl text-brand-dark-green mb-3">
+                <h3 className="font-outfit font-bold text-xl text-brand-primary mb-3">
                   {offering.title}
                 </h3>
-                <p className="font-inter text-sm text-brand-green mb-4 font-medium">
+                <p className="font-inter text-sm text-brand-accent mb-4 font-medium">
                   {offering.description}
                 </p>
                 <ul className="space-y-3">
                   {offering.services.map((service, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="font-inter text-[14px] text-gray-600 leading-relaxed">
@@ -166,8 +166,8 @@ Purpose-driven analytical frameworks aligned with business models, cost structur
       {/* Target Audience Section */}
       <section className="w-full py-16 px-[5%] bg-white">
         <div className="max-w-[1000px] mx-auto text-center">
-          <h2 className="font-outfit font-bold text-[clamp(24px,2.5vw,36px)] text-brand-dark-green mb-10">
-            Who Is This <span className="text-brand-green">For?</span>
+          <h2 className="font-outfit font-bold text-[clamp(24px,2.5vw,36px)] text-brand-primary mb-10">
+            Who Is This <span className="text-brand-accent">For?</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
             {targetAudience.map((audience, i) => (
@@ -177,10 +177,10 @@ Purpose-driven analytical frameworks aligned with business models, cost structur
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-brand-green/5 border border-brand-green/10"
+                className="flex items-center gap-4 p-4 rounded-xl bg-brand-accent/5 border border-brand-accent/10"
               >
-                <div className="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
@@ -194,7 +194,7 @@ Purpose-driven analytical frameworks aligned with business models, cost structur
       </section>
 
       {/* Outcome Section */}
-      <section className="w-full py-12 px-[5%] bg-brand-dark-green text-white">
+      <section className="w-full py-12 px-[5%] bg-brand-primary text-white">
         <div className="max-w-[1000px] mx-auto text-center">
           <h3 className="font-outfit font-bold text-2xl mb-4">The Outcome</h3>
           <p className="font-inter text-lg text-white/90 leading-relaxed italic">

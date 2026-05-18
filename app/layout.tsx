@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroller from "./components/SmoothScroller";
+import { AppStoreProvider } from "./store/AppStore";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -94,7 +95,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${outfit.variable} ${inter.variable} bg-white`}>
-        <SmoothScroller>{children}</SmoothScroller>
+        <AppStoreProvider>
+          <SmoothScroller>{children}</SmoothScroller>
+        </AppStoreProvider>
       </body>
     </html>
   );

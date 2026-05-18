@@ -115,17 +115,17 @@ export default function ContactFormSection() {
         {/* Section Heading */}
         <motion.div
           className="text-center mb-10 md:mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 22, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-green mb-4">
+          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-accent mb-4">
             Get In Touch
           </p>
           <h2 className="font-outfit font-bold text-[clamp(28px,3vw,40px)] leading-[1.2]">
-            <span className="text-brand-dark-green">We&apos;d Love to </span>
-            <span className="text-brand-green">Hear From You</span>
+            <span className="text-brand-primary">We&apos;d Love to </span>
+            <span className="text-brand-accent">Hear From You</span>
           </h2>
         </motion.div>
 
@@ -233,7 +233,7 @@ export default function ContactFormSection() {
                 <div className="flex-1 flex flex-col gap-2">
                   <label
                     htmlFor="firstName"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                   >
                     First Name
                   </label>
@@ -244,14 +244,14 @@ export default function ContactFormSection() {
                     placeholder="John"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                     required
                   />
                 </div>
                 <div className="flex-1 flex flex-col gap-2">
                   <label
                     htmlFor="lastName"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                   >
                     Last Name
                   </label>
@@ -262,7 +262,7 @@ export default function ContactFormSection() {
                     placeholder="Doe"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                     required
                   />
                 </div>
@@ -273,7 +273,7 @@ export default function ContactFormSection() {
                 <div className="flex-1 flex flex-col gap-2">
                   <label
                     htmlFor="email"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                   >
                     Email
                   </label>
@@ -284,14 +284,14 @@ export default function ContactFormSection() {
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                     required
                   />
                 </div>
                 <div className="flex-1 flex flex-col gap-2">
                   <label
                     htmlFor="phone"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                   >
                     Phone Number
                   </label>
@@ -302,7 +302,7 @@ export default function ContactFormSection() {
                     placeholder="+91 7032 163 646"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors"
+                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function ContactFormSection() {
               <div className="mt-5 sm:mt-6 flex flex-col gap-2">
                 <label
                   htmlFor="subject"
-                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                 >
                   Subject
                 </label>
@@ -320,7 +320,7 @@ export default function ContactFormSection() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-dark-green focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors bg-white"
+                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors bg-white"
                   required
                 >
                   <option value="">Select a subject</option>
@@ -339,7 +339,7 @@ export default function ContactFormSection() {
               <div className="mt-5 sm:mt-6 flex flex-col gap-2 flex-1">
                 <label
                   htmlFor="message"
-                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-dark-green"
+                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
                 >
                   Message
                 </label>
@@ -350,7 +350,7 @@ export default function ContactFormSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full flex-1 min-h-[100px] border border-surface-input-border rounded-[8px] p-4 font-inter text-[14px] text-brand-dark-green placeholder:text-text-placeholder focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-colors resize-none"
+                  className="w-full flex-1 min-h-[100px] border border-surface-input-border rounded-[8px] p-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors resize-none"
                   required
                 />
               </div>
@@ -360,7 +360,7 @@ export default function ContactFormSection() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 font-inter text-[14px] text-brand-green font-medium"
+                  className="mt-4 font-inter text-[14px] text-brand-accent font-medium"
                 >
                   ✓ Message sent successfully! We&apos;ll get back to you soon.
                 </motion.p>

@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
 
+import Link from "next/link";
 import OptimizedImage from "../components/OptimizedImage";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import BlurText from "../components/BlurText";
 
 export default function HeroSection() {
   return (
@@ -26,35 +27,31 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-start h-full px-4 sm:px-8 py-16 sm:py-20 lg:py-0 lg:pt-[50px]">
-        {/* Breadcrumb - Added for layout consistency */}
+        {/* Invisible breadcrumb placeholder to maintain layout height */}
         <motion.div
-          className="font-outfit font-bold text-[12px] leading-[18px] text-brand-dark-green flex items-center gap-1 mb-6 sm:mb-7"
+          className="font-outfit font-bold text-[12px] leading-[18px] text-brand-primary flex items-center gap-1 mb-6 sm:mb-7"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <span className="opacity-0">Home</span> {/* Invisible placeholder to maintain layout height */}
+          <span className="opacity-0">Home</span>
         </motion.div>
 
-        {/* Title */}
-        <motion.h1
-          className="max-w-[734px] font-outfit font-bold text-[28px] sm:text-[36px] lg:text-[50px] leading-[34px] sm:leading-[42px] lg:leading-[55px] text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-        >
-          <span className="text-brand-dark-green">
-            Trusted Chartered Accountants Delivering Value
-          </span>
-          <span className="text-black">-</span>
-          <span className="text-brand-green">
-            Driven Financial Solutions
-          </span>
-        </motion.h1>
+        {/* Title — BlurText word-by-word, Direction Bottom, 250 ms delay */}
+        <h1 className="max-w-[734px] font-outfit font-bold text-[28px] sm:text-[36px] lg:text-[50px] leading-[34px] sm:leading-[42px] lg:leading-[55px] text-center">
+          <BlurText
+            segments={[
+              { text: "Trusted Chartered Accountants Delivering Value", className: "text-brand-primary" },
+              { text: "-", className: "text-black" },
+              { text: "Driven Financial Solutions", className: "text-brand-accent" },
+            ]}
+            className="justify-center"
+          />
+        </h1>
 
         {/* Subtitle */}
         <motion.p
-          className="mt-6 sm:mt-8 lg:mt-10 max-w-[848px] font-inter font-light text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-center text-brand-dark-green px-2"
+          className="mt-6 sm:mt-8 lg:mt-10 max-w-[848px] font-inter font-light text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-center text-brand-primary px-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
@@ -64,10 +61,10 @@ export default function HeroSection() {
           solutions that help businesses grow and stay compliant.
         </motion.p>
 
-        {/* Connect Button */}
+        {/* Connect Button — adaptive padding replaces fixed w/h */}
         <motion.a
           href="#get-in-touch"
-          className="mt-6 sm:mt-8 w-[141px] h-[34px] rounded-[8px] border border-brand-dark-green bg-gradient-btn-hero overflow-hidden flex items-center justify-center gap-2 cursor-pointer hover:opacity-90 transition-opacity"
+          className="mt-6 sm:mt-8 rounded-[8px] border border-brand-primary bg-gradient-btn-hero overflow-hidden inline-flex items-center justify-center gap-2 px-5 py-[7px] cursor-pointer hover:opacity-90 transition-opacity"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}

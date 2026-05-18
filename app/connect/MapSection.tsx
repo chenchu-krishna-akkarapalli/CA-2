@@ -14,19 +14,19 @@ export default function MapSection() {
         {/* Section Heading */}
         <motion.div
           className="text-center mb-10 md:mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 22, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-green mb-4">
+          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-accent mb-4">
             Our Office
           </p>
           <h2 className="font-outfit font-bold text-[clamp(28px,3vw,40px)] leading-[1.2]">
-            <span className="text-brand-dark-green">Find Us </span>
-            <span className="text-brand-green">on the Map</span>
+            <span className="text-brand-primary">Find Us </span>
+            <span className="text-brand-accent">on the Map</span>
           </h2>
-          <p className="mt-3 font-inter text-[15px] sm:text-[16px] leading-[24px] text-brand-dark-green/60 max-w-[560px] mx-auto">
+          <p className="mt-3 font-inter text-[15px] sm:text-[16px] leading-[24px] text-brand-primary/60 max-w-[560px] mx-auto">
             Visit our office at Velachery, Chennai for a face-to-face consultation with our team.
           </p>
         </motion.div>
@@ -59,10 +59,10 @@ export default function MapSection() {
           {/* Bottom info bar */}
           <div className="bg-white py-4 sm:py-5 px-5 sm:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div>
-              <p className="font-outfit font-semibold text-[15px] sm:text-[16px] text-brand-dark-green">
+              <p className="font-outfit font-semibold text-[15px] sm:text-[16px] text-brand-primary">
                 CHINNI MALLIKARJUNA AND COMPANY, Chartered Accountants
               </p>
-              <p className="font-inter text-[13px] sm:text-[14px] text-brand-dark-green/60 mt-0.5">
+              <p className="font-inter text-[13px] sm:text-[14px] text-brand-primary/60 mt-0.5">
                 No. 10/31, G1, Ten Downing, Rajalakshmi Nagar, 3rd Main Road, Velachery, Chennai – 600 042
               </p>
             </div>

@@ -30,8 +30,8 @@ Our approach focuses on early issue identification, strong legal positioning, an
                 <div className="max-w-[1200px] mx-auto space-y-16">
 
                     {/* GST Component */}
-                    <div className="bg-gradient-to-br from-brand-green/5 to-white rounded-[30px] p-8 md:p-12 shadow-strategic border border-brand-border-green transition-all hover:shadow-xl">
-                        <h3 className="font-outfit font-bold text-[28px] md:text-[32px] text-brand-dark-green mb-6 border-b-2 border-brand-green pb-2 inline-block">GST Litigation</h3>
+                    <div className="bg-gradient-to-br from-brand-accent/5 to-white rounded-[30px] p-8 md:p-12 shadow-strategic border border-brand-secondary transition-all hover:shadow-xl">
+                        <h3 className="font-outfit font-bold text-[28px] md:text-[32px] text-brand-primary mb-6 border-b-2 border-brand-accent pb-2 inline-block">GST Litigation</h3>
                         <p className="font-inter text-text-secondary text-lg mb-8">We assist clients in handling disputes arising under the GST law, including matters before departmental authorities and appellate forums.</p>
                         <div className="grid md:grid-cols-2 gap-4">
                             {[
@@ -44,16 +44,16 @@ Our approach focuses on early issue identification, strong legal positioning, an
                                 "Audit, inspection, search, and seizure related proceedings"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-2 h-2 rounded-full bg-brand-green shrink-0" />
-                                    <p className="font-inter text-brand-dark-green">{item}</p>
+                                    <span className="mt-1.5 w-2 h-2 rounded-full bg-brand-accent shrink-0" />
+                                    <p className="font-inter text-brand-primary">{item}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     {/* Income Tax Component */}
-                    <div className="bg-gradient-to-br from-brand-green/5 to-white rounded-[30px] p-8 md:p-12 shadow-strategic border border-brand-border-green transition-all hover:shadow-xl">
-                        <h3 className="font-outfit font-bold text-[28px] md:text-[32px] text-brand-dark-green mb-6 border-b-2 border-brand-dark-green pb-2 inline-block">Income-tax Litigation</h3>
+                    <div className="bg-gradient-to-br from-brand-accent/5 to-white rounded-[30px] p-8 md:p-12 shadow-strategic border border-brand-secondary transition-all hover:shadow-xl">
+                        <h3 className="font-outfit font-bold text-[28px] md:text-[32px] text-brand-primary mb-6 border-b-2 border-brand-primary pb-2 inline-block">Income-tax Litigation</h3>
                         <p className="font-inter text-text-secondary text-lg mb-8">We provide comprehensive support in income-tax disputes, from assessment stage to appellate proceedings.</p>
                         <div className="grid md:grid-cols-2 gap-4">
                             {[
@@ -65,8 +65,8 @@ Our approach focuses on early issue identification, strong legal positioning, an
                                 "Advisory on litigation strategy and risk assessment"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-2 h-2 rounded-full bg-brand-dark-green shrink-0" />
-                                    <p className="font-inter text-brand-dark-green">{item}</p>
+                                    <span className="mt-1.5 w-2 h-2 rounded-full bg-brand-primary shrink-0" />
+                                    <p className="font-inter text-brand-primary">{item}</p>
                                 </div>
                             ))}
                         </div>
@@ -74,7 +74,7 @@ Our approach focuses on early issue identification, strong legal positioning, an
 
                     {/* Approach Component - Dark Mode Style */}
                     <div className="bg-gradient-primary rounded-[24px] p-8 md:p-12 shadow-xl text-white relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-green/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 transition-all duration-1000 group-hover:scale-150" />
+                        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 transition-all duration-1000 group-hover:scale-150" />
                         <h3 className="font-outfit font-bold text-[28px] md:text-[32px] text-white mb-8 text-center relative z-10">Our Litigation Approach</h3>
 
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
@@ -87,7 +87,7 @@ Our approach focuses on early issue identification, strong legal positioning, an
                                 { title: "Efficient", desc: "Efficient dispute resolution" }
                             ].map((item, i) => (
                                 <div key={i} className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                                    <h4 className="font-bold text-brand-green text-lg mb-2">{item.title}</h4>
+                                    <h4 className="font-bold text-brand-accent text-lg mb-2">{item.title}</h4>
                                     <p className="text-white/80 text-sm">{item.desc}</p>
                                 </div>
                             ))}

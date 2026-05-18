@@ -1,179 +1,127 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import aboutData from "../data/about.json";
-import { LocateFixed } from "lucide-react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Flag, TrendingUp, Globe, Award } from "lucide-react";
+import aboutData from "../data/about";
+import HeadingReveal from "../components/HeadingReveal";
 
 const data = aboutData.ourJourney;
 
-export default function OurJourneySection() {
-  const desktopTopPositions = [302, 475, 662, 857, 1062, 1229, 1405, 1566];
+// Map appropriate icons for the journey stages
+const icons = [Flag, TrendingUp, Globe, Award];
+
+function TimelineItem({ item, index, isLast }: { item: any; index: number; isLast: boolean }) {
+  const isEven = index % 2 === 0;
+  const Icon = icons[index % icons.length];
 
   return (
-    <section
-      className="relative w-full overflow-hidden bg-brand-green/10"
+    <div className={`relative flex flex-col md:flex-row items-center justify-between w-full mb-12 lg:mb-24 ${isEven ? 'md:flex-row-reverse' : ''}`}>
+      {/* Mobile only timeline line fragment */}
+      {!isLast && (
+        <div className="absolute left-[39px] top-8 bottom-[-3rem] w-[2px] bg-brand-accent/20 md:hidden" />
+      )}
+      
+      {/* Timeline Node/Icon */}
+      <motion.div 
+        className="absolute left-[24px] md:left-1/2 top-0 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 z-10 flex items-center justify-center w-8 h-8 md:w-16 md:h-16 rounded-full bg-white border-4 border-brand-accent/20 shadow-xl transition-transform duration-300 hover:scale-110 hover:border-brand-accent/40 group"
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.1 }}
+      >
+        <div className="w-3 h-3 md:hidden rounded-full bg-brand-accent group-hover:bg-brand-primary transition-colors" />
+        <Icon className="hidden md:block w-6 h-6 text-brand-accent group-hover:text-brand-primary transition-colors" strokeWidth={2} />
+      </motion.div>
+
+      {/* Spacer for alternating layout (Desktop) */}
+      <div className="hidden md:block w-1/2" />
+
+      {/* Content Card */}
+      <div className={`w-full md:w-1/2 flex pl-[80px] md:pl-0 ${isEven ? 'md:justify-start md:pl-16' : 'md:justify-end md:pr-16'}`}>
+        <motion.div
+          initial={{ opacity: 0, y: 30, x: isEven ? 30 : -30 }}
+          whileInView={{ opacity: 1, y: 0, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+          className="relative w-full max-w-[480px] p-6 lg:p-8 rounded-3xl border border-white/60 bg-white/60 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:bg-white hover:shadow-[0_16px_48px_rgba(2,79,49,0.08)] transition-all duration-500 group"
+        >
+          {/* Year Badge */}
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent text-white font-outfit font-bold text-sm mb-5 shadow-sm transform group-hover:-translate-y-1 transition-transform duration-300">
+            {item.year}
+          </div>
+          
+          <h3 className="font-outfit font-bold text-2xl lg:text-3xl text-brand-primary mb-3 group-hover:text-brand-accent transition-colors duration-300">
+            {item.title}
+          </h3>
+          
+          <p className="font-inter text-slate-600 leading-relaxed text-sm lg:text-[15px]">
+            {item.desc}
+          </p>
+
+          {/* Decorative subtle background icon */}
+          <Icon className="absolute -bottom-4 -right-4 w-32 h-32 text-brand-accent/5 -rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-700 pointer-events-none" />
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+export default function OurJourneySection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Create a scroll-linked animation for the center line
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
+
+  const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
+
+  return (
+    <section 
+      className="relative left-1/2 w-screen max-w-none -translate-x-1/2 overflow-hidden bg-brand-accent/5 py-16 lg:py-24"
       aria-label="Our Journey"
     >
-      {/* Mobile / tablet layout */}
-      <div className="relative lg:hidden py-12 sm:py-16">
-        <div className="absolute inset-0" aria-hidden="true">
-          <Image
-            src="/Assets/figma/about/our-journey-bg.svg"
-            alt=""
-            fill
-            className="object-cover opacity-60"
-            sizes="100vw"
-          />
-        </div>
-
-        <div className="relative max-w-[720px] mx-auto px-4 sm:px-8">
-          <div className="flex flex-col items-center gap-[10px]">
-            <h2 className="font-outfit font-bold text-[30px] sm:text-[40px] leading-[44px] text-center">
-              <span className="text-brand-dark-green">OUR</span>{" "}
-              <span className="text-brand-green">JOURNEY</span>
-            </h2>
-            <div className="h-[6px] w-[300px] rounded-full bg-gradient-to-b from-brand-dark-green to-brand-green" />
-          </div>
-
-          <div className="mt-10 flex items-center justify-center gap-3">
-             <LocateFixed className="w-[50px] h-[50px] text-brand-green" strokeWidth={1.5} />
-            <p className="font-outfit font-semibold text-[22px] sm:text-[28px] leading-[32px] text-center">
-              <span className="text-brand-dark-green">Our</span>
-              <span className="text-brand-green"> Story</span>
-            </p>
-          </div>
-
-          <div className="relative mt-12">
-            <div className="absolute left-[18px] top-0 bottom-0 w-[2px] bg-brand-green/25" />
-            <div className="flex flex-col gap-6">
-              {data.timeline.map((item, i) => (
-                <motion.div
-                  key={item.year}
-                  className="relative"
-                  initial={{ opacity: 0, y: 26 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.6, delay: 0.06 * i, ease: [0.25, 0.4, 0.25, 1] }}
-                >
-                  <div className="absolute left-[0px] top-[18px] w-[36px] h-[36px] rounded-full bg-gradient-primary ring-4 ring-white flex items-center justify-center">
-                    <span className="font-outfit font-bold text-[11px] text-white leading-none">
-                      {item.year}
-                    </span>
-                  </div>
-
-                  <div className="ml-[56px]">
-                    <div className="bg-white border border-white/60 shadow-strategic rounded-[16px] px-6 py-6">
-                      <div className="inline-flex items-center justify-center h-[28px] px-4 rounded-full bg-brand-green/10 mb-3">
-                        <span className="font-outfit font-bold text-[14px] leading-[20px] text-brand-dark-green">
-                          {item.year}
-                        </span>
-                      </div>
-                      <h3 className="font-outfit font-bold text-[18px] leading-[24px] tracking-[-0.5px] text-brand-dark-green">
-                        {item.title}
-                      </h3>
-                      <p className="mt-3 font-inter font-light text-[14px] leading-[22px] text-text-secondary">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
+      {/* Background Decorators */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div className="absolute top-20 -left-20 w-[400px] h-[400px] bg-brand-accent/10 rounded-full blur-[80px]" />
+        <div className="absolute bottom-20 -right-20 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[100px]" />
       </div>
 
-      {/* Desktop layout (centered timeline) */}
-      <div className="hidden lg:flex justify-center relative overflow-hidden bg-brand-green/10">
-        <div className="relative w-[1440px] h-[1928px] flex-shrink-0 z-10">
-          {/* Background decoration - Explicitly positioned behind content */}
-          <div className="absolute inset-0 z-0 pointer-events-none mix-blend-multiply" aria-hidden="true">
-            <Image
-              src="/Assets/figma/about/our-journey-bg.svg"
-              alt=""
-              fill
-              className="object-cover opacity-100"
-              sizes="1440px"
-              priority
-            />
-          </div>
-
-          {/* Intro Heading Group - Left: 517px -> relative to 1440px container */}
-          <div className="absolute left-[517px] top-[68px] flex flex-col gap-[10px] items-center text-center w-[380px] z-20">
-            <h2 className="font-outfit font-bold text-[50px] leading-[55px]">
-              <span className="text-brand-dark-green">OUR</span>{" "}
-              <span className="text-brand-green">JOURNEY</span>
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col items-center gap-4 mb-16 lg:mb-24">
+          <HeadingReveal>
+            <h2 className="text-center font-outfit text-[32px] font-bold leading-[1.2] sm:text-[40px] lg:text-[50px] tracking-tight">
+              <span className="text-brand-primary">OUR</span>{" "}
+              <span className="text-brand-accent">JOURNEY</span>
             </h2>
-            <div className="h-[6px] w-[352px] rounded-full bg-gradient-to-b from-brand-dark-green to-brand-green" />
-          </div>
+          </HeadingReveal>
+          <div className="h-1.5 w-20 sm:w-24 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent" />
+        </div>
 
-          {/* Sub header group - Left: 597px */}
-          <div className="absolute left-[597px] top-[211px] flex items-center justify-center gap-3 w-[246px]">
-             <LocateFixed className="w-[50px] h-[50px] text-brand-green" strokeWidth={1.5} />
-            <p className="font-outfit font-semibold text-[32px] leading-[32px]">
-              <span className="text-brand-dark-green">Our</span>
-              <span className="text-brand-green"> Story</span>
-            </p>
-          </div>
-
-          {/* Center decorative icon - Left: 620px */}
-          <div className="absolute left-[620px] top-[270px] w-[202px] h-[1600px] pointer-events-none" aria-hidden="true">
-            <Image
-              src="/Assets/figma/about/our-journey-center-icon.svg"
-              alt=""
-              width={202}
-              height={1600}
-              className="object-contain"
+        {/* Timeline Container */}
+        <div ref={containerRef} className="relative w-full max-w-[1100px] mx-auto">
+          {/* Desktop Animated Center Line */}
+          <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-[2px] bg-brand-accent/10 -translate-x-1/2">
+            <motion.div 
+              className="absolute top-0 left-0 w-full bg-gradient-to-b from-brand-accent via-brand-primary to-brand-accent origin-top"
+              style={{ scaleY, height: "100%", opacity }}
             />
           </div>
 
-          {/* Milestones grid - Absolute positioning */}
-          {data.timeline.map((item, i) => {
-            const top = desktopTopPositions[i] || 300 + i * 150;
-            const isLeft = i % 2 === 0;
-
-            return (
-              <motion.div
-                key={item.year}
-                className="absolute w-[448px] h-[167px]"
-                style={{
-                  top: top,
-                  left: isLeft ? "150px" : "842px",
-                }}
-                // Staggered scroll animation: Left items slide from left (-50), Right items slide from right (50)
-                initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
-              >
-                <div
-                  className={`w-full h-full bg-white border border-brand-green/25 rounded-[16px] shadow-strategic flex flex-col justify-between overflow-hidden group hover:shadow-lg transition-shadow duration-300`}
-                >
-                  <div className={`pt-6 px-6 relative h-full`}>
-                    
-                    {/* Badge */}
-                    <div className={`absolute top-6 bg-brand-green/10 h-[28px] px-3 rounded-full flex items-center justify-center ${isLeft ? "right-6" : "left-6"}`}>
-                       <span className={`font-outfit font-bold text-[14px] leading-[20px] text-brand-dark-green`}>
-                        {item.year}
-                      </span>
-                    </div>
-
-                    {/* Content */}
-                    <div className={`${isLeft ? "mr-[60px] text-right ml-auto" : "ml-[60px] text-left mr-auto"} mt-[36px]`}>
-                      <h3 className="absolute top-[60px] font-outfit font-bold text-[20px] leading-[28px] tracking-[-0.5px] text-brand-dark-green w-[398px]" style={{ left: isLeft ? "auto" : "24px", right: isLeft ? "24px" : "auto" }}>
-                        {item.title}
-                      </h3>
-                      <p className="absolute top-[96px] font-outfit font-normal text-[14px] leading-[22.75px] text-text-secondary w-[398px]" style={{ left: isLeft ? "auto" : "24px", right: isLeft ? "24px" : "auto" }}>
-                        {item.desc}
-                      </p>
-                    </div>
-
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+          <div className="flex flex-col relative">
+            {data.timeline.map((item, index) => (
+              <TimelineItem 
+                key={index} 
+                item={item} 
+                index={index} 
+                isLast={index === data.timeline.length - 1}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

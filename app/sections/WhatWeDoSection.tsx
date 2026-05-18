@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import HeadingReveal from "../components/HeadingReveal";
 
 interface ServiceCardProps {
   image: string;
@@ -43,23 +45,23 @@ function ServiceCard({ image, title, description, iconSrc, delay = 0 }: ServiceC
         </div>
 
         {/* Title */}
-        <h3 className="font-outfit font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-center text-brand-dark-green">
+        <h3 className="font-outfit font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-center text-brand-primary">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mt-3 font-inter font-normal text-[14px] sm:text-[16px] leading-[22px] sm:leading-[24px] text-center text-brand-dark-green flex-1">
+        <p className="mt-3 font-inter font-normal text-[14px] sm:text-[16px] leading-[22px] sm:leading-[24px] text-center text-brand-primary flex-1">
           {description}
         </p>
 
         {/* Explore Link */}
-        <div className="mt-4 border-t-[0.8px] border-brand-accent-green pt-5 flex justify-center">
-          <a
-            href="#"
+        <div className="mt-4 border-t-[0.8px] border-brand-accent-hover pt-5 flex justify-center">
+          <Link
+            href="/services"
             className="flex items-center gap-1 group"
             aria-label={`Explore ${title} service`}
           >
-            <span className="font-arial font-bold text-[14px] leading-[20px] text-brand-accent-green">
+            <span className="font-arial font-bold text-[14px] leading-[20px] text-brand-accent-hover">
               Explore Service{" "}
             </span>
             <Image
@@ -70,7 +72,7 @@ function ServiceCard({ image, title, description, iconSrc, delay = 0 }: ServiceC
               className="group-hover:translate-x-1 transition-transform"
               aria-hidden="true"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </motion.article>
@@ -105,31 +107,33 @@ export default function WhatWeDoSection() {
   return (
     <section
       id="what-we-do"
-      className="relative w-full max-w-[1318px] border border-brand-green rounded-[20px] sm:rounded-[30px] overflow-hidden py-8 sm:py-10 lg:py-[42px] px-4 sm:px-6 lg:px-[42px]"
+      className="relative w-full max-w-[1318px] border border-brand-accent rounded-[20px] sm:rounded-[30px] overflow-hidden py-8 sm:py-10 lg:py-[42px] px-4 sm:px-6 lg:px-[42px]"
       aria-label="What We Do"
     >
       {/* Header Row */}
       <div className="flex flex-col items-center gap-4">
         {/* Section Title */}
-        <h2 className="font-outfit font-semibold text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[38px] lg:leading-[44px] text-center text-brand-dark-green">
-          WHAT WE <span className="text-brand-accent-green">DO?</span>
-        </h2>
+        <HeadingReveal>
+          <h2 className="font-outfit font-semibold text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[38px] lg:leading-[44px] text-center text-brand-primary">
+            WHAT WE <span className="text-brand-accent-hover">DO?</span>
+          </h2>
+        </HeadingReveal>
 
-        {/* View All Button */}
-        <a
-          href="#"
-          className="w-[163px] h-[44px] rounded-[8px] border border-surface-btn-border bg-gradient-btn-services overflow-hidden flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity flex-shrink-0"
+        {/* View All Button — fixed href + adaptive padding replaces fixed w/h */}
+        <Link
+          href="/services"
+          className="rounded-[8px] border border-surface-btn-border bg-gradient-btn-services overflow-hidden inline-flex items-center justify-center gap-1.5 px-5 py-[11px] hover:opacity-90 transition-opacity"
           aria-label="View all services"
         >
           <span className="font-outfit font-semibold text-[16px] leading-[19px] text-white text-center">
             View All Services
           </span>
           <ArrowRight className="w-[18px] h-[20px] text-white" strokeWidth={2} />
-        </a>
+        </Link>
       </div>
 
       {/* Subtitle */}
-      <p className="mt-4 sm:mt-5 max-w-[848px] mx-auto font-inter font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-center text-brand-dark-green">
+      <p className="mt-4 sm:mt-5 max-w-[848px] mx-auto font-inter font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-center text-brand-primary">
         We provide comprehensive, practical, and forward-thinking financial
         solutions designed to support businesses at every stage of growth. Our
         core services are built around accuracy, compliance, and strategic

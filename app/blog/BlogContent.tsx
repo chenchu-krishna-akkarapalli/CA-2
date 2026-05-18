@@ -21,7 +21,7 @@ const BlogHero = () => {
     }, []);
 
     return (
-        <section className="relative w-full min-h-[90vh] -mt-[106px] overflow-hidden bg-brand-dark-green">
+        <section className="relative w-full min-h-[90vh] -mt-[106px] overflow-hidden bg-brand-primary">
             {/* Background */}
             <div className="absolute inset-0">
                 <OptimizedImage
@@ -31,13 +31,13 @@ const BlogHero = () => {
                     className="object-cover opacity-20"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-brand-dark-green/90 via-brand-dark-green/70 to-brand-dark-green/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/90 via-brand-primary/70 to-brand-primary/90" />
             </div>
 
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[20%] left-[10%] w-[300px] h-[300px] bg-brand-green/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-brand-dark-green/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute top-[20%] left-[10%] w-[300px] h-[300px] bg-brand-accent/10 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-brand-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
 
             {/* Content */}
@@ -59,7 +59,7 @@ const BlogHero = () => {
                     className={`font-outfit font-bold text-[clamp(32px,5vw,64px)] leading-[1.1] text-center text-white drop-shadow-lg transition-all duration-1000 delay-200 max-w-[900px] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
                 >
-                    Insights & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-accent-green">Updates</span>
+                    Insights & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">Updates</span>
                 </h1>
 
                 {/* Subtitle */}
@@ -101,7 +101,7 @@ const BlogPostCard = ({ post, index }: { post: BlogPost; index: number }) => {
                         className="object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 z-10">
-                        <span className="px-3 py-1 bg-white/95 backdrop-blur-sm rounded-full text-[12px] font-bold text-brand-dark-green uppercase tracking-wider shadow-sm">
+                        <span className="px-3 py-1 bg-white/95 backdrop-blur-sm rounded-full text-[12px] font-bold text-brand-primary uppercase tracking-wider shadow-sm">
                             {post.category}
                         </span>
                     </div>
@@ -114,7 +114,7 @@ const BlogPostCard = ({ post, index }: { post: BlogPost; index: number }) => {
                         <span>•</span>
                         <span>{post.readTime}</span>
                     </div>
-                    <h3 className="font-outfit font-bold text-[20px] text-brand-dark-green leading-[1.3] mb-3 group-hover:text-brand-green transition-colors line-clamp-2">
+                    <h3 className="font-outfit font-bold text-[20px] text-brand-primary leading-[1.3] mb-3 group-hover:text-brand-accent transition-colors line-clamp-2">
                         {post.title}
                     </h3>
                     <p className="font-inter text-[15px] text-slate-600 leading-[1.6] mb-6 line-clamp-3 flex-grow">
@@ -125,9 +125,9 @@ const BlogPostCard = ({ post, index }: { post: BlogPost; index: number }) => {
                     <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
                         <div>
                             <p className="text-[12px] text-slate-500 font-inter">Written by</p>
-                            <p className="font-inter font-semibold text-[14px] text-brand-dark-green">{post.author}</p>
+                            <p className="font-inter font-semibold text-[14px] text-brand-primary">{post.author}</p>
                         </div>
-                        <span className="text-brand-green font-semibold text-[14px] group-hover:underline flex items-center gap-1 font-outfit">
+                        <span className="text-brand-accent font-semibold text-[14px] group-hover:underline flex items-center gap-1 font-outfit">
                             Read full article <span>→</span>
                         </span>
                     </div>
@@ -168,13 +168,13 @@ export default function BlogContent() {
                     {/* Header */}
                     <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
-                            <h2 className="font-outfit font-bold text-[32px] text-brand-dark-green">
+                            <h2 className="font-outfit font-bold text-[32px] text-brand-primary">
                                 {authorFilter ? `Articles by ${authorFilter}` : 'Latest Articles'}
                             </h2>
                             {authorFilter && (
                                 <button
                                     onClick={handleViewAll}
-                                    className="mt-2 text-brand-green font-semibold hover:underline flex items-center gap-1 transition-colors font-outfit"
+                                    className="mt-2 text-brand-accent font-semibold hover:underline flex items-center gap-1 transition-colors font-outfit"
                                 >
                                     ← View all articles
                                 </button>
@@ -204,7 +204,7 @@ export default function BlogContent() {
                                 <div className="mt-12 flex justify-center">
                                     <button
                                         onClick={handleLoadMore}
-                                        className="px-8 py-3 bg-surface-light-gray text-brand-dark-green font-outfit font-bold rounded-full hover:bg-slate-200 transition-colors border border-slate-200"
+                                        className="px-8 py-3 bg-surface-light-gray text-brand-primary font-outfit font-bold rounded-full hover:bg-slate-200 transition-colors border border-slate-200"
                                     >
                                         Load More Articles
                                     </button>
@@ -216,7 +216,7 @@ export default function BlogContent() {
                             <p className="text-slate-500 text-[18px] font-inter">No articles found for this author yet.</p>
                             <button
                                 onClick={handleViewAll}
-                                className="mt-4 px-6 py-2 bg-brand-green text-white rounded-full hover:bg-brand-dark-green transition-colors font-outfit"
+                                className="mt-4 px-6 py-2 bg-brand-accent text-white rounded-full hover:bg-brand-primary transition-colors font-outfit"
                             >
                                 View all articles
                             </button>

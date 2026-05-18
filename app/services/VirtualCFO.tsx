@@ -86,43 +86,43 @@ const VirtualCFO = () => {
 
                         <div className="grid md:grid-cols-2 gap-12">
                             <div>
-                                <h3 className="font-outfit font-bold text-[24px] text-brand-dark-green mb-6">Who Is This For?</h3>
+                                <h3 className="font-outfit font-bold text-[24px] text-brand-primary mb-6">Who Is This For?</h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">MSMEs and mid-sized enterprises</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Real-estate and infrastructure projects</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Family-owned and promoter-managed businesses</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Companies transitioning from compliance-only finance to strategic finance</span>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="font-outfit font-bold text-[24px] text-brand-dark-green mb-6">Why Our Virtual CFO Model?</h3>
+                                <h3 className="font-outfit font-bold text-[24px] text-brand-primary mb-6">Why Our Virtual CFO Model?</h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Cost-effective access to senior financial expertise</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Independent, objective, and compliance-driven advice</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Deep understanding of Indian regulatory and cost structures</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-brand-green mt-2.5 shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                                         <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Flexible engagement—scaled to your business needs</span>
                                     </li>
                                 </ul>

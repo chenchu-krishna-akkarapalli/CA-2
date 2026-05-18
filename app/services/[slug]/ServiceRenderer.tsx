@@ -105,7 +105,7 @@ export default function ServiceRenderer({ slug }: { slug: string }) {
   if (!Component) {
     return (
       <div className="min-h-[50vh] flex flex-col items-center justify-center gap-4">
-        <h2 className="font-outfit font-bold text-[28px] text-brand-dark-green">
+        <h2 className="font-outfit font-bold text-[28px] text-brand-primary">
           Service Not Found
         </h2>
         <p className="font-inter text-text-secondary">

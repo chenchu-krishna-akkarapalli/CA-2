@@ -34,7 +34,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="w-full bg-brand-footer-dark"
+      className="w-full bg-brand-charcoal"
       role="contentinfo"
     >
       {/* Main Footer Content */}

@@ -40,7 +40,7 @@ const ContentBlock = ({ block, index }: { block: { type: string; text: string };
     const isHeading = block.type === 'h3';
     if (isHeading) {
         return (
-            <h3 className="font-outfit font-bold text-[24px] md:text-[28px] text-brand-dark-green mb-4 mt-10 leading-tight">
+            <h3 className="font-outfit font-bold text-[24px] md:text-[28px] text-brand-primary mb-4 mt-10 leading-tight">
                 {block.text}
             </h3>
         );
@@ -56,14 +56,14 @@ const DynamicTable = ({ tableData }: { tableData: any }) => {
     if (!tableData) return null;
     return (
         <div className="my-8 overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
-            <h4 className="font-outfit font-bold text-[18px] text-brand-dark-green bg-slate-50 p-4 border-b border-slate-200 text-center">
+            <h4 className="font-outfit font-bold text-[18px] text-brand-primary bg-slate-50 p-4 border-b border-slate-200 text-center">
                 {tableData.table_title || tableData.section_title}
             </h4>
             <table className="w-full border-collapse min-w-[600px] text-left">
                 <thead>
                     <tr>
                         {tableData.columns.map((col: string, idx: number) => (
-                            <th key={idx} className="bg-surface-light-gray p-4 font-inter font-bold text-[14px] text-brand-dark-green border-b border-slate-200">
+                            <th key={idx} className="bg-surface-light-gray p-4 font-inter font-bold text-[14px] text-brand-primary border-b border-slate-200">
                                 {col}
                             </th>
                         ))}
@@ -91,7 +91,7 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
             {chapters.map((chapter, index) => (
                 <div key={index} className="mb-12">
                     {/* Chapter Heading */}
-                    <h2 className="font-outfit font-bold text-[28px] md:text-[32px] text-brand-dark-green mb-6 mt-10 pb-2 border-b-2 border-brand-green/20">
+                    <h2 className="font-outfit font-bold text-[28px] md:text-[32px] text-brand-primary mb-6 mt-10 pb-2 border-b-2 border-brand-accent/20">
                         {chapter.heading_full || chapter.heading}
                     </h2>
 
@@ -106,7 +106,7 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
 
                         return (
                             <div key={sIdx} className="mb-8">
-                                <h3 className="font-outfit font-bold text-[22px] md:text-[24px] text-brand-dark-green mb-4">
+                                <h3 className="font-outfit font-bold text-[22px] md:text-[24px] text-brand-primary mb-4">
                                     {sub.sub_heading_full || sub.sub_heading}
                                 </h3>
 
@@ -129,7 +129,7 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
                                         if (isListParams) {
                                             return (
                                                 <div key={pIdx} className="flex gap-3 mb-4 pl-4">
-                                                    <span className="text-brand-green font-bold mt-[6px]">•</span>
+                                                    <span className="text-brand-accent font-bold mt-[6px]">•</span>
                                                     <p className="font-inter text-[16px] md:text-[18px] text-slate-700 leading-[1.8]">
                                                         {block.replace(/^([•\-\*]|\d+\.)\s/, '')}
                                                     </p>
@@ -142,7 +142,7 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
                                         if (parts.length > 1 && parts[0].length < 60 && !block.includes('.')) {
                                             return (
                                                 <p key={pIdx} className="font-inter text-[16px] md:text-[18px] text-slate-700 leading-[1.8] mb-4">
-                                                    <span className="font-bold text-brand-dark-green">{parts[0]}:</span>{parts[1]}
+                                                    <span className="font-bold text-brand-primary">{parts[0]}:</span>{parts[1]}
                                                 </p>
                                             );
                                         }
@@ -155,7 +155,7 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
                                     } else if (typeof block === 'object') {
                                         if (block.type === 'h4') {
                                             return (
-                                                <h4 key={pIdx} className="font-outfit font-bold text-[18px] md:text-[20px] text-brand-dark-green mt-6 mb-3">
+                                                <h4 key={pIdx} className="font-outfit font-bold text-[18px] md:text-[20px] text-brand-primary mt-6 mb-3">
                                                     {block.text}
                                                 </h4>
                                             );
@@ -165,7 +165,7 @@ const StructuredContent = ({ chapters, tables }: { chapters: any[]; tables?: any
                                                 <ul key={pIdx} className="list-none space-y-3 mb-6 pl-4">
                                                     {block.items.map((item: string, i: number) => (
                                                         <li key={i} className="flex gap-3">
-                                                            <span className="text-brand-green font-bold mt-[6px]">•</span>
+                                                            <span className="text-brand-accent font-bold mt-[6px]">•</span>
                                                             <span className="font-inter text-[16px] md:text-[18px] text-slate-700 leading-[1.8]">{item}</span>
                                                         </li>
                                                     ))}
@@ -219,7 +219,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Hero Section */}
             <section className="relative w-full min-h-[60vh] lg:min-h-[70vh] -mt-[106px] overflow-hidden">
                 {/* Background */}
-                <div className="absolute inset-0 bg-brand-dark-green">
+                <div className="absolute inset-0 bg-brand-primary">
                     <OptimizedImage
                         src={post.image}
                         alt={post.title}
@@ -227,7 +227,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                         className="object-cover opacity-40 mix-blend-overlay"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-brand-dark-green/90 via-brand-dark-green/70 to-brand-dark-green/90" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/90 via-brand-primary/70 to-brand-primary/90" />
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] lg:min-h-[70vh] px-[5%] text-center pt-[150px] pb-[100px]">
@@ -240,7 +240,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                         <span className="text-white line-clamp-1 max-w-[200px] opacity-80">{post.title}</span>
                     </div>
 
-                    <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-[13px] font-bold text-brand-green uppercase tracking-wider mb-6 border border-white/10">
+                    <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-[13px] font-bold text-brand-accent uppercase tracking-wider mb-6 border border-white/10">
                         {post.category}
                     </span>
 
@@ -282,7 +282,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div className="lg:w-1/4">
                     <div className="sticky top-[120px]">
                         <div className="bg-slate-50 p-6 rounded-[20px] border border-slate-100">
-                            <h3 className="font-outfit font-bold text-[18px] text-brand-dark-green mb-4">About the Author</h3>
+                            <h3 className="font-outfit font-bold text-[18px] text-brand-primary mb-4">About the Author</h3>
                             <div className="flex flex-col items-center text-center">
                                 <div className="w-[100px] h-[100px] rounded-full overflow-hidden border-4 border-white shadow-md mb-4 group relative">
                                     <OptimizedImage
@@ -292,7 +292,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                         className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                                     />
                                 </div>
-                                <h4 className="font-outfit font-bold text-[16px] text-brand-dark-green">{post.author}</h4>
+                                <h4 className="font-outfit font-bold text-[16px] text-brand-primary">{post.author}</h4>
                                 <p className="font-inter text-[13px] text-slate-500 mt-1 mb-4">
                                     Author
                                 </p>
@@ -303,10 +303,10 @@ export default async function BlogPostPage({ params }: PageProps) {
                         </div>
 
                         <div className="mt-8">
-                            <h3 className="font-outfit font-bold text-[18px] text-brand-dark-green mb-4">Share this article</h3>
+                            <h3 className="font-outfit font-bold text-[18px] text-brand-primary mb-4">Share this article</h3>
                             <div className="flex gap-2">
                                 {['IN', 'TW', 'FB'].map((social) => (
-                                    <button key={social} className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-green hover:text-white transition-colors shadow-sm">
+                                    <button key={social} className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-accent hover:text-white transition-colors shadow-sm">
                                         <span className="font-bold text-sm">{social}</span>
                                     </button>
                                 ))}

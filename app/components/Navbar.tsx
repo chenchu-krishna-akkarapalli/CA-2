@@ -255,10 +255,10 @@ function DropdownLink({ item, onClick }: { item: DropdownItem; onClick?: () => v
       onClick={onClick}
       className="group flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-all duration-300"
     >
-      <div className="shrink-0 w-8 h-8 rounded-md bg-white border border-slate-100 shadow-sm flex items-center justify-center group-hover:border-brand-green/30 group-hover:shadow-sm transition-all duration-300">
-        <Icon className="w-3.5 h-3.5 text-brand-green group-hover:scale-110 transition-transform duration-300" />
+      <div className="shrink-0 w-8 h-8 rounded-md bg-white border border-slate-100 shadow-sm flex items-center justify-center group-hover:border-brand-accent/30 group-hover:shadow-sm transition-all duration-300">
+        <Icon className="w-3.5 h-3.5 text-brand-accent group-hover:scale-110 transition-transform duration-300" />
       </div>
-      <p className="font-inter font-medium text-[13px] text-slate-700 group-hover:text-brand-dark-green leading-tight transition-colors duration-300">
+      <p className="font-inter font-medium text-[13px] text-slate-700 group-hover:text-brand-primary leading-tight transition-colors duration-300">
         {item.label}
       </p>
     </Link>
@@ -349,7 +349,7 @@ function DesktopDropdown({
           >
             <div className="bg-white rounded-xl shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden">
               {/* Decorative top border */}
-              <div className="h-1 bg-gradient-to-r from-brand-green via-brand-dark-green to-brand-green" />
+              <div className="h-1 bg-gradient-to-r from-brand-accent via-brand-primary to-brand-accent" />
               <div className="p-2 grid gap-0.5">
                 {menuItem.items.map((item) => (
                   <DropdownLink key={item.href} item={item} onClick={onClose} />
@@ -384,13 +384,13 @@ function DesktopDropdown({
         >
           <div className="bg-white rounded-xl shadow-[0_15px_50px_-10px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden">
             {/* Decorative top border */}
-            <div className="h-1 bg-gradient-to-r from-brand-green via-brand-dark-green to-brand-green" />
+            <div className="h-1 bg-gradient-to-r from-brand-accent via-brand-primary to-brand-accent" />
 
             <div className="p-5">
               <div className={`grid ${gridCols} gap-4`}>
                 {columns.map((col, colIdx) => (
                   <div key={col.heading} className="space-y-2.5">
-                    <h4 className="font-outfit font-bold text-[11px] text-brand-green uppercase tracking-[0.05em] px-2 pb-2 border-b border-slate-100 truncate">
+                    <h4 className="font-outfit font-bold text-[11px] text-brand-accent uppercase tracking-[0.05em] px-2 pb-2 border-b border-slate-100 truncate">
                       {col.heading}
                     </h4>
                     <div className="space-y-0.5">
@@ -406,13 +406,13 @@ function DesktopDropdown({
               <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between px-1">
                 <p className="font-inter text-[12px] text-slate-500">
                   Need help?
-                  <Link href="/connect" onClick={onClose} className="text-brand-green font-semibold ml-1 hover:text-brand-dark-green transition-colors inline-flex items-center gap-0.5 group">
+                  <Link href="/connect" onClick={onClose} className="text-brand-accent font-semibold ml-1 hover:text-brand-primary transition-colors inline-flex items-center gap-0.5 group">
                     Expert Talk
                     <span className="group-hover:translate-x-0.5 transition-transform">→</span>
                   </Link>
                 </p>
                 <div className="flex items-center gap-2 text-slate-600 bg-slate-50 px-3 py-1.5 rounded-full">
-                  <Phone className="w-3.5 h-3.5 text-brand-green" />
+                  <Phone className="w-3.5 h-3.5 text-brand-accent" />
                   <span className="font-inter font-semibold text-[12px]">+91 7032 163 646</span>
                 </div>
               </div>
@@ -443,14 +443,14 @@ function MobileAccordion({
     <div className="border-b border-gray-100 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-4 px-4 text-left hover:bg-brand-green/5 transition-colors duration-300"
+        className="w-full flex items-center justify-between py-4 px-4 text-left hover:bg-brand-accent/5 transition-colors duration-300"
         aria-expanded={isOpen}
       >
-        <span className="font-inter font-medium text-[16px] text-brand-dark-green">
+        <span className="font-inter font-medium text-[16px] text-brand-primary">
           {menuItem.title}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-brand-green transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+          className={`w-5 h-5 text-brand-accent transition-transform duration-300 ${isOpen ? "rotate-180" : ""
             }`}
         />
       </button>
@@ -467,7 +467,7 @@ function MobileAccordion({
               {allItems.map((group) => (
                 <div key={group.heading || "main"} className="mb-4 last:mb-0">
                   {group.heading && (
-                    <h4 className="font-outfit font-bold text-[12px] text-brand-dark-green uppercase tracking-wider mb-2 px-2">
+                    <h4 className="font-outfit font-bold text-[12px] text-brand-primary uppercase tracking-wider mb-2 px-2">
                       {group.heading}
                     </h4>
                   )}
@@ -480,11 +480,11 @@ function MobileAccordion({
                         onClick={onLinkClick}
                         className="flex items-center gap-3 py-2.5 px-2 rounded-lg hover:bg-white transition-colors duration-300"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-green/20 to-brand-dark-green/20 flex items-center justify-center">
-                          <Icon className="w-4 h-4 text-brand-green" />
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-accent/20 to-brand-primary/20 flex items-center justify-center">
+                          <Icon className="w-4 h-4 text-brand-accent" />
                         </div>
                         <div>
-                          <p className="font-inter font-medium text-[14px] text-brand-dark-green">
+                          <p className="font-inter font-medium text-[14px] text-brand-primary">
                             {item.label}
                           </p>
                           <p className="font-inter text-[11px] text-text-muted">
@@ -569,7 +569,7 @@ export default function Navbar() {
                   width={16}
                   height={16}
                 />
-                <span className="font-arial text-[13px] text-brand-dark-green">
+                <span className="font-arial text-[13px] text-brand-primary">
                   Chennai
                 </span>
               </a>
@@ -583,7 +583,7 @@ export default function Navbar() {
                   width={11}
                   height={9}
                 />
-                <span className="font-arial text-[13px] text-brand-dark-green">
+                <span className="font-arial text-[13px] text-brand-primary">
                   malli@cmkca.com
                 </span>
               </a>
@@ -602,10 +602,10 @@ export default function Navbar() {
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-outfit font-bold text-[15px] sm:text-[18px] leading-[18px] tracking-[-0.45px] text-brand-dark-green">
+                <span className="font-outfit font-bold text-[15px] sm:text-[18px] leading-[18px] tracking-[-0.45px] text-brand-primary">
                   CHINNI MALLIKARJUNA & CO.
                 </span>
-                <span className="font-arial text-[10px] sm:text-[12px] leading-[14px] tracking-[0.6px] text-brand-dark-green">
+                <span className="font-arial text-[10px] sm:text-[12px] leading-[14px] tracking-[0.6px] text-brand-primary">
                   CHARTERED ACCOUNTANTS
                 </span>
               </div>
@@ -613,7 +613,7 @@ export default function Navbar() {
 
             {/* Divider + ICAI (hidden on small screens) */}
             <div className="hidden lg:flex items-center gap-2 ml-1">
-              <div className="w-px h-8 bg-brand-dark-green/30" />
+              <div className="w-px h-8 bg-brand-primary/30" />
               <Image
                 src="/Assets/Images/Frame 44.png"
                 alt="ICAI Logo"
@@ -635,7 +635,7 @@ export default function Navbar() {
                       onClick={() =>
                         setOpenDropdown(isOpen ? null : item.title)
                       }
-                      className={`font-outfit font-normal text-[13.5px] leading-[20px] text-brand-dark-green px-3 py-2 flex items-center gap-1 rounded-md hover:bg-gray-50 transition-colors ${isOpen ? "bg-gray-50" : ""
+                      className={`font-outfit font-normal text-[13.5px] leading-[20px] text-brand-primary px-3 py-2 flex items-center gap-1 rounded-md hover:bg-gray-50 transition-colors ${isOpen ? "bg-gray-50" : ""
                         }`}
                       aria-haspopup="true"
                       aria-expanded={isOpen}
@@ -643,7 +643,7 @@ export default function Navbar() {
                     >
                       {item.title}
                       <ChevronDown
-                        className={`w-3 h-3 text-brand-dark-green transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+                        className={`w-3 h-3 text-brand-primary transition-transform duration-200 ${isOpen ? "rotate-180" : ""
                           }`}
                       />
                     </button>
@@ -661,7 +661,7 @@ export default function Navbar() {
                 <Link
                   key={item.title}
                   href={item.href!}
-                  className="font-outfit font-normal text-[13.5px] leading-[20px] text-brand-dark-green px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
+                  className="font-outfit font-normal text-[13.5px] leading-[20px] text-brand-primary px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
                 >
                   {item.title}
                 </Link>
@@ -688,9 +688,9 @@ export default function Navbar() {
               aria-expanded={mobileOpen}
             >
               {mobileOpen ? (
-                <X className="w-6 h-6 text-brand-dark-green" />
+                <X className="w-6 h-6 text-brand-primary" />
               ) : (
-                <Menu className="w-6 h-6 text-brand-dark-green" />
+                <Menu className="w-6 h-6 text-brand-primary" />
               )}
             </button>
           </div>
@@ -730,7 +730,7 @@ export default function Navbar() {
                       C
                     </span>
                   </div>
-                  <span className="font-outfit font-bold text-base text-brand-dark-green">
+                  <span className="font-outfit font-bold text-base text-brand-primary">
                     CHINNI MALLIKARJUNA & CO.
                   </span>
                 </Link>
@@ -739,7 +739,7 @@ export default function Navbar() {
                   className="w-9 h-9 flex items-center justify-center rounded-md hover:bg-gray-50"
                   aria-label="Close menu"
                 >
-                  <X className="w-5 h-5 text-brand-dark-green" />
+                  <X className="w-5 h-5 text-brand-primary" />
                 </button>
               </div>
 
@@ -759,7 +759,7 @@ export default function Navbar() {
                       width={14}
                       height={14}
                     />
-                    <span className="font-arial text-xs text-brand-dark-green">
+                    <span className="font-arial text-xs text-brand-primary">
                       Chennai
                     </span>
                   </a>
@@ -770,7 +770,7 @@ export default function Navbar() {
                       width={10}
                       height={8}
                     />
-                    <span className="font-arial text-xs text-brand-dark-green">
+                    <span className="font-arial text-xs text-brand-primary">
                       malli@cmkca.com
                     </span>
                   </a>
@@ -792,7 +792,7 @@ export default function Navbar() {
                       key={item.title}
                       href={item.href!}
                       onClick={() => setMobileOpen(false)}
-                      className="flex items-center px-4 py-3 font-outfit font-medium text-base text-brand-dark-green border-b border-gray-100 hover:bg-gray-50 transition-colors"
+                      className="flex items-center px-4 py-3 font-outfit font-medium text-base text-brand-primary border-b border-gray-100 hover:bg-gray-50 transition-colors"
                     >
                       {item.title}
                     </Link>

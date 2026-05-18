@@ -10,11 +10,11 @@ const config: Config = {
       /* ── Figma Design Tokens ── */
       colors: {
         brand: {
-          "dark-green": "#094c00",
-          "green": "#55b947",
-          "accent-green": "#6ac25e",
-          "border-green": "#73c668",
-          "footer-dark": "#041d00",
+          primary: "var(--color-brand-primary)",
+          accent: "var(--color-brand-accent)",
+          "accent-hover": "var(--color-brand-accent-hover)",
+          secondary: "var(--color-brand-secondary)",
+          charcoal: "var(--color-brand-charcoal)",
         },
         surface: {
           "light-gray": "#efefef",
@@ -66,13 +66,13 @@ const config: Config = {
         "strategic": "0px 4px 16px rgba(0, 0, 0, 0.1)",
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%)",
-        "gradient-btn-hero": "linear-gradient(166.443deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%)",
-        "gradient-btn-services": "linear-gradient(164.894deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%)",
-        "gradient-btn-blog": "linear-gradient(150.642deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%)",
-        "gradient-btn-submit": "linear-gradient(173.443deg, rgb(15, 32, 39) 0%, rgb(44, 119, 68) 100%)",
-        "gradient-contact": "linear-gradient(130.305deg, rgb(11, 61, 46) 0%, rgb(20, 83, 45) 100%)",
-        "gradient-footer-logo": "linear-gradient(135deg, rgb(11, 61, 46) 0%, rgb(20, 83, 45) 100%)",
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-btn-hero": "linear-gradient(166.443deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%)",
+        "gradient-btn-services": "linear-gradient(164.894deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%)",
+        "gradient-btn-blog": "linear-gradient(150.642deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%)",
+        "gradient-btn-submit": "linear-gradient(173.443deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%)",
+        "gradient-contact": "var(--gradient-contact)",
+        "gradient-footer-logo": "linear-gradient(135deg, var(--color-brand-charcoal) 0%, var(--color-brand-primary) 100%)",
       },
       width: {
         "1440": "1440px",

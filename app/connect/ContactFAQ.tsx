@@ -50,19 +50,19 @@ export default function ContactFAQ() {
         {/* Section Heading */}
         <motion.div
           className="text-center mb-10 md:mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 22, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-green mb-4">
+          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-accent mb-4">
             FAQs
           </p>
           <h2 className="font-outfit font-bold text-[clamp(28px,3vw,40px)] leading-[1.2]">
-            <span className="text-brand-dark-green">Common </span>
-            <span className="text-brand-green">Questions</span>
+            <span className="text-brand-primary">Common </span>
+            <span className="text-brand-accent">Questions</span>
           </h2>
-          <p className="mt-3 font-inter text-[15px] sm:text-[16px] leading-[24px] text-brand-dark-green/60 max-w-[500px] mx-auto">
+          <p className="mt-3 font-inter text-[15px] sm:text-[16px] leading-[24px] text-brand-primary/60 max-w-[500px] mx-auto">
             Quick answers to help you get started with our services.
           </p>
         </motion.div>
@@ -82,8 +82,8 @@ export default function ContactFAQ() {
                 key={i}
                 className={`rounded-[14px] border transition-colors duration-300 ${
                   isOpen
-                    ? "border-brand-green/20 bg-brand-green/[0.03] shadow-sm"
-                    : "border-surface-input-border bg-white hover:border-brand-green/15"
+                    ? "border-brand-accent/20 bg-brand-accent/[0.03] shadow-sm"
+                    : "border-surface-input-border bg-white hover:border-brand-accent/15"
                 }`}
               >
                 <button
@@ -93,7 +93,7 @@ export default function ContactFAQ() {
                 >
                   <span
                     className={`font-outfit font-semibold text-[15px] sm:text-[16px] leading-[22px] sm:leading-[24px] transition-colors ${
-                      isOpen ? "text-brand-green" : "text-brand-dark-green"
+                      isOpen ? "text-brand-accent" : "text-brand-primary"
                     }`}
                   >
                     {faq.question}
@@ -105,7 +105,7 @@ export default function ContactFAQ() {
                   >
                     <ChevronDown
                       className={`w-5 h-5 transition-colors ${
-                        isOpen ? "text-brand-green" : "text-brand-dark-green/40"
+                        isOpen ? "text-brand-accent" : "text-brand-primary/40"
                       }`}
                     />
                   </motion.span>
@@ -121,8 +121,8 @@ export default function ContactFAQ() {
                       className="overflow-hidden"
                     >
                       <div className="px-5 sm:px-6 pb-5 sm:pb-6">
-                        <div className="h-px bg-brand-green/10 mb-4" />
-                        <p className="font-inter text-[14px] sm:text-[15px] leading-[22px] sm:leading-[24px] text-brand-dark-green/70">
+                        <div className="h-px bg-brand-accent/10 mb-4" />
+                        <p className="font-inter text-[14px] sm:text-[15px] leading-[22px] sm:leading-[24px] text-brand-primary/70">
                           {faq.answer}
                         </p>
                       </div>
