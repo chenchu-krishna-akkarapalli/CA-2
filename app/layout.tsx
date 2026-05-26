@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "Compliance Services",
   ],
   authors: [{ name: "CHINNI MALLIKARJUNA AND COMPANY" }],
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "CHINNI MALLIKARJUNA AND COMPANY | Chartered Accountants – Audit, Tax & Advisory",
     description:
@@ -54,6 +55,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://gmnrassociates.com",
   },
 };
 

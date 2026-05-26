@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+# Security Policy — CHINNI MALLIKARJUNA AND COMPANY
+# RFC 9116 — https://securitytxt.org
+
+Contact: mailto:malli@cmkca.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://gmnrassociates.com/.well-known/security.txt
+Policy: https://gmnrassociates.com/security-policy
+Hiring: https://gmnrassociates.com/connect/
+
+# Please report any security vulnerabilities responsibly.
+# We will acknowledge valid reports within 72 hours.
+-----BEGIN PGP SIGNATURE-----
+(Signature to be added after GPG key setup)
+-----END PGP SIGNATURE-----

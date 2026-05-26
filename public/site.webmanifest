@@ -1,0 +1,39 @@
+{
+  "name": "CHINNI MALLIKARJUNA AND COMPANY",
+  "short_name": "CMK CA",
+  "description": "Trusted Chartered Accountants in Chennai — Audit, Tax & Advisory Services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["finance", "business"],
+  "icons": [
+    {
+      "src": "/Assets/logo-malli.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Browse all CA services",
+      "url": "/services/",
+      "icons": [{ "src": "/Assets/logo-malli.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch",
+      "url": "/connect/",
+      "icons": [{ "src": "/Assets/logo-malli.svg", "sizes": "any" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

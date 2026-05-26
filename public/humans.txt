@@ -1,0 +1,21 @@
+/* TEAM */
+Company: CHINNI MALLIKARJUNA AND COMPANY
+Role: Chartered Accountants — Audit, Tax & Advisory
+Location: Chennai, Tamil Nadu, India
+Contact: malli@cmkca.com
+
+/* SITE */
+Last update: 2025-05-26
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code
+
+/* TECHNOLOGY COLOPHON */
+Framework: Next.js 15 (App Router, Static Export)
+UI Library: React 19
+Language: TypeScript 5
+Styling: Tailwind CSS 3
+Animations: Framer Motion, GSAP
+Fonts: Outfit, Inter (Google Fonts)
+Images: AVIF (responsive, srcSet via <picture>)
+Hosting: IIS / Windows Server

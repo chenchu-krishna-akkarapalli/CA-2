@@ -154,7 +154,7 @@ const ServiceHero = ({
               </span>
             </a>
             <a
-              href="tel:+918328174243"
+              href="tel:+917032163646"
               className="w-[134px] h-[36px] rounded-[6px] border border-brand-accent bg-white/50 backdrop-blur-[2px] flex items-center justify-center"
               aria-label="Call us now"
             >

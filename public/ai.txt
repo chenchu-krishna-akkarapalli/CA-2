@@ -1,0 +1,86 @@
+# ai.txt — AI Access Policy
+# Canonical: https://gmnrassociates.com/ai.txt
+# Owner: CHINNI MALLIKARJUNA AND COMPANY
+# Last-Updated: 2025-05-26
+# Standard: https://site-policy.anthropic.com/ai-crawling; https://openai.com/policies/usage-policies
+
+# ──────────────────────────────────────────
+#  CONTENT LICENSING
+# ──────────────────────────────────────────
+# All content on this site is © CHINNI MALLIKARJUNA AND COMPANY.
+# Proprietary professional advisory content — reproduction in AI
+# training datasets is NOT authorised.
+
+# ──────────────────────────────────────────
+#  AI SEARCH / ANSWER ENGINES  →  ALLOWED
+# ──────────────────────────────────────────
+# Retrieving content to generate cited answers for users is permitted.
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ──────────────────────────────────────────
+#  AI TRAINING CRAWLERS  →  DISALLOWED
+# ──────────────────────────────────────────
+# Crawling to build or fine-tune language models is NOT permitted.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: ICC-Crawler
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+# ──────────────────────────────────────────
+#  CONTACT
+# ──────────────────────────────────────────
+Contact: mailto:malli@cmkca.com
