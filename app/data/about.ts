@@ -39,6 +39,7 @@ export interface WhatDrivesUs {
 export interface TeamMember {
   name: string;
   role: string;
+  label: string;
   bio: string;
   areasOfPractice: string[];
 }

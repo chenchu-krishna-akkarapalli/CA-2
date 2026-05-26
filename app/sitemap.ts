@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { allSlugs } from "./data/services-registry";
 import { BLOG_POSTS } from "./data/blogData";
 
+export const dynamic = "force-static";
+
 const SITE_URL = "https://gmnrassociates.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
