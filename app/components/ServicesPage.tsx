@@ -284,10 +284,10 @@ const ServicesHero = () => {
             <Link
               href="/connect"
               className="rounded-[6px] border border-brand-accent bg-white/50 backdrop-blur-[2px] inline-flex items-center justify-center px-5 py-[8px]"
-              aria-label="Get a free consultation"
+              aria-label="Get your consultation"
             >
               <span className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary">
-                Free Consult
+                Get Your Consultation
               </span>
             </Link>
           </motion.div>

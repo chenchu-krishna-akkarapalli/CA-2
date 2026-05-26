@@ -42,21 +42,15 @@ export default function Footer() {
         {/* Column 1: Logo & Description */}
         <div>
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[10px] bg-gradient-footer-logo flex items-center justify-center flex-shrink-0">
-              <span className="font-outfit font-bold text-[20px] sm:text-[22px] text-white leading-none">
-                C
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-outfit font-bold text-[15px] sm:text-[16px] leading-[20px] tracking-[-0.45px] text-white">
-                CHINNI MALLIKARJUNA & CO.
-              </span>
-              <span className="font-arial text-[10px] leading-[12px] tracking-[0.6px] text-white/60">
-                CHARTERED ACCOUNTANTS
-              </span>
-            </div>
-          </div>
+          <Link href="/">
+            <Image
+              src="/Assets/logo-malli.svg"
+              alt="Chinni Mallikarjuna & Co. - Chartered Accountants"
+              width={200}
+              height={44}
+              className="h-10 w-auto object-contain  "
+            />
+          </Link>
 
           {/* Description */}
           <p className="mt-4 sm:mt-5 font-inter font-light text-[13px] sm:text-[14px] leading-[22px] text-white/60 max-w-[340px]">

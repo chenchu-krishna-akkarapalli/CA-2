@@ -33,7 +33,7 @@ Private Limited Companies are ideal for businesses planning to raise funding fro
     benefits: [
       { title: "Quick Registration", desc: "Complete registration in 7-10 working days with our expert assistance" },
       { title: "100% Online Process", desc: "Entirely paperless process with digital signatures and e-filing" },
-      { title: "Expert Support", desc: "Dedicated CMA/CS professionals to guide you through every step" },
+      { title: "Expert Support", desc: "Dedicated professionals to guide you through every step" },
       { title: "Post-Incorporation Support", desc: "Help with bank account opening, GST registration, and compliance setup" },
       { title: "Affordable Pricing", desc: "Transparent pricing with no hidden charges" },
       { title: "Compliance Calendar", desc: "Free compliance calendar to track all your filing deadlines" }

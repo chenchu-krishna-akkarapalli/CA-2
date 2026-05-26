@@ -553,41 +553,41 @@ export default function Navbar() {
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* ── Location Bar ── */}
-        <div className="w-full h-[31px] border-b border-black/10 hidden md:flex items-center justify-end">
-          <div className="w-full max-w-[1440px] mx-auto flex items-center justify-end px-4 lg:px-10 xl:px-20">
-            <div className="flex items-center gap-4 text-sm">
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=No.+10%2F31,+G1,+Ten+Downing,+Rajalakshmi+Nagar+3rd+Main+Road,+Velachery,+Chennai+%E2%80%93+600+042"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:opacity-80 transition-opacity"
-              >
-                <Image
-                  src="/Assets/react-icons/BiMap.svg"
-                  alt="Location"
-                  width={16}
-                  height={16}
-                />
-                <span className="font-arial text-[13px] text-brand-primary">
-                  Chennai
-                </span>
-              </a>
-              <a
-                href="mailto:malli@cmkca.com"
-                className="flex items-center gap-1 hover:opacity-80 transition-opacity"
-              >
-                <Image
-                  src="/Assets/gmail-icon.svg"
-                  alt="Email"
-                  width={11}
-                  height={9}
-                />
-                <span className="font-arial text-[13px] text-brand-primary">
-                  malli@cmkca.com
-                </span>
-              </a>
-            </div>
+        {/* ── Location Bar (all screen sizes) ── */}
+        <div className="w-full border-b border-black/10 flex items-center h-[28px] md:h-[31px]">
+          <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between md:justify-end px-4 lg:px-10 xl:px-20 gap-4">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=No.+10%2F31,+G1,+Ten+Downing,+Rajalakshmi+Nagar+3rd+Main+Road,+Velachery,+Chennai+%E2%80%93+600+042"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/Assets/react-icons/BiMap.svg"
+                alt="Location"
+                width={14}
+                height={14}
+                className="md:w-4 md:h-4"
+              />
+              <span className="font-arial text-[11px] md:text-[13px] text-brand-primary">
+                Chennai
+              </span>
+            </a>
+            <a
+              href="mailto:malli@cmkca.com"
+              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/Assets/gmail-icon.svg"
+                alt="Email"
+                width={10}
+                height={8}
+                className="md:w-[11px] md:h-[9px]"
+              />
+              <span className="font-arial text-[11px] md:text-[13px] text-brand-primary">
+                malli@cmkca.com
+              </span>
+            </a>
           </div>
         </div>
 
@@ -595,33 +595,16 @@ export default function Navbar() {
         <div className="w-full max-w-[1440px] mx-auto h-[56px] flex items-center justify-between px-4 lg:px-6 xl:px-8">
           {/* Left: Logo + ICAI */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[10px] bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                <span className="font-arial font-bold text-lg sm:text-xl text-white leading-none">
-                  C
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-outfit font-bold text-[15px] sm:text-[18px] leading-[18px] tracking-[-0.45px] text-brand-primary">
-                  CHINNI MALLIKARJUNA & CO.
-                </span>
-                <span className="font-arial text-[10px] sm:text-[12px] leading-[14px] tracking-[0.6px] text-brand-primary">
-                  CHARTERED ACCOUNTANTS
-                </span>
-              </div>
-            </Link>
-
-            {/* Divider + ICAI (hidden on small screens) */}
-            <div className="hidden lg:flex items-center gap-2 ml-1">
-              <div className="w-px h-8 bg-brand-primary/30" />
+            <Link href="/" className="flex items-center">
               <Image
-                src="/Assets/Images/Frame 44.png"
-                alt="ICAI Logo"
-                width={39}
-                height={33}
-                className="object-contain"
+                src="/Assets/logo-malli.svg"
+                alt="Chinni Mallikarjuna & Co. - Chartered Accountants"
+                width={220}
+                height={48}
+                className="h-7 sm:h-10 md:h-11 w-auto object-contain"
+                priority
               />
-            </div>
+            </Link>
           </div>
 
           {/* Center: Desktop Nav Items */}
@@ -722,17 +705,17 @@ export default function Navbar() {
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
                 <Link
                   href="/"
-                  className="flex items-center gap-2"
+                  className="flex items-center"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-                    <span className="font-arial font-bold text-base text-white">
-                      C
-                    </span>
-                  </div>
-                  <span className="font-outfit font-bold text-base text-brand-primary">
-                    CHINNI MALLIKARJUNA & CO.
-                  </span>
+                  <Image
+                    src="/Assets/logo-malli.svg"
+                    alt="Chinni Mallikarjuna & Co. - Chartered Accountants"
+                    width={200}
+                    height={40}
+                    className="h-7 w-auto object-contain"
+                    priority
+                  />
                 </Link>
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -745,37 +728,6 @@ export default function Navbar() {
 
               {/* Drawer Body */}
               <div className="flex-1 overflow-y-auto">
-                {/* Location bar (mobile) */}
-                <div className="flex items-center gap-4 px-4 py-3 bg-gray-50 text-sm border-b border-gray-100">
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=No.+10%2F31,+G1,+Ten+Downing,+Rajalakshmi+Nagar+3rd+Main+Road,+Velachery,+Chennai+%E2%80%93+600+042"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1"
-                  >
-                    <Image
-                      src="/Assets/react-icons/BiMap.svg"
-                      alt=""
-                      width={14}
-                      height={14}
-                    />
-                    <span className="font-arial text-xs text-brand-primary">
-                      Chennai
-                    </span>
-                  </a>
-                  <a href="mailto:malli@cmkca.com" className="flex items-center gap-1">
-                    <Image
-                      src="/Assets/gmail-icon.svg"
-                      alt=""
-                      width={10}
-                      height={8}
-                    />
-                    <span className="font-arial text-xs text-brand-primary">
-                      malli@cmkca.com
-                    </span>
-                  </a>
-                </div>
-
                 {/* Menu Items */}
                 {MENU_ITEMS.map((item) => {
                   if (item.type === "mega" || item.type === "simple") {

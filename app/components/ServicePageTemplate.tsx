@@ -146,10 +146,10 @@ const ServiceHero = ({
             <a
               href="#get-quote"
               className="w-[134px] h-[36px] rounded-[6px] bg-gradient-btn-services flex items-center justify-center"
-              aria-label="Get a free quote"
+              aria-label="Get your quote"
             >
               <span className="font-outfit font-medium text-[14px] leading-[20px] text-white">
-                Get Quote
+                connect with us
               </span>
             </a>
             <a

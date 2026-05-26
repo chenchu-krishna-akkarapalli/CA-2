@@ -125,12 +125,12 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-8 backdrop-blur-md border border-white/10 shadow-lg">
               <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse shadow-[0_0_10px_rgba(85,185,71,0.6)]" />
               <span className="font-inter text-[13px] text-white font-medium tracking-wide">
-                Free Consultation
+                Get your consultation
               </span>
             </div>
 
             <h2 className="font-outfit font-bold text-[clamp(40px,5vw,64px)] leading-[1.1] text-white mb-6">
-              Get a Free
+              Get your
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-white">
                 {" "}
                 Quote Today
