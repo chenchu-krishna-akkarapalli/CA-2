@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/* Background Wave */}
       <div className="absolute inset-0">
         <OptimizedImage
-          src="/Assets/Images/Vector 1.png"
+          src="/Assets/Images/Vector 1.avif"
           alt=""
           fill
           className="object-cover"

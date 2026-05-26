@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "website",
       images: [
         {
-          url: `${SITE_URL}/hero-img/hero-1.png`,
+          url: `${SITE_URL}/hero-img/hero-1.avif`,
           width: 1200,
           height: 630,
           alt: service.name,
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/hero-img/hero-1.png`],
+      images: [`${SITE_URL}/hero-img/hero-1.avif`],
     },
     robots: {
       index: true,

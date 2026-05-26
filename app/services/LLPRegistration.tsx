@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const LLPRegistration = () => {
   const pageData = {
     serviceName: "Limited Liability Partnership",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "LLP Registration in India",
     heroSubtitle: "Combine the benefits of partnership with limited liability protection. Perfect for professionals, consultants, and small businesses.",
     
@@ -32,7 +32,7 @@ LLPs offer operational flexibility with minimal compliance requirements compared
     
     benefits: [
       { title: "Ideal for Professionals", desc: "Perfect structure for CAs, lawyers, architects, and consultants" },
-      { title: "No Audit Required", desc: "Audit not mandatory if turnover below ₹40 lakhs and capital below ₹25 lakhs" },
+      { title: "No Audit Required", desc: "Audit not mandatory if turnover below â‚¹40 lakhs and capital below â‚¹25 lakhs" },
       { title: "Easy Conversion", desc: "Can be easily converted to Private Limited Company when needed" },
       { title: "Lower Compliance Cost", desc: "Only 2 annual filings required - Form 11 and Form 8" },
       { title: "Expert Guidance", desc: "Our team handles the entire registration process" },

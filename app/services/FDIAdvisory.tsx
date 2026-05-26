@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const FDIAdvisory = () => {
   const pageData = {
     serviceName: "FDI Investment Advisory",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "FDI Investment Advisory",
     heroSubtitle: "Professional services for FDI Investment Advisory. Expert guidance and compliance support.",
     

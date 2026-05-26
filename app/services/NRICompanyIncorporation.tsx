@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const NRICompanyIncorporation = () => {
   const pageData = {
     serviceName: "NRI Company Incorporation",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Company Incorporation for NRIs",
     heroSubtitle: "Start your business in India as an NRI. Full ownership allowed in most sectors with simplified incorporation process.",
     

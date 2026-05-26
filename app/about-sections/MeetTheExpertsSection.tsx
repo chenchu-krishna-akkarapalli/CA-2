@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -10,8 +10,8 @@ const data = aboutData.meetTheExperts;
 
 const teamHeaderImages = [
   "/Assets/Images/source/image.jpg",
-  "/hero-img/hero-3.png",
-  "/hero-img/hero-2.png",
+  "/hero-img/hero-3.avif",
+  "/hero-img/hero-2.avif",
 ];
 
 export default function MeetTheExpertsSection() {

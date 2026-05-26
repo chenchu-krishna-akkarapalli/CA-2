@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const TANRegistration = () => {
   const pageData = {
     serviceName: "TAN Registration",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "TAN Registration Services",
     heroSubtitle: "Tax Deduction and Collection Account Number for businesses required to deduct TDS. Essential for salary payments and vendor payments.",
     
@@ -43,7 +43,7 @@ Without TAN, businesses cannot comply with TDS provisions, leading to penalties 
       { q: "Who needs to obtain TAN?", a: "Any person (individual, company, firm, etc.) responsible for deducting TDS on payments like salary, rent, professional fees, contract payments, etc. must have TAN." },
       { q: "What is the structure of TAN?", a: "TAN is a 10-character alphanumeric code. First 4 are letters (first 3 represent city/state code), next 5 are numbers, and last is a letter." },
       { q: "Can a person have multiple TANs?", a: "Generally, one TAN per deductor. However, branches in different states may need separate TANs. Multiple TANs for same entity attract penalties." },
-      { q: "What is the penalty for not having TAN?", a: "Penalty of ₹10,000 can be imposed for not applying for TAN. TDS returns cannot be filed without quoting TAN, leading to further penalties." },
+      { q: "What is the penalty for not having TAN?", a: "Penalty of â‚¹10,000 can be imposed for not applying for TAN. TDS returns cannot be filed without quoting TAN, leading to further penalties." },
       { q: "What are TAN-related compliance requirements?", a: "Deduct TDS at applicable rates, deposit TDS by due dates, file quarterly TDS returns (24Q, 26Q, 27Q), and issue TDS certificates (Form 16/16A)." }
     ],
     

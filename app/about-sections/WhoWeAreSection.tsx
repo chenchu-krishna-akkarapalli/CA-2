@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import OptimizedImage from "../components/OptimizedImage";
 import {
   Handshake,
   Target,
@@ -146,8 +147,8 @@ function ImageSide() {
         <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-brand-primary/10 rounded-full blur-3xl" />
 
         <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/50 shadow-2xl">
-          <Image
-            src="/Assets/figma/about/who-rectangle-3.png"
+          <OptimizedImage
+            src="/Assets/figma/about/who-rectangle-3.avif"
             alt="Professional CA Team"
             fill
             className="object-cover hover:scale-105 transition-transform duration-700"

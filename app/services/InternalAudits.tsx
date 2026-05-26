@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const InternalAudits = () => {
   const pageData = {
     serviceName: "Internal and Concurrent Audits",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Internal and Concurrent Audits",
     heroSubtitle: "Professional services for Internal and Concurrent Audits. Expert guidance and compliance support.",
     

@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ProducerCompany = () => {
   const pageData = {
     serviceName: "Producer Company",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Producer Company Registration",
     heroSubtitle: "Organize producers for collective benefit. Perfect for farmers, artisans, and cooperatives seeking corporate structure.",
     

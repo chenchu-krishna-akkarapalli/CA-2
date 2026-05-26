@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ProjectReport = () => {
   const pageData = {
     serviceName: "Project Report",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Project Report Preparation",
     heroSubtitle: "Comprehensive project reports for bank loans, MSME schemes, and investor presentations. Professionally crafted reports that get approvals.",
 
@@ -44,7 +44,7 @@ A well-prepared project report increases approval chances, speeds up sanction, a
       { q: "How long does it take to prepare a project report?", a: "Standard project reports take 5-7 working days. Complex projects or scheme-specific reports may take 10-15 days. Rush delivery available for urgent requirements." },
       { q: "Can you prepare reports for specific bank formats?", a: "Yes, we prepare reports as per specific bank formats including SBI, HDFC, ICICI, and nationalized banks. We also prepare scheme-specific formats for PMEGP, CGTMSE, Stand-Up India." },
       { q: "Do you help with loan processing after project report?", a: "Yes, we assist with complete loan documentation, CIBIL improvement guidance, collateral valuation, and accompany you for bank meetings if needed." },
-      { q: "What is the cost of project report preparation?", a: "Cost varies based on project size and complexity. Basic reports start from ₹15,000, while detailed DPRs for large projects may cost more. We provide quotes after understanding requirements." }
+      { q: "What is the cost of project report preparation?", a: "Cost varies based on project size and complexity. Basic reports start from â‚¹15,000, while detailed DPRs for large projects may cost more. We provide quotes after understanding requirements." }
     ],
 
     relatedServices: [

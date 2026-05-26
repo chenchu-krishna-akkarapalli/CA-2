@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const JointVentureAgreement = () => {
   const pageData = {
     serviceName: "Joint Venture Agreement",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Joint Venture Agreement",
     heroSubtitle: "Professional services for Joint Venture Agreement. Expert guidance and compliance support.",
     

@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const BusinessValuation = () => {
   const pageData = {
     serviceName: "Business Valuation",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Business Valuation Services",
     heroSubtitle: "Professional company valuation for M&A, fundraising, and compliance. IBBI-registered valuers providing defensible valuations.",
     

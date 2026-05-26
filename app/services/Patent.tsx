@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const Patent = () => {
   const pageData = {
     serviceName: "Patent Registration",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Patent Registration Services",
     heroSubtitle: "Protect your inventions and innovations. Exclusive rights for 20 years to manufacture, use, and sell your patented invention.",
     

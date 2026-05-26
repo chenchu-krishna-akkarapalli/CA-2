@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const NidhiCompany = () => {
   const pageData = {
     serviceName: "Nidhi Company",
-    heroImage: "/hero-img/hero-3.png",
+    heroImage: "/hero-img/hero-3.avif",
     heroTitle: "Nidhi Company Registration",
     heroSubtitle: "Start your own savings and lending company. A mutual benefit society to cultivate thrift and savings among members.",
     
@@ -26,7 +26,7 @@ The key advantage of Nidhi Company is that it can only accept deposits from and 
     process: [
       { title: "DSC & DIN", desc: "Obtain Digital Signature and DIN for all 7 directors" },
       { title: "Name Approval", desc: "Apply for name ending with 'Nidhi Limited' through RUN" },
-      { title: "Incorporation", desc: "File SPICe+ with minimum 7 members and ₹10 lakh capital" },
+      { title: "Incorporation", desc: "File SPICe+ with minimum 7 members and â‚¹10 lakh capital" },
       { title: "NDH-4 Filing", desc: "Apply for Nidhi status declaration to Central Government" }
     ],
     
@@ -40,7 +40,7 @@ The key advantage of Nidhi Company is that it can only accept deposits from and 
     ],
     
     faqs: [
-      { q: "What is the minimum capital requirement for Nidhi Company?", a: "Minimum paid-up equity share capital of ₹10 lakhs is required at the time of incorporation." },
+      { q: "What is the minimum capital requirement for Nidhi Company?", a: "Minimum paid-up equity share capital of â‚¹10 lakhs is required at the time of incorporation." },
       { q: "How many members and directors are needed?", a: "Minimum 7 members (who are also shareholders) and 3 directors are required. Members can also be directors." },
       { q: "Can Nidhi Company accept deposits from non-members?", a: "No, Nidhi Company can only accept deposits from and provide loans to its members. Non-members cannot transact." },
       { q: "What is the maximum interest rate Nidhi Company can charge?", a: "Nidhi Company can charge maximum 7.5% above the highest rate of interest offered on deposits. The rate must be disclosed to members." },

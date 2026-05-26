@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const SecretarialServices = () => {
   const pageData = {
     serviceName: "Secretarial Work",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Secretarial Work",
     heroSubtitle: "Professional services for Secretarial Work. Expert guidance and compliance support.",
     

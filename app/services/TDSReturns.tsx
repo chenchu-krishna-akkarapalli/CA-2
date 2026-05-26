@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const TDSReturns = () => {
   const pageData = {
     serviceName: "TDS Returns",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "TDS Return Filing Services",
     heroSubtitle: "Quarterly TDS compliance made easy. Accurate filing, timely submission, and proper TDS certificate generation.",
     
@@ -31,7 +31,7 @@ Accurate TDS return filing ensures that employees and vendors receive credit in 
     ],
     
     benefits: [
-      { title: "Avoid Penalties", desc: "Late filing fee ₹200/day, up to TDS amount" },
+      { title: "Avoid Penalties", desc: "Late filing fee â‚¹200/day, up to TDS amount" },
       { title: "No Interest Burden", desc: "Timely deposit prevents 1.5% monthly interest" },
       { title: "Employee Satisfaction", desc: "Timely Form 16 for their ITR filing" },
       { title: "Vendor Relations", desc: "Proper TDS certificates maintain good relations" },
@@ -41,7 +41,7 @@ Accurate TDS return filing ensures that employees and vendors receive credit in 
     
     faqs: [
       { q: "What are the due dates for TDS returns?", a: "Q1 (Apr-Jun): 31st July. Q2 (Jul-Sep): 31st October. Q3 (Oct-Dec): 31st January. Q4 (Jan-Mar): 31st May. Government deductors have extended dates." },
-      { q: "What is the penalty for late TDS filing?", a: "Late filing fee of ₹200 per day until return is filed, up to the amount of TDS. Plus penalty up to ₹1 lakh under section 271H." },
+      { q: "What is the penalty for late TDS filing?", a: "Late filing fee of â‚¹200 per day until return is filed, up to the amount of TDS. Plus penalty up to â‚¹1 lakh under section 271H." },
       { q: "What is the interest on late TDS deposit?", a: "1% per month if TDS not deducted, 1.5% per month if deducted but not deposited. Interest calculated from due date to actual deposit date." },
       { q: "When should Form 16 be issued?", a: "Form 16 must be issued to employees by June 15th every year. Form 16A should be issued within 15 days from the due date of filing TDS return." },
       { q: "Can TDS returns be revised?", a: "Yes, correction statements can be filed on TRACES for errors in PAN, amount, challan details, etc. There's no time limit for corrections." }

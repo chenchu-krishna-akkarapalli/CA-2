@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const Copyright = () => {
   const pageData = {
     serviceName: "Copyright Registration",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Copyright Registration Services",
     heroSubtitle: "Protect your creative works. Legal protection for literary, artistic, musical, and other original creations.",
     

@@ -1,14 +1,14 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const GSTRegistration = () => {
   const pageData = {
     serviceName: "GST Registration",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "GST Registration Services",
     heroSubtitle: "Get your business GST compliant with hassle-free registration. Essential for all businesses with turnover above threshold limits.",
     
-    description: `Goods and Services Tax (GST) Registration is mandatory for businesses with annual turnover exceeding ₹40 lakhs (₹20 lakhs for service providers and ₹10 lakhs for special category states). GST has replaced multiple indirect taxes and unified India into a single market.
+    description: `Goods and Services Tax (GST) Registration is mandatory for businesses with annual turnover exceeding â‚¹40 lakhs (â‚¹20 lakhs for service providers and â‚¹10 lakhs for special category states). GST has replaced multiple indirect taxes and unified India into a single market.
 
 GST registration provides a unique 15-digit GSTIN (GST Identification Number) that enables businesses to collect tax from customers, claim input tax credit on purchases, and participate in interstate trade. Without GST registration, businesses cannot charge GST or claim input credits.
 
@@ -40,11 +40,11 @@ Whether you're a manufacturer, trader, service provider, or e-commerce seller, G
     ],
     
     faqs: [
-      { q: "What is the threshold for mandatory GST registration?", a: "For goods: ₹40 lakhs (₹20 lakhs for special category states). For services: ₹20 lakhs (₹10 lakhs for special category states). E-commerce sellers need registration regardless of turnover." },
+      { q: "What is the threshold for mandatory GST registration?", a: "For goods: â‚¹40 lakhs (â‚¹20 lakhs for special category states). For services: â‚¹20 lakhs (â‚¹10 lakhs for special category states). E-commerce sellers need registration regardless of turnover." },
       { q: "What documents are required for GST registration?", a: "PAN card, Aadhaar card, business address proof (electricity bill, rent agreement), bank statement/cancelled cheque, photos of proprietor/partners/directors, and business registration documents." },
       { q: "Can I apply for GST registration voluntarily?", a: "Yes, businesses below threshold limit can register voluntarily to avail input tax credit benefits and enhance business credibility." },
       { q: "What are GST return filing requirements?", a: "Regular taxpayers need to file GSTR-1 (monthly/quarterly) for outward supplies, GSTR-3B (monthly) for summary return, and GSTR-9 annual return." },
-      { q: "What is the penalty for not registering under GST?", a: "Operating without mandatory GST registration attracts penalty of 100% of tax due or ₹10,000, whichever is higher. Prosecution may also be initiated for willful evasion." }
+      { q: "What is the penalty for not registering under GST?", a: "Operating without mandatory GST registration attracts penalty of 100% of tax due or â‚¹10,000, whichever is higher. Prosecution may also be initiated for willful evasion." }
     ],
     
     relatedServices: [

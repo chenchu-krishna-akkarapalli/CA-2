@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ShareTransferFDI = () => {
   const pageData = {
     serviceName: "Share Transfer & RBI Filing",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Share Transfer & RBI Filing",
     heroSubtitle: "Professional services for Share Transfer & RBI Filing. Expert guidance and compliance support.",
     

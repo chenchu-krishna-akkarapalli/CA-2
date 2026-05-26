@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const IncomeTaxAppeals = () => {
   const pageData = {
     serviceName: "Appeals",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Appeals",
     heroSubtitle: "Professional services for Appeals. Expert guidance and compliance support.",
     

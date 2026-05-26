@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const FDIFilings = () => {
   const pageData = {
     serviceName: "FDI Filings with RBI",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "FDI Filings with RBI",
     heroSubtitle: "Professional services for FDI Filings with RBI. Expert guidance and compliance support.",
     

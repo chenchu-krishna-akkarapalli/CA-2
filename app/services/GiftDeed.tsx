@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const GiftDeed = () => {
   const pageData = {
     serviceName: "Gift Deed",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Gift Deed",
     heroSubtitle: "Professional services for Gift Deed. Expert guidance and compliance support.",
     

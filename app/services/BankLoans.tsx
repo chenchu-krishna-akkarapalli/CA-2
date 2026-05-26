@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const BankLoans = () => {
   const pageData = {
     serviceName: "Loans from Banks and NBFCs",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Loans from Banks and NBFCs",
     heroSubtitle: "Professional services for Loans from Banks and NBFCs. Expert guidance and compliance support.",
     

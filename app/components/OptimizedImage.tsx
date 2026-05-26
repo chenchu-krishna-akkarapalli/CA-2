@@ -40,14 +40,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         .map((w) => `${encodedBasePath}-${w}w.avif ${w}w`)
         .join(", ");
 
-    const webpSrcSet = widths
-        .map((w) => `${encodedBasePath}-${w}w.webp ${w}w`)
-        .join(", ");
-
     const avifSrc = `${encodedBasePath}.avif`;
-    // const webpSrc = `${encodedBasePath}.webp`;
 
-    // We use the <picture> element for format switching
     return (
         <picture className={`block relative overflow-hidden w-full h-full ${className || ''}`}>
             <source
@@ -55,19 +49,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
                 sizes={props.sizes || "100vw"}
                 type="image/avif"
             />
-            <source
-                srcSet={webpSrcSet}
-                sizes={props.sizes || "100vw"}
-                type="image/webp"
-            />
-            {/* Fallback to optimized base AVIF or original */}
-            <source srcSet={avifSrc} type="image/avif" />
-
             <img
-                src={encodedSrc}
+                src={avifSrc}
                 alt={alt}
                 className={`w-full h-full object-cover ${className || ""}`}
-                // Pass style if provided, but position absolute is often needed for fill replacement
                 style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0, ...props.style }}
                 loading={priority ? "eager" : "lazy"}
                 decoding="async"

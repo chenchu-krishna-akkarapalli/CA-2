@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const TransferPricing = () => {
   const pageData = {
     serviceName: "Transfer Pricing Reports",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Transfer Pricing Reports",
     heroSubtitle: "Professional services for Transfer Pricing Reports. Expert guidance and compliance support.",
     

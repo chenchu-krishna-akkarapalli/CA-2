@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const PrivateLimitedCompany = () => {
   const pageData = {
     serviceName: "Private Limited Company",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Private Limited Company Registration",
     heroSubtitle: "Start your entrepreneurial journey with India's most preferred business structure. Get your Pvt Ltd company registered in just 7-10 working days.",
 
@@ -40,7 +40,7 @@ Private Limited Companies are ideal for businesses planning to raise funding fro
     ],
 
     faqs: [
-      { q: "What is the minimum capital required to start a Private Limited Company?", a: "There is no minimum capital requirement to start a Private Limited Company in India. You can start with any amount of authorized capital. However, we recommend starting with at least ₹1 lakh authorized capital for better credibility." },
+      { q: "What is the minimum capital required to start a Private Limited Company?", a: "There is no minimum capital requirement to start a Private Limited Company in India. You can start with any amount of authorized capital. However, we recommend starting with at least â‚¹1 lakh authorized capital for better credibility." },
       { q: "How many directors and shareholders are required?", a: "A minimum of 2 directors and 2 shareholders are required. The maximum number of directors can be 15 (can be increased with special resolution), and the maximum shareholders can be 200." },
       { q: "Can NRIs or foreign nationals be directors?", a: "Yes, NRIs and foreign nationals can be directors in an Indian Private Limited Company. However, at least one director must be a resident of India (stayed in India for 182+ days in the previous calendar year)." },
       { q: "How long does it take to register a Private Limited Company?", a: "With all documents in place, the registration typically takes 7-10 working days. This includes DSC issuance (1-2 days), name approval (2-3 days), and certificate of incorporation (4-5 days)." },

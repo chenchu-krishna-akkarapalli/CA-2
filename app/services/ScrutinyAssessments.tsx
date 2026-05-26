@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ScrutinyAssessments = () => {
   const pageData = {
     serviceName: "Scrutiny Assessments",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Scrutiny Assessments",
     heroSubtitle: "Professional services for Scrutiny Assessments. Expert guidance and compliance support.",
     

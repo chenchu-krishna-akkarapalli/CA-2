@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const LoanSyndication = () => {
   const pageData = {
     serviceName: "Loan Syndication",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Loan Syndication",
     heroSubtitle: "Professional services for Loan Syndication. Expert guidance and compliance support.",
     

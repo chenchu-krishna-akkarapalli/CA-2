@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const PayrollProcessing = () => {
   const pageData = {
     serviceName: "Payroll Processing",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Payroll Processing Services",
     heroSubtitle: "End-to-end salary management for your business. From computation to compliance, we handle everything.",
     

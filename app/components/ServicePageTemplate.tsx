@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 import GetFreeQuote from "./GetFreeQuote";
 import BottomFadeBlurOverlay from "./BottomFadeBlurOverlay";
 
@@ -75,7 +76,7 @@ const ServiceHero = ({
     >
       {/* Background */}
       <div className="absolute inset-0" aria-hidden="true">
-        <Image
+        <OptimizedImage
           src={heroImage}
           alt={serviceName}
           fill

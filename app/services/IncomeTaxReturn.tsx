@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const IncomeTaxReturn = () => {
   const pageData = {
     serviceName: "Income Tax Return",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Income Tax Return Filing Services",
     heroSubtitle: "Expert ITR filing for individuals and businesses. Maximize deductions, claim refunds, and stay compliant with tax laws.",
     
@@ -40,10 +40,10 @@ Our tax experts analyze your financial situation, identify all applicable deduct
     ],
     
     faqs: [
-      { q: "Who must file Income Tax Return?", a: "Individuals with gross income above ₹2.5 lakhs (₹3 lakhs for seniors, ₹5 lakhs for super seniors). Also mandatory if you have foreign assets, bank deposits above ₹1 crore, or TDS/TCS above ₹25,000." },
+      { q: "Who must file Income Tax Return?", a: "Individuals with gross income above â‚¹2.5 lakhs (â‚¹3 lakhs for seniors, â‚¹5 lakhs for super seniors). Also mandatory if you have foreign assets, bank deposits above â‚¹1 crore, or TDS/TCS above â‚¹25,000." },
       { q: "What is the due date for ITR filing?", a: "For individuals and non-audit cases: 31st July. For audit cases: 31st October. For transfer pricing cases: 30th November. Belated return: 31st December with penalty." },
-      { q: "Which ITR form should I use?", a: "ITR-1: Salary, one house property, other income up to ₹50L. ITR-2: Capital gains, more than one house. ITR-3: Business income. ITR-4: Presumptive taxation." },
-      { q: "What happens if I don't file ITR?", a: "Penalty up to ₹5,000 (₹1,000 if income below ₹5 lakhs), inability to carry forward losses, higher TDS rates, and potential prosecution for deliberate evasion." },
+      { q: "Which ITR form should I use?", a: "ITR-1: Salary, one house property, other income up to â‚¹50L. ITR-2: Capital gains, more than one house. ITR-3: Business income. ITR-4: Presumptive taxation." },
+      { q: "What happens if I don't file ITR?", a: "Penalty up to â‚¹5,000 (â‚¹1,000 if income below â‚¹5 lakhs), inability to carry forward losses, higher TDS rates, and potential prosecution for deliberate evasion." },
       { q: "Can I revise my ITR after filing?", a: "Yes, revised return can be filed within 31st December of the assessment year if original return was filed on time. Belated returns cannot be revised after the deadline." }
     ],
     

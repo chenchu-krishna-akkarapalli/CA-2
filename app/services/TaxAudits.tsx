@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const TaxAudits = () => {
   const pageData = {
     serviceName: "Tax Audits (Income Tax Act)",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Tax Audits (Income Tax Act)",
     heroSubtitle: "Professional services for Tax Audits (Income Tax Act). Expert guidance and compliance support.",
     

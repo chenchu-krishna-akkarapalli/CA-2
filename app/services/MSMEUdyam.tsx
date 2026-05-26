@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const MSMEUdyam = () => {
   const pageData = {
     serviceName: "MSME/Udyam Registration",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "MSME/Udyam Registration",
     heroSubtitle: "Unlock government benefits for your small business. Free registration with lifetime validity and multiple advantages.",
     
@@ -40,7 +40,7 @@ Registered MSMEs enjoy numerous benefits including priority sector lending, cred
     ],
     
     faqs: [
-      { q: "What is the classification criteria for MSME?", a: "Micro: Investment ≤₹1 Cr & Turnover ≤₹5 Cr. Small: Investment ≤₹10 Cr & Turnover ≤₹50 Cr. Medium: Investment ≤₹50 Cr & Turnover ≤₹250 Cr." },
+      { q: "What is the classification criteria for MSME?", a: "Micro: Investment â‰¤â‚¹1 Cr & Turnover â‰¤â‚¹5 Cr. Small: Investment â‰¤â‚¹10 Cr & Turnover â‰¤â‚¹50 Cr. Medium: Investment â‰¤â‚¹50 Cr & Turnover â‰¤â‚¹250 Cr." },
       { q: "Who can register for Udyam?", a: "Any proprietorship, partnership, LLP, private company, or any other form of business engaged in manufacturing or service activities." },
       { q: "Is GST registration required for Udyam?", a: "GST registration is not mandatory but if you have GSTIN, it will be linked to Udyam registration for turnover verification from GST returns." },
       { q: "Can I update my Udyam Registration?", a: "Yes, you can update details anytime through the Udyam portal. Reclassification happens automatically based on ITR and GST return data." },

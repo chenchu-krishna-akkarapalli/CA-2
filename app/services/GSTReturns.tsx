@@ -1,16 +1,16 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const GSTReturns = () => {
   const pageData = {
     serviceName: "GST Returns",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "GST Return Filing Services",
     heroSubtitle: "Timely and accurate GST return filing. Stay compliant and maximize your input tax credit with expert assistance.",
     
     description: `GST Return Filing is a mandatory compliance for all GST-registered businesses. Returns must be filed monthly or quarterly based on your turnover and business type, reporting all sales, purchases, and tax liability.
 
-Key returns include GSTR-1 (outward supplies), GSTR-3B (summary return), GSTR-9 (annual return), and others based on business nature. Late filing attracts interest (18% p.a.) and late fees (up to ₹200 per day).
+Key returns include GSTR-1 (outward supplies), GSTR-3B (summary return), GSTR-9 (annual return), and others based on business nature. Late filing attracts interest (18% p.a.) and late fees (up to â‚¹200 per day).
 
 Accurate GST return filing is crucial for claiming Input Tax Credit (ITC), which directly reduces your tax liability. Discrepancies in returns can lead to ITC mismatch, notices from department, and cash flow issues. Our experts ensure your returns are filed correctly and on time.`,
     
@@ -41,10 +41,10 @@ Accurate GST return filing is crucial for claiming Input Tax Credit (ITC), which
     
     faqs: [
       { q: "What are the due dates for GST returns?", a: "GSTR-1: 11th (monthly) or 13th (QRMP). GSTR-3B: 20th (monthly) or 22nd/24th (quarterly). GSTR-9: 31st December. Dates vary based on state and turnover." },
-      { q: "What is the penalty for late GST return filing?", a: "Late fee of ₹50/day (₹25 each CGST+SGST) for nil return and ₹100/day for others, up to maximum ₹10,000. Plus interest at 18% on unpaid tax." },
-      { q: "What is QRMP scheme?", a: "Quarterly Return Monthly Payment scheme allows businesses with turnover up to ₹5 crores to file quarterly returns while paying tax monthly through PMT-06." },
+      { q: "What is the penalty for late GST return filing?", a: "Late fee of â‚¹50/day (â‚¹25 each CGST+SGST) for nil return and â‚¹100/day for others, up to maximum â‚¹10,000. Plus interest at 18% on unpaid tax." },
+      { q: "What is QRMP scheme?", a: "Quarterly Return Monthly Payment scheme allows businesses with turnover up to â‚¹5 crores to file quarterly returns while paying tax monthly through PMT-06." },
       { q: "What is ITC reconciliation?", a: "Matching your purchase records with GSTR-2A/2B data to ensure you claim only eligible ITC. Mismatches can lead to ITC reversal and notices." },
-      { q: "Is GSTR-9 mandatory?", a: "GSTR-9 annual return is mandatory for regular taxpayers with turnover above ₹2 crores. GSTR-9C reconciliation statement is required if turnover exceeds ₹5 crores." }
+      { q: "Is GSTR-9 mandatory?", a: "GSTR-9 annual return is mandatory for regular taxpayers with turnover above â‚¹2 crores. GSTR-9C reconciliation statement is required if turnover exceeds â‚¹5 crores." }
     ],
     
     relatedServices: [

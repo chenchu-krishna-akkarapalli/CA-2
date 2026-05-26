@@ -9,7 +9,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { BLOG_POSTS, BlogPost } from '../data/blogData';
 
 // Hero Image
-const BlogHeroImage = "/Assets/Images/Vector 1.png";
+const BlogHeroImage = "/Assets/Images/Vector 1.avif";
 
 // Blog Hero Section
 const BlogHero = () => {

@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const PANForNRI = () => {
   const pageData = {
     serviceName: "PAN for NRI",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "PAN Card for NRI/Foreign Nationals",
     heroSubtitle: "Essential identification for financial transactions in India. Quick PAN card for NRIs and foreign citizens.",
     

@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const FEMACompliance = () => {
   const pageData = {
     serviceName: "FEMA Compliance",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "FEMA Compliance Services",
     heroSubtitle: "Navigate foreign exchange regulations with ease. Expert assistance for all FEMA compliances and RBI filings.",
     
@@ -42,7 +42,7 @@ We help NRIs, foreign companies, Indian subsidiaries, and businesses with foreig
     faqs: [
       { q: "What is FC-GPR filing?", a: "FC-GPR (Foreign Currency-Gross Provisional Return) must be filed within 30 days of allotment of shares to foreign investors, reporting details of FDI received." },
       { q: "What is FLA Return?", a: "Annual Return on Foreign Liabilities and Assets (FLA) must be filed by all Indian companies with FDI or overseas investments, by July 15 every year." },
-      { q: "What are the penalties for FEMA non-compliance?", a: "Penalties can be up to 3 times the amount involved or ₹2 lakhs if amount is not quantifiable. Additional daily penalty of ₹5,000 for continuing contravention." },
+      { q: "What are the penalties for FEMA non-compliance?", a: "Penalties can be up to 3 times the amount involved or â‚¹2 lakhs if amount is not quantifiable. Additional daily penalty of â‚¹5,000 for continuing contravention." },
       { q: "What is FEMA compounding?", a: "Compounding is the process to settle FEMA contraventions by paying a compounding fee to RBI, without prosecution. It's like a settlement procedure." },
       { q: "Who needs FEMA compliance?", a: "Companies with foreign investment, NRI-owned companies, businesses with ECB, ODI, import/export payments, and individuals with foreign assets or investments." }
     ],

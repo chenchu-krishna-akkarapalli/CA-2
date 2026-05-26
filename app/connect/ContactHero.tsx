@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import OptimizedImage from "../components/OptimizedImage";
 import { motion } from "framer-motion";
 import BlurText from "../components/BlurText";
 
@@ -13,8 +14,8 @@ export default function ContactHero() {
     >
       {/* Background */}
       <div className="absolute inset-0" aria-hidden="true">
-        <Image
-          src="/Assets/figma/about/about-hero-bg.png"
+        <OptimizedImage
+          src="/Assets/figma/about/about-hero-bg.avif"
           alt=""
           fill
           className="object-cover"

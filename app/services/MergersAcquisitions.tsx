@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const MergersAcquisitions = () => {
   const pageData = {
     serviceName: "Mergers and Acquisitions",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Mergers and Acquisitions",
     heroSubtitle: "Professional services for Mergers and Acquisitions. Expert guidance and compliance support.",
     

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { Briefcase, BarChart3, ShieldCheck, FileCheck, Layers, Users } from 'lucide-react';
 
@@ -53,7 +53,7 @@ const VirtualCFO = () => {
         },
         {
             q: "What is the key outcome of this service?",
-            a: "The primary outcome is better financial discipline, improved profitability visibility, stronger controls, and informed decision-making—without adding permanent overheads."
+            a: "The primary outcome is better financial discipline, improved profitability visibility, stronger controls, and informed decision-makingâ€”without adding permanent overheads."
         }
     ];
 
@@ -69,10 +69,10 @@ const VirtualCFO = () => {
         <>
             <ServicePageTemplate
                 serviceName="Virtual CFO Services"
-                heroImage="/hero-img/hero-2.png"
+                heroImage="/hero-img/hero-2.avif"
                 heroTitle="Strategic Financial Leadership"
                 heroSubtitle="Expert financial oversight and strategic direction for your growing business."
-                description="Strategic financial leadership—without the cost of a full-time CFO. Our Virtual CFO (vCFO) services provide businesses with high-level financial oversight, strategic direction, and governance support on a flexible, outsourced basis."
+                description="Strategic financial leadershipâ€”without the cost of a full-time CFO. Our Virtual CFO (vCFO) services provide businesses with high-level financial oversight, strategic direction, and governance support on a flexible, outsourced basis."
                 icon={Briefcase}
                 keyHighlights={features}
                 faqs={faqs}
@@ -123,7 +123,7 @@ const VirtualCFO = () => {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 rounded-full bg-brand-accent mt-2.5 shrink-0" />
-                                        <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Flexible engagement—scaled to your business needs</span>
+                                        <span className="font-inter text-[16px] text-text-secondary leading-relaxed">Flexible engagementâ€”scaled to your business needs</span>
                                     </li>
                                 </ul>
                             </div>

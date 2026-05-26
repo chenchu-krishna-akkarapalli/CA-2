@@ -1,16 +1,16 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { motion } from 'framer-motion';
 
 const CMAReport = () => {
   const pageData = {
     serviceName: "Analytics & Business Intelligence",
-    heroImage: "/hero-img/hero-3.png",
+    heroImage: "/hero-img/hero-3.avif",
     heroTitle: "Analytics & Business Intelligence",
     heroSubtitle: "Turning financial data into actionable business insights.",
     description: `Analytics & Business Intelligence services designed to help organizations move from raw data and static reports to meaningful, decision-ready insights.
 
-Provides promoters, management, and functional heads with clarity and control—without unnecessary complexity.
+Provides promoters, management, and functional heads with clarity and controlâ€”without unnecessary complexity.
 
 Purpose-driven analytical frameworks aligned with business models, cost structures, and regulatory realities rather than generic dashboards.`,
 
@@ -198,7 +198,7 @@ Purpose-driven analytical frameworks aligned with business models, cost structur
         <div className="max-w-[1000px] mx-auto text-center">
           <h3 className="font-outfit font-bold text-2xl mb-4">The Outcome</h3>
           <p className="font-inter text-lg text-white/90 leading-relaxed italic">
-            "Faster decisions, better cost control, improved profitability visibility, and reduced compliance risk—powered by analytics that management can actually use."
+            "Faster decisions, better cost control, improved profitability visibility, and reduced compliance riskâ€”powered by analytics that management can actually use."
           </p>
         </div>
       </section>

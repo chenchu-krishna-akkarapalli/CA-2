@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const OnePersonCompany = () => {
   const pageData = {
     serviceName: "One Person Company",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "One Person Company (OPC) Registration",
     heroSubtitle: "Start your business as a single entrepreneur with the benefits of a private limited company. Full control with limited liability.",
     
@@ -12,7 +12,7 @@ const OnePersonCompany = () => {
 
 An OPC requires only one shareholder and one director (who can be the same person), making it ideal for solo entrepreneurs who want to establish a formal business structure. The owner gets limited liability protection while enjoying complete control over business decisions.
 
-OPC offers all benefits of a private limited company including separate legal entity status, perpetual succession, and enhanced credibility. Recent amendments have removed the ₹2 crore turnover ceiling, making it more attractive for growing businesses. After 2 years, OPC can voluntarily convert to Private Limited Company or LLP.`,
+OPC offers all benefits of a private limited company including separate legal entity status, perpetual succession, and enhanced credibility. Recent amendments have removed the â‚¹2 crore turnover ceiling, making it more attractive for growing businesses. After 2 years, OPC can voluntarily convert to Private Limited Company or LLP.`,
     
     keyHighlights: [
       { title: "Single Ownership", desc: "Only one person required to form and run the company", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
@@ -43,7 +43,7 @@ OPC offers all benefits of a private limited company including separate legal en
       { q: "Who can form a One Person Company?", a: "Only a natural person who is an Indian citizen and resident in India can form an OPC. NRIs and foreign nationals cannot incorporate an OPC." },
       { q: "What is the role of a nominee in OPC?", a: "A nominee is required who will become the member of OPC in case of death or incapacity of the original member. The nominee must also be an Indian citizen and resident." },
       { q: "What are the minimum capital requirements?", a: "There is no minimum capital requirement for OPC. You can start with any amount of authorized and paid-up capital." },
-      { q: "Can OPC be converted to Private Limited Company?", a: "Yes, OPC can be voluntarily converted to Private Limited Company after 2 years from incorporation, or mandatorily if paid-up capital exceeds ₹50 lakhs or turnover exceeds ₹2 crores." },
+      { q: "Can OPC be converted to Private Limited Company?", a: "Yes, OPC can be voluntarily converted to Private Limited Company after 2 years from incorporation, or mandatorily if paid-up capital exceeds â‚¹50 lakhs or turnover exceeds â‚¹2 crores." },
       { q: "What are the compliance requirements for OPC?", a: "OPC needs to file annual return, financial statements, and income tax return. Board meetings are not mandatory, and resolutions are deemed passed when signed by the director." }
     ],
     

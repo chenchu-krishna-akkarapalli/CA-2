@@ -253,6 +253,7 @@ function DropdownLink({ item, onClick }: { item: DropdownItem; onClick?: () => v
     <Link
       href={item.href}
       onClick={onClick}
+      prefetch={false}
       className="group flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-all duration-300"
     >
       <div className="shrink-0 w-8 h-8 rounded-md bg-white border border-slate-100 shadow-sm flex items-center justify-center group-hover:border-brand-accent/30 group-hover:shadow-sm transition-all duration-300">
@@ -287,34 +288,32 @@ function DesktopDropdown({
     const vw = window.innerWidth;
 
     if (menuItem.type === "mega") {
-      // Reset any prior inline styles
-      el.style.left = "";
-      el.style.right = "";
-      el.style.transform = "";
-
+      // READ all layout measurements before any writes (avoids forced reflow)
       const parentRect = parentRef.current?.getBoundingClientRect();
       const elWidth = el.offsetWidth;
-      // Try to center under the parent button
-      const parentCenter = (parentRect?.left ?? 0) + (parentRect?.width ?? 0) / 2;
-      let idealLeft = parentCenter - elWidth / 2;
 
-      // Clamp: don't overflow left
+      // Compute target position
+      const parentCenter = (parentRect?.left ?? 0) + (parentRect?.width ?? 0) / 2;
+      const parentLeft = parentRect?.left ?? 0;
+      let idealLeft = parentCenter - elWidth / 2;
       if (idealLeft < 16) idealLeft = 16;
-      // Clamp: don't overflow right
       if (idealLeft + elWidth > vw - 16) idealLeft = vw - 16 - elWidth;
 
-      const parentLeft = parentRect?.left ?? 0;
+      // WRITE all styles in one batch
+      el.style.right = "";
+      el.style.transform = "";
       el.style.left = `${idealLeft - parentLeft}px`;
-      el.style.transform = "none";
     } else {
-      // Simple dropdown — clamp within viewport
+      // Simple dropdown — READ both measurements before any writes
       const rect = el.getBoundingClientRect();
+      const parentRight = parentRef.current?.getBoundingClientRect().right ?? vw;
+
       if (rect.left < 16) {
         el.style.left = "16px";
         el.style.transform = "none";
       } else if (rect.right > vw - 16) {
         el.style.left = "auto";
-        el.style.right = `${-(vw - 16 - (parentRef.current?.getBoundingClientRect().right ?? vw))}px`;
+        el.style.right = `${-(vw - 16 - parentRight)}px`;
         el.style.transform = "none";
       }
     }

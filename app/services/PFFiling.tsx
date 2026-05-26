@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const PFFiling = () => {
   const pageData = {
     serviceName: "PF Filing",
-    heroImage: "/hero-img/hero-3.png",
+    heroImage: "/hero-img/hero-3.avif",
     heroTitle: "Provident Fund (PF) Filing",
     heroSubtitle: "Complete EPF compliance for your business. Monthly returns, challan payment, and annual filings all managed.",
     
@@ -12,7 +12,7 @@ const PFFiling = () => {
 
 Monthly PF compliance includes calculating employee and employer contributions, generating challans via EPFO portal, making timely payments, and filing ECR (Electronic Challan cum Return). Annual returns and event-based filings also need attention.
 
-PF compliance carries significant penalties for delays - ₹5/day for late payment and up to 100% of contribution as damages. Our PF filing services ensure accurate calculations, timely payments, and complete compliance with EPFO regulations.`,
+PF compliance carries significant penalties for delays - â‚¹5/day for late payment and up to 100% of contribution as damages. Our PF filing services ensure accurate calculations, timely payments, and complete compliance with EPFO regulations.`,
     
     keyHighlights: [
       { title: "EPF Registration", desc: "New establishment registration with EPFO", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
@@ -42,7 +42,7 @@ PF compliance carries significant penalties for delays - ₹5/day for late payme
     faqs: [
       { q: "What is the due date for PF payment?", a: "PF contribution must be paid by the 15th of the following month. For example, March salary PF is due by April 15. Non-payment attracts interest @12% and damages up to 100%." },
       { q: "What are the current PF contribution rates?", a: "Employee contribution: 12% of basic + DA. Employer contribution: 12% (3.67% to EPF, 8.33% to EPS). Employer also pays 0.5% EDLI and admin charges." },
-      { q: "Is PF applicable to all employees?", a: "PF is mandatory for employees earning basic + DA up to ₹15,000/month. Higher paid employees can opt out at joining, else it becomes mandatory." },
+      { q: "Is PF applicable to all employees?", a: "PF is mandatory for employees earning basic + DA up to â‚¹15,000/month. Higher paid employees can opt out at joining, else it becomes mandatory." },
       { q: "How to check PF balance?", a: "Employees can check PF balance via UMANG app, EPFO portal, missed call to 011-22901406, or SMS to 7738299899. UAN activation and KYC seeding required." },
       { q: "What happens if PF is not deducted?", a: "Non-deduction is a compliance violation. Employer must deposit both employee and employer share, even if not deducted from salary, plus face penalties." }
     ],

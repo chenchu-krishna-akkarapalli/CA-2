@@ -1,16 +1,16 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const FSSAILicense = () => {
   const pageData = {
     serviceName: "FSSAI License",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "FSSAI Food License Registration",
     heroSubtitle: "Essential license for food business operators. Ensure food safety compliance and build customer trust.",
     
     description: `FSSAI (Food Safety and Standards Authority of India) License is mandatory for all food business operators in India. Under the Food Safety and Standards Act, 2006, any business involved in manufacturing, processing, packaging, storage, transportation, distribution, or sale of food products must obtain FSSAI license.
 
-FSSAI license comes in three categories: Basic Registration (FSSAI Registration) for small businesses with turnover up to ₹12 lakhs, State License for medium businesses with turnover ₹12-20 crores, and Central License for large businesses or those operating in multiple states.
+FSSAI license comes in three categories: Basic Registration (FSSAI Registration) for small businesses with turnover up to â‚¹12 lakhs, State License for medium businesses with turnover â‚¹12-20 crores, and Central License for large businesses or those operating in multiple states.
 
 The 14-digit FSSAI license number must be displayed on all food product labels and premises. It ensures that food products meet the safety standards set by FSSAI and gives consumers confidence in the quality and hygiene of food products.`,
     
@@ -42,9 +42,9 @@ The 14-digit FSSAI license number must be displayed on all food product labels a
     faqs: [
       { q: "Who needs FSSAI license?", a: "Anyone involved in food manufacturing, processing, packaging, storage, transport, distribution, or retail including restaurants, cafes, food trucks, caterers, e-commerce food sellers, and food importers." },
       { q: "What is the validity of FSSAI license?", a: "FSSAI license can be obtained for 1 to 5 years. The fee varies based on license type and validity period. Renewal must be done 30 days before expiry." },
-      { q: "What is the difference between license types?", a: "Basic Registration: Turnover up to ₹12 lakhs. State License: Turnover ₹12 lakhs to ₹20 crores, single state operation. Central License: Turnover above ₹20 crores or multi-state operations." },
+      { q: "What is the difference between license types?", a: "Basic Registration: Turnover up to â‚¹12 lakhs. State License: Turnover â‚¹12 lakhs to â‚¹20 crores, single state operation. Central License: Turnover above â‚¹20 crores or multi-state operations." },
       { q: "Is inspection required for FSSAI license?", a: "Physical inspection is required for State and Central licenses. For Basic Registration, inspection may be done randomly. Online video inspection is also available." },
-      { q: "What are the penalties for operating without license?", a: "Fine up to ₹5 lakhs for operating without license. Imprisonment up to 6 months for repeated offenses. Products can be seized and destroyed." }
+      { q: "What are the penalties for operating without license?", a: "Fine up to â‚¹5 lakhs for operating without license. Imprisonment up to 6 months for repeated offenses. Products can be seized and destroyed." }
     ],
     
     relatedServices: [

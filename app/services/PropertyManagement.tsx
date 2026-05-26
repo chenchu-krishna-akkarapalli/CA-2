@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const PropertyManagement = () => {
   const pageData = {
     serviceName: "Property Management",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "NRI Property Management Services",
     heroSubtitle: "Hassle-free management of your Indian properties. Complete solutions from tenant management to legal documentation.",
     

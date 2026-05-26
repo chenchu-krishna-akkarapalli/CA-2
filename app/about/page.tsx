@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -26,9 +26,9 @@ const MeetTheExpertsSection = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "About Us | CHINNI MALLIKARJUNA AND COMPANY – Chartered Accountants",
+  title: "About Us | CHINNI MALLIKARJUNA AND COMPANY â€“ Chartered Accountants",
   description:
-    "Learn about CHINNI MALLIKARJUNA AND COMPANY — a trusted CA firm in Chennai. Meet our expert team of Chartered Accountants delivering audit, tax, and advisory services.",
+    "Learn about CHINNI MALLIKARJUNA AND COMPANY â€” a trusted CA firm in Chennai. Meet our expert team of Chartered Accountants delivering audit, tax, and advisory services.",
   keywords: [
     "About CHINNI MALLIKARJUNA AND COMPANY",
     "Chartered Accountants Chennai",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: "https://gmnrassociates.com/about",
   },
   openGraph: {
-    title: "About Us | CHINNI MALLIKARJUNA AND COMPANY – Chartered Accountants",
+    title: "About Us | CHINNI MALLIKARJUNA AND COMPANY â€“ Chartered Accountants",
     description:
       "A young and dynamic CA firm built on integrity, expertise, and a commitment to quality financial services.",
     url: "https://gmnrassociates.com/about",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/hero-img/hero-1.png",
+        url: "/hero-img/hero-1.avif",
         width: 1200,
         height: 630,
-        alt: "CHINNI MALLIKARJUNA AND COMPANY – Chartered Accountants",
+        alt: "CHINNI MALLIKARJUNA AND COMPANY â€“ Chartered Accountants",
       },
     ],
   },
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | CHINNI MALLIKARJUNA AND COMPANY",
     description:
-      "Meet the team behind CHINNI MALLIKARJUNA AND COMPANY — a trusted Chartered Accountants firm in Chennai.",
-    images: ["/hero-img/hero-1.png"],
+      "Meet the team behind CHINNI MALLIKARJUNA AND COMPANY â€” a trusted Chartered Accountants firm in Chennai.",
+    images: ["/hero-img/hero-1.avif"],
   },
 };
 

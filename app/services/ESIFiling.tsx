@@ -1,14 +1,14 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ESIFiling = () => {
   const pageData = {
     serviceName: "ESI Filing",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "ESI Filing & Compliance",
     heroSubtitle: "Complete Employee State Insurance compliance. Monthly contributions, returns, and claims management for your workforce.",
     
-    description: `ESI (Employee State Insurance) is a social security scheme providing medical, disability, maternity, and unemployment benefits to employees. Establishments with 10+ employees (20+ in some states) where employees earn up to ₹21,000/month must register under ESI Act.
+    description: `ESI (Employee State Insurance) is a social security scheme providing medical, disability, maternity, and unemployment benefits to employees. Establishments with 10+ employees (20+ in some states) where employees earn up to â‚¹21,000/month must register under ESI Act.
 
 ESI compliance involves monthly contribution payment, half-yearly returns, and maintaining proper records. The contribution rate is 3.25% from employer and 0.75% from employee. Benefits include medical treatment, cash benefits during sickness, maternity, and employment injury.
 
@@ -40,7 +40,7 @@ Non-compliance results in penalties, interest on delayed payments, and loss of b
     ],
     
     faqs: [
-      { q: "What is the wage limit for ESI applicability?", a: "ESI is applicable to employees earning up to ₹21,000/month gross wages. Once covered, an employee remains covered for the contribution period even if wages exceed limit." },
+      { q: "What is the wage limit for ESI applicability?", a: "ESI is applicable to employees earning up to â‚¹21,000/month gross wages. Once covered, an employee remains covered for the contribution period even if wages exceed limit." },
       { q: "What is the due date for ESI payment?", a: "ESI contribution must be paid within 15 days of the following month. For March wages, payment is due by April 15. Late payment attracts 12% interest per annum." },
       { q: "What benefits do employees get under ESI?", a: "Medical benefit (treatment), Sickness benefit (70% wages), Maternity benefit (100% wages for 26 weeks), Disablement benefit, Dependent benefit, Funeral expenses, and Unemployment allowance." },
       { q: "How many employees trigger ESI registration?", a: "10 or more employees (20 in some states). The threshold is 10 in most states including Maharashtra, Karnataka, Tamil Nadu. Check state-specific rules." },

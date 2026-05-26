@@ -1,21 +1,21 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { motion } from 'framer-motion';
 
 const CostAudit = () => {
     const pageData = {
         serviceName: "Cost Audit",
-        heroImage: "/hero-img/hero-1.png", // Using generic office image suitable for audit/compliance
+        heroImage: "/hero-img/hero-1.avif", // Using generic office image suitable for audit/compliance
         heroTitle: "Cost Audit & Compliance",
         heroSubtitle: "End-to-end cost audit compliance with structured cost records and seamless MCA filings.",
-        description: `Comprehensive Cost Audit & Cost Records services covering the complete statutory lifecycle—from appointment of the Cost Auditor to maintenance of cost records, conduct of cost audit, and filing of cost audit reports with MCA.
+        description: `Comprehensive Cost Audit & Cost Records services covering the complete statutory lifecycleâ€”from appointment of the Cost Auditor to maintenance of cost records, conduct of cost audit, and filing of cost audit reports with MCA.
 
 Ensures strict statutory compliance while enabling management to derive meaningful cost insights.`,
 
         keyHighlights: [
             {
                 title: "End-to-End",
-                desc: "End-to-end compliance ownership (Appointment → Audit → Filing)",
+                desc: "End-to-end compliance ownership (Appointment â†’ Audit â†’ Filing)",
                 icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
             },
             {

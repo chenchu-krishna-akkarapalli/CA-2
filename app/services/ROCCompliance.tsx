@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ROCCompliance = () => {
   const pageData = {
     serviceName: "ROC Compliance",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "ROC Compliance Services",
     heroSubtitle: "Stay compliant with Ministry of Corporate Affairs. Annual filings, event-based filings, and company secretarial services.",
 

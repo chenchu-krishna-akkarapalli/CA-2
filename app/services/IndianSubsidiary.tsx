@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const IndianSubsidiary = () => {
   const pageData = {
     serviceName: "Indian Subsidiary",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Indian Subsidiary Company Registration",
     heroSubtitle: "Establish your foreign company's presence in India. The gateway to tap into India's massive market potential.",
     

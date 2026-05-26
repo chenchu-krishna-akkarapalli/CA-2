@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const BusinessPlan = () => {
   const pageData = {
     serviceName: "Business Plan",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Business Plan",
     heroSubtitle: "Professional services for Business Plan. Expert guidance and compliance support.",
     

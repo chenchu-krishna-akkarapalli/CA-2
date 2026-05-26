@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ImportExportCode = () => {
   const pageData = {
     serviceName: "Import Export Code",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Import Export Code (IEC) Registration",
     heroSubtitle: "Gateway to international trade. Mandatory license for importing or exporting goods and services from India.",
     
@@ -40,11 +40,11 @@ The IEC registration process has been simplified and can be completed online. On
     ],
     
     faqs: [
-      { q: "Who needs IEC registration?", a: "Any person or business entity that wants to import or export goods. Also required for receiving foreign exchange for service exports above ₹5 lakhs annually." },
-      { q: "Is IEC required for service exports?", a: "Yes, if you receive payment in foreign currency for services exceeding ₹5 lakhs per year, IEC is required. Below this threshold, IEC is not mandatory for services." },
+      { q: "Who needs IEC registration?", a: "Any person or business entity that wants to import or export goods. Also required for receiving foreign exchange for service exports above â‚¹5 lakhs annually." },
+      { q: "Is IEC required for service exports?", a: "Yes, if you receive payment in foreign currency for services exceeding â‚¹5 lakhs per year, IEC is required. Below this threshold, IEC is not mandatory for services." },
       { q: "What is the validity of IEC?", a: "IEC has lifetime validity. However, you must update the IEC if there are any changes in business details. Annual update is required between April-June each year." },
       { q: "Can individuals get IEC?", a: "Yes, individuals with PAN can obtain IEC. However, the import/export business should be conducted in individual capacity, not as hobby or personal use." },
-      { q: "What are the exemptions from IEC?", a: "IEC is not required for personal imports not connected with trade, import/export by government ministries, specified notified agencies, and goods exported/imported below ₹5 lakhs value (for commercial samples)." }
+      { q: "What are the exemptions from IEC?", a: "IEC is not required for personal imports not connected with trade, import/export by government ministries, specified notified agencies, and goods exported/imported below â‚¹5 lakhs value (for commercial samples)." }
     ],
     
     relatedServices: [

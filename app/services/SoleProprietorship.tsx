@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const SoleProprietorship = () => {
   const pageData = {
     serviceName: "Sole Proprietorship",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Sole Proprietorship Registration",
     heroSubtitle: "The simplest way to start your business. Complete ownership and control with minimal compliance requirements.",
     

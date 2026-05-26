@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { motion } from 'framer-motion';
 
 const AnnualFiling = () => {
   const pageData = {
     serviceName: "Auditing & Assurance",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Auditing & Assurance Services",
     heroSubtitle: "Independent assurance that strengthens trust, controls, and decision-making.",
     description: `Auditing & Assurance services that go beyond statutory compliance, focusing on clarity, credibility, and confidence in financial and operational information.

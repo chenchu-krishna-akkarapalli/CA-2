@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ShareholderAgreement = () => {
   const pageData = {
     serviceName: "Shareholder Agreement",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Shareholder Agreement",
     heroSubtitle: "Professional services for Shareholder Agreement. Expert guidance and compliance support.",
     

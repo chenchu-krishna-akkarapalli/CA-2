@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const DueDiligence = () => {
   const pageData = {
     serviceName: "Due Diligence",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Due Diligence Services",
     heroSubtitle: "Comprehensive financial, legal, and tax due diligence for M&A transactions. Make informed investment decisions.",
 

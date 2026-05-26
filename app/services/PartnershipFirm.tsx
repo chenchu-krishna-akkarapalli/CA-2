@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const PartnershipFirm = () => {
   const pageData = {
     serviceName: "Partnership Firm",
-    heroImage: "/hero-img/hero-1.png",
+    heroImage: "/hero-img/hero-1.avif",
     heroTitle: "Partnership Firm Registration",
     heroSubtitle: "Start a business with partners sharing profits and responsibilities. Simple structure for collaborative ventures.",
     

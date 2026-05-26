@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const Section8Company = () => {
   const pageData = {
     serviceName: "Section 8 Company",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Section 8 Company Registration",
     heroSubtitle: "Establish a non-profit organization with charitable or social objectives. Perfect for NGOs, foundations, and social enterprises.",
     

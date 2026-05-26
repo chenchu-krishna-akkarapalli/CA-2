@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type BlurLayer = {
   zIndex: number;
@@ -36,27 +36,20 @@ const LAYERS: BlurLayer[] = [
 
 export default function BottomFadeBlurOverlay() {
   const [opacity, setOpacity] = useState(1);
+  const footerRef = useRef<Element | null>(null);
 
   useEffect(() => {
+    footerRef.current = document.querySelector("footer");
+
     const handleScroll = () => {
-      const footer = document.querySelector("footer");
+      const footer = footerRef.current;
       if (!footer) return;
 
       const footerRect = footer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Calculate how much of the footer is visible
-      // If footer top is above the bottom of the viewport
       if (footerRect.top < windowHeight) {
-        // We want to fade out as the footer comes into view.
-        // Let's say we start fading out when the footer is 100px from the bottom or just entering.
-        // A simple logic: if footer touches the blur area (height 330px), start fading.
-
-        const triggerPoint = windowHeight - 330; // Top of the blur area
         const distanceOverlap = windowHeight - footerRect.top;
-
-        // If footer is appearing, reduce opacity.
-        // Map distance overlap (0 to 330) to opacity (1 to 0)
         let newOpacity = 1 - Math.min(distanceOverlap / 200, 1);
         if (newOpacity < 0) newOpacity = 0;
         setOpacity(newOpacity);
@@ -65,8 +58,7 @@ export default function BottomFadeBlurOverlay() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    // Call once to set initial state
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);

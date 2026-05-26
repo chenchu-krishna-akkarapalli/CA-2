@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const DirectorKYC = () => {
   const pageData = {
     serviceName: "Director KYC",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Director KYC (DIR-3 KYC)",
     heroSubtitle: "Annual KYC compliance for directors. Keep your DIN active with timely DIR-3 KYC filing.",
 
@@ -42,7 +42,7 @@ Deactivated DIN means the person cannot function as a director, file forms, or s
     faqs: [
       { q: "What is the deadline for DIR-3 KYC?", a: "DIR-3 KYC must be filed annually before September 30 for all directors whose DIN was allotted on or before March 31 of that year. First-time allottees have 30 days." },
       { q: "What happens if DIR-3 KYC is not filed?", a: "DIN gets deactivated with 'Deactivated due to non-filing of DIR-3 KYC' status. Director cannot sign forms, approve filings, or function as director until reactivation." },
-      { q: "How to reactivate deactivated DIN?", a: "File DIR-3 KYC with additional fee of ₹5,000. DIN gets reactivated within 2-3 working days after successful filing and fee payment." },
+      { q: "How to reactivate deactivated DIN?", a: "File DIR-3 KYC with additional fee of â‚¹5,000. DIN gets reactivated within 2-3 working days after successful filing and fee payment." },
       { q: "Is Aadhaar mandatory for DIR-3 KYC?", a: "Aadhaar is mandatory for Indian directors. For foreign nationals, passport details are required. OTP verification is mandatory for both mobile and email." },
       { q: "Can we file DIR-3 KYC without DSC?", a: "No, DIR-3 KYC must be filed with the director's Digital Signature Certificate. If DSC is not available, it needs to be obtained first." }
     ],

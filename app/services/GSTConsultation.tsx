@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const GSTConsultation = () => {
   const pageData = {
     serviceName: "GST Consultation",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "GST Consultation",
     heroSubtitle: "Professional services for GST Consultation. Expert guidance and compliance support.",
     

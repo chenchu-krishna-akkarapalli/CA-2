@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const StatutoryAudits = () => {
   const pageData = {
     serviceName: "Statutory Audits (Companies Act)",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Statutory Audits (Companies Act)",
     heroSubtitle: "Professional services for Statutory Audits (Companies Act). Expert guidance and compliance support.",
     

@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 const ESOP = () => {
   const pageData = {
     serviceName: "Employee Stock Options (ESOP)",
-    heroImage: "/hero-img/hero-2.png",
+    heroImage: "/hero-img/hero-2.avif",
     heroTitle: "Employee Stock Options (ESOP)",
     heroSubtitle: "Professional services for Employee Stock Options (ESOP). Expert guidance and compliance support.",
     
