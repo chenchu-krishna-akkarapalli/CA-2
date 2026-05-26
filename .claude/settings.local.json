@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Force \"public\\\\Assets\\\\figma\\\\about\\\\about-timline.svg\" \"public\\\\Assets\\\\figma\\\\about\\\\our-journey-bg.svg\" \"public\\\\Assets\\\\figma\\\\about\\\\our-journey-center-icon.svg\" \"public\\\\Assets\\\\figma\\\\about\\\\who-ellipse-5.svg\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4.png\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4.avif\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4.webp\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-320w.avif\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-320w.webp\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-640w.avif\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-640w.webp\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-960w.avif\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-960w.webp\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-1280w.avif\" \"public\\\\Assets\\\\figma\\\\about\\\\who-rectangle-4-1280w.webp\")"
+    ]
+  }
+}

@@ -554,37 +554,37 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* ── Location Bar (all screen sizes) ── */}
-        <div className="w-full border-b border-black/10 flex items-center h-[28px] md:h-[31px]">
+        <div className="w-full bg-brand-primary border-b border-white/10 flex items-center h-[28px] md:h-[31px]">
           <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between md:justify-end px-4 lg:px-10 xl:px-20 gap-4">
             <a
               href="https://www.google.com/maps/search/?api=1&query=No.+10%2F31,+G1,+Ten+Downing,+Rajalakshmi+Nagar+3rd+Main+Road,+Velachery,+Chennai+%E2%80%93+600+042"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-1 hover:opacity-100 opacity-80 transition-opacity"
             >
               <Image
                 src="/Assets/react-icons/BiMap.svg"
                 alt="Location"
                 width={14}
                 height={14}
-                className="md:w-4 md:h-4"
+                className="md:w-4 md:h-4 brightness-0 invert"
               />
-              <span className="font-arial text-[11px] md:text-[13px] text-brand-primary">
+              <span className="font-arial text-[11px] md:text-[13px] text-white">
                 Chennai
               </span>
             </a>
             <a
               href="mailto:malli@cmkca.com"
-              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-1 hover:opacity-100 opacity-80 transition-opacity"
             >
               <Image
                 src="/Assets/gmail-icon.svg"
                 alt="Email"
                 width={10}
                 height={8}
-                className="md:w-[11px] md:h-[9px]"
+                className="md:w-[11px] md:h-[9px] brightness-0 invert"
               />
-              <span className="font-arial text-[11px] md:text-[13px] text-brand-primary">
+              <span className="font-arial text-[11px] md:text-[13px] text-white">
                 malli@cmkca.com
               </span>
             </a>
