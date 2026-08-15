@@ -1,0 +1,83 @@
+# ====================================================================
+# GODADDY PRODUCTION APACHE CONFIGURATION (.htaccess)
+# Designed for Next.js Static Export (output: "export", trailingSlash: true)
+# ====================================================================
+
+# 1. PREVENT DIRECTORY BROWSING
+Options -Indexes
+
+# 2. ENFORCE HTTPS & CANONICAL DOMAIN
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 3. NEXT.JS STATIC EXPORT CLEAN URL REWRITING
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Serve direct static files or directories if they exist
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Map /route/ to /route/index.html
+    RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+    RewriteRule ^(.*)/$ $1/index.html [L]
+
+    # Map /route to /route.html
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^([^/]+)$ $1.html [L]
+
+    # SPA Fallback for dynamic client routing
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# 4. ENTERPRISE SECURITY HEADERS
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
+    Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://c.bing.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://www.clarity.ms https://c.bing.com https://api.emailjs.com;"
+</IfModule>
+
+# 5. GZIP & BROTLI COMPRESSION (mod_deflate)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml application/manifest+json
+</IfModule>
+
+# 6. EXPIRES HEADERS & BROWSER CACHING
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # Dynamic Data and HTML - Revalidate immediately
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/manifest+json "access plus 1 week"
+
+    # Static CSS and JS - 1 Year Cache
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+
+    # Images and Fonts
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Match Next.js immutable static build assets
+    <FilesMatch "^.*\.([0-9a-zA-Z]{16,32})\.(js|css|woff2|avif|webp)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>

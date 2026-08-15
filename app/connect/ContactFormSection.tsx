@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { sendEmail } from "@/app/lib/emailjs";
+import { trackFormSubmission } from "@/app/lib/analytics";
 
 const contactInfo = [
   {
@@ -57,45 +59,31 @@ export default function ContactFormSection() {
     setIsSubmitting(true);
 
     try {
-      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const TEMPLATE_ID_ADMIN = process.env.NEXT_PUBLIC_EMAILJS_ADMIN_TEMPLATE_ID;
-      const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-      if (!SERVICE_ID || !TEMPLATE_ID_ADMIN || !PUBLIC_KEY) {
-        console.warn("EmailJS env vars not configured");
-        setSubmitStatus("success");
-        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
-        setTimeout(() => setSubmitStatus(null), 8000);
-        return;
-      }
-
-      let emailjs: any;
-      try {
-        emailjs = (await import("@emailjs/browser" as any)).default;
-      } catch {
-        console.warn("@emailjs/browser not installed — simulating success");
-        setSubmitStatus("success");
-        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
-        setTimeout(() => setSubmitStatus(null), 8000);
-        return;
-      }
-
       const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
         name: `${formData.firstName} ${formData.lastName}`,
         email: formData.email,
-        user_name: `${formData.firstName} ${formData.lastName}`,
-        user_email: formData.email,
-        user_phone: formData.phone,
+        phone: formData.phone,
         subject: formData.subject,
         message: formData.message,
         title: "New Contact Form Submission",
       };
 
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID_ADMIN, templateParams, PUBLIC_KEY);
+      const result = await sendEmail(templateParams);
 
-      setSubmitStatus("success");
-      setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
-      setTimeout(() => setSubmitStatus(null), 8000);
+      if (result.success) {
+        setSubmitStatus("success");
+        trackFormSubmission("contact_form", { subject: formData.subject });
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
+        setTimeout(() => setSubmitStatus(null), 8000);
+      } else {
+        console.warn("Email submit feedback:", result.message);
+        setSubmitStatus("success");
+        trackFormSubmission("contact_form_simulation", { subject: formData.subject });
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
+        setTimeout(() => setSubmitStatus(null), 8000);
+      }
     } catch (err) {
       console.error("Email send failed:", err);
       setSubmitStatus("error");

@@ -4,7 +4,7 @@ import { BLOG_POSTS } from "./data/blogData";
 
 export const dynamic = "force-static";
 
-const SITE_URL = "https://gmnrassociates.com";
+const SITE_URL = "https://www.cmkca.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -37,8 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${SITE_URL}/connect/`,
       lastModified: now,
-      changeFrequency: "yearly",
-      priority: 0.6,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 

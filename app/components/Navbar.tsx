@@ -86,7 +86,7 @@ type MenuItem = LinkMenuItem | MegaMenuItem | SimpleMenuItem;
 /* ─────────────────────── Menu Config ─────────────────────── */
 
 const MENU_ITEMS: MenuItem[] = [
-  { title: "Home", href: "/" },
+  // { title: "Home", href: "/" },
   { title: "About Us", href: "/about" },
   {
     title: "Start Business",

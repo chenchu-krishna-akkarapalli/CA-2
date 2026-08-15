@@ -1,0 +1,3430 @@
+{
+  "schema_version": 1,
+  "nodes": [
+    {
+      "path": ".claude/Design.md",
+      "size_bytes": 8593,
+      "language": "markdown",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": ".claude/launch.json",
+      "size_bytes": 180,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": ".claude/settings.json",
+      "size_bytes": 600,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 348,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "UI-UX.md",
+      "size_bytes": 25442,
+      "language": "markdown",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "app/about-sections/AboutHeroSection.tsx",
+      "size_bytes": 4892,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "path": "app/about-sections/CoreValuesSection.tsx",
+      "size_bytes": 4853,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "path": "app/about-sections/MeetTheExpertsSection.tsx",
+      "size_bytes": 4691,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "path": "app/about-sections/OurJourneySection.tsx",
+      "size_bytes": 6172,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "path": "app/about-sections/WhoWeAreSection.tsx",
+      "size_bytes": 8153,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "path": "app/about/loading.tsx",
+      "size_bytes": 115,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/about/page.tsx",
+      "size_bytes": 5750,
+      "language": "javascript",
+      "exports": [
+        "metadata",
+        "default"
+      ],
+      "routes": [
+        "/about"
+      ],
+      "in_degree": 0,
+      "out_degree": 5
+    },
+    {
+      "path": "app/blog/BlogContent.tsx",
+      "size_bytes": 11437,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "path": "app/blog/[slug]/page.tsx",
+      "size_bytes": 16942,
+      "language": "javascript",
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "default"
+      ],
+      "routes": [
+        "/blog/:slug"
+      ],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "path": "app/blog/layout.tsx",
+      "size_bytes": 471,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [
+        "/blog"
+      ],
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "path": "app/blog/page.tsx",
+      "size_bytes": 561,
+      "language": "javascript",
+      "exports": [
+        "metadata",
+        "default"
+      ],
+      "routes": [
+        "/blog"
+      ],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/components/AnimatedSection.tsx",
+      "size_bytes": 765,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/BlurText.tsx",
+      "size_bytes": 1786,
+      "language": "javascript",
+      "exports": [
+        "TextSegment",
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/BottomFadeBlurOverlay.tsx",
+      "size_bytes": 2378,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/Footer.tsx",
+      "size_bytes": 4794,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/GetFreeQuote.tsx",
+      "size_bytes": 18753,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/HeadingReveal.tsx",
+      "size_bytes": 1047,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 8,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/Navbar.tsx",
+      "size_bytes": 31121,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/OptimizedImage.tsx",
+      "size_bytes": 2104,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 8,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/OrbitPath.tsx",
+      "size_bytes": 10498,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/PageLoader.tsx",
+      "size_bytes": 1342,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/ScrollReveal.tsx",
+      "size_bytes": 3248,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "app/components/ServicePageTemplate.tsx",
+      "size_bytes": 24175,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    {
+      "path": "app/components/ServicesPage.tsx",
+      "size_bytes": 11894,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    {
+      "path": "app/components/SmoothScroller.tsx",
+      "size_bytes": 701,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/connect/ContactFAQ.tsx",
+      "size_bytes": 6065,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/connect/ContactFormSection.tsx",
+      "size_bytes": 18707,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/connect/ContactHero.tsx",
+      "size_bytes": 4807,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "path": "app/connect/MapSection.tsx",
+      "size_bytes": 3967,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/connect/loading.tsx",
+      "size_bytes": 115,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/connect/page.tsx",
+      "size_bytes": 2860,
+      "language": "javascript",
+      "exports": [
+        "metadata",
+        "default"
+      ],
+      "routes": [
+        "/connect"
+      ],
+      "in_degree": 0,
+      "out_degree": 7
+    },
+    {
+      "path": "app/data/about.json",
+      "size_bytes": 4687,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/data/about.ts",
+      "size_bytes": 1117,
+      "language": "javascript",
+      "exports": [
+        "AboutFeature",
+        "WhoWeAre",
+        "TimelineItem",
+        "OurJourney",
+        "CoreValue",
+        "WhatDrivesUs",
+        "TeamMember",
+        "MeetTheExperts",
+        "AboutData",
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 5,
+      "out_degree": 1
+    },
+    {
+      "path": "app/data/article_structured_chapters_numbered.json",
+      "size_bytes": 32958,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/data/blogData.ts",
+      "size_bytes": 9613,
+      "language": "javascript",
+      "exports": [
+        "BlogPost",
+        "BLOG_POSTS"
+      ],
+      "routes": [],
+      "in_degree": 3,
+      "out_degree": 2
+    },
+    {
+      "path": "app/data/director_loans_companies_income_tax_structured.json",
+      "size_bytes": 33403,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/data/services-registry.ts",
+      "size_bytes": 20258,
+      "language": "javascript",
+      "exports": [
+        "ServiceMeta",
+        "serviceRegistry",
+        "allSlugs"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/globals.css",
+      "size_bytes": 1827,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/layout.tsx",
+      "size_bytes": 3769,
+      "language": "javascript",
+      "exports": [
+        "metadata",
+        "default"
+      ],
+      "routes": [
+        "/"
+      ],
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "path": "app/loading.tsx",
+      "size_bytes": 114,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/page.tsx",
+      "size_bytes": 2067,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [
+        "/"
+      ],
+      "in_degree": 0,
+      "out_degree": 9
+    },
+    {
+      "path": "app/robots.ts",
+      "size_bytes": 1675,
+      "language": "javascript",
+      "exports": [
+        "dynamic",
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "app/sections/GetInTouchSection.tsx",
+      "size_bytes": 10293,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "path": "app/sections/HeroSection.tsx",
+      "size_bytes": 3463,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "path": "app/sections/MissionSection.tsx",
+      "size_bytes": 3169,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/sections/StrategicApproachSection.tsx",
+      "size_bytes": 5571,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/sections/WhatWeDoSection.tsx",
+      "size_bytes": 5953,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/AnnualFiling.tsx",
+      "size_bytes": 9467,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/BankLoans.tsx",
+      "size_bytes": 2296,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/BusinessPlan.tsx",
+      "size_bytes": 2250,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/BusinessValuation.tsx",
+      "size_bytes": 5518,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/CMAReport.tsx",
+      "size_bytes": 9494,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/Copyright.tsx",
+      "size_bytes": 5242,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/CostAudit.tsx",
+      "size_bytes": 12936,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/DirectorKYC.tsx",
+      "size_bytes": 5036,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/DueDiligence.tsx",
+      "size_bytes": 5319,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ESIFiling.tsx",
+      "size_bytes": 5314,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ESOP.tsx",
+      "size_bytes": 2298,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/FDIAdvisory.tsx",
+      "size_bytes": 2288,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/FDIFilings.tsx",
+      "size_bytes": 2274,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/FEMACompliance.tsx",
+      "size_bytes": 5037,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/FSSAILicense.tsx",
+      "size_bytes": 5858,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/FinancialInstitutionLoans.tsx",
+      "size_bytes": 2356,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/GSTAudits.tsx",
+      "size_bytes": 2232,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/GSTConsultation.tsx",
+      "size_bytes": 2268,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/GSTRefunds.tsx",
+      "size_bytes": 2238,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/GSTRegistration.tsx",
+      "size_bytes": 5891,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/GSTReturns.tsx",
+      "size_bytes": 5104,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/GiftDeed.tsx",
+      "size_bytes": 2226,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ImportExportCode.tsx",
+      "size_bytes": 5266,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/IncomeTaxAppeals.tsx",
+      "size_bytes": 2234,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/IncomeTaxReturn.tsx",
+      "size_bytes": 5275,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/IndianSubsidiary.tsx",
+      "size_bytes": 5471,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/InternalAudits.tsx",
+      "size_bytes": 2322,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/JointVentureAgreement.tsx",
+      "size_bytes": 2308,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/LLPRegistration.tsx",
+      "size_bytes": 6370,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/LoanSyndication.tsx",
+      "size_bytes": 2268,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/MSMEUdyam.tsx",
+      "size_bytes": 5355,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/MergersAcquisitions.tsx",
+      "size_bytes": 2308,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/NRICompanyIncorporation.tsx",
+      "size_bytes": 5073,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/NidhiCompany.tsx",
+      "size_bytes": 5490,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/OnePersonCompany.tsx",
+      "size_bytes": 5861,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/PANForNRI.tsx",
+      "size_bytes": 5025,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/PFFiling.tsx",
+      "size_bytes": 5135,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/PartnershipFirm.tsx",
+      "size_bytes": 5802,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/Patent.tsx",
+      "size_bytes": 5086,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/PayrollProcessing.tsx",
+      "size_bytes": 4981,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/PrivateLimitedCompany.tsx",
+      "size_bytes": 6401,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ProducerCompany.tsx",
+      "size_bytes": 5728,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ProfessionalTax.tsx",
+      "size_bytes": 5500,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ProjectReport.tsx",
+      "size_bytes": 5551,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/PropertyManagement.tsx",
+      "size_bytes": 5780,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ROCCompliance.tsx",
+      "size_bytes": 5241,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ScrutinyAssessments.tsx",
+      "size_bytes": 2292,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/SecretarialServices.tsx",
+      "size_bytes": 2276,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/Section8Company.tsx",
+      "size_bytes": 6150,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ShareTransferFDI.tsx",
+      "size_bytes": 2314,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/ShareholderAgreement.tsx",
+      "size_bytes": 2298,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/SoleProprietorship.tsx",
+      "size_bytes": 5143,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/StatutoryAudits.tsx",
+      "size_bytes": 2332,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/TANRegistration.tsx",
+      "size_bytes": 5105,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/TDSReturns.tsx",
+      "size_bytes": 4945,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/TaxAudits.tsx",
+      "size_bytes": 2300,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/TaxLitigation.tsx",
+      "size_bytes": 8555,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/Trademark.tsx",
+      "size_bytes": 5522,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/TransferPricing.tsx",
+      "size_bytes": 2300,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/VirtualCFO.tsx",
+      "size_bytes": 8731,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/[slug]/ServiceRenderer.tsx",
+      "size_bytes": 5572,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 60
+    },
+    {
+      "path": "app/services/[slug]/page.tsx",
+      "size_bytes": 4717,
+      "language": "javascript",
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "default"
+      ],
+      "routes": [
+        "/services/:slug"
+      ],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/layout.tsx",
+      "size_bytes": 317,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [
+        "/services"
+      ],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "path": "app/services/loading.tsx",
+      "size_bytes": 115,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/services/page.tsx",
+      "size_bytes": 813,
+      "language": "javascript",
+      "exports": [
+        "metadata",
+        "default"
+      ],
+      "routes": [
+        "/services"
+      ],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "path": "app/sitemap.ts",
+      "size_bytes": 1440,
+      "language": "javascript",
+      "exports": [
+        "dynamic",
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "path": "app/store/AppStore.tsx",
+      "size_bytes": 1694,
+      "language": "javascript",
+      "exports": [
+        "AppStoreProvider",
+        "useAppStore",
+        "useAboutData"
+      ],
+      "routes": [],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "path": "components/ServicePageTemplate.tsx",
+      "size_bytes": 152,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 60,
+      "out_degree": 1
+    },
+    {
+      "path": "lighthouse/timestampresponce.json",
+      "size_bytes": 554748,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "next-env.d.ts",
+      "size_bytes": 268,
+      "language": "javascript",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "next.config.ts",
+      "size_bytes": 505,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "package.json",
+      "size_bytes": 969,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "postcss.config.mjs",
+      "size_bytes": 87,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/.well-known/security.txt",
+      "size_bytes": 605,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-10.svg",
+      "size_bytes": 598,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-11.svg",
+      "size_bytes": 746,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-2.svg",
+      "size_bytes": 1026,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-3.svg",
+      "size_bytes": 514,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-4.svg",
+      "size_bytes": 1304,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-5.svg",
+      "size_bytes": 1464,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-6.svg",
+      "size_bytes": 713,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-7.svg",
+      "size_bytes": 397,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-8.svg",
+      "size_bytes": 361,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon-9.svg",
+      "size_bytes": 1514,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Icon.svg",
+      "size_bytes": 692,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Images/Vector 1-1280w.avif",
+      "size_bytes": 4004,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Images/Vector 1-320w.avif",
+      "size_bytes": 1264,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Images/Vector 1-640w.avif",
+      "size_bytes": 2407,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Images/Vector 1-960w.avif",
+      "size_bytes": 3405,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/Images/Vector 1.avif",
+      "size_bytes": 11496,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/author-images/Malikarjuna-1280w.avif",
+      "size_bytes": 2925,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/author-images/Malikarjuna-320w.avif",
+      "size_bytes": 2235,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/author-images/Malikarjuna-640w.avif",
+      "size_bytes": 2925,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/author-images/Malikarjuna-960w.avif",
+      "size_bytes": 2925,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/author-images/Malikarjuna.avif",
+      "size_bytes": 5202,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-incentive-audit-benefit-cash-payment-income-concept-1280w.avif",
+      "size_bytes": 41990,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-incentive-audit-benefit-cash-payment-income-concept-320w.avif",
+      "size_bytes": 8182,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-incentive-audit-benefit-cash-payment-income-concept-640w.avif",
+      "size_bytes": 21056,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-incentive-audit-benefit-cash-payment-income-concept-960w.avif",
+      "size_bytes": 37728,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-incentive-audit-benefit-cash-payment-income-concept.avif",
+      "size_bytes": 106732,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-return-filing-1280w.avif",
+      "size_bytes": 17055,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-return-filing-320w.avif",
+      "size_bytes": 5044,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-return-filing-640w.avif",
+      "size_bytes": 9643,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-return-filing-960w.avif",
+      "size_bytes": 14682,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/images/tax-return-filing.avif",
+      "size_bytes": 96174,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/chapter-1-1280w.avif",
+      "size_bytes": 10794,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/chapter-1-320w.avif",
+      "size_bytes": 2967,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/chapter-1-640w.avif",
+      "size_bytes": 7559,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/chapter-1-960w.avif",
+      "size_bytes": 10794,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/chapter-1.avif",
+      "size_bytes": 19176,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.2-1280w.avif",
+      "size_bytes": 15232,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.2-320w.avif",
+      "size_bytes": 5948,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.2-640w.avif",
+      "size_bytes": 15232,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.2-960w.avif",
+      "size_bytes": 15232,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.2.avif",
+      "size_bytes": 28872,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.3-1280w.avif",
+      "size_bytes": 8234,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.3-320w.avif",
+      "size_bytes": 2641,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.3-640w.avif",
+      "size_bytes": 5850,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.3-960w.avif",
+      "size_bytes": 8234,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-1.3.avif",
+      "size_bytes": 13064,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-2.2-1280w.avif",
+      "size_bytes": 6404,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-2.2-320w.avif",
+      "size_bytes": 1728,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-2.2-640w.avif",
+      "size_bytes": 4485,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-2.2-960w.avif",
+      "size_bytes": 6404,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-1/subchapter-2.2.avif",
+      "size_bytes": 10777,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/chapter-1-1280w.avif",
+      "size_bytes": 16798,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/chapter-1-320w.avif",
+      "size_bytes": 4935,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/chapter-1-640w.avif",
+      "size_bytes": 12042,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/chapter-1-960w.avif",
+      "size_bytes": 16798,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/chapter-1.avif",
+      "size_bytes": 28415,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-1.2.3-1280w.avif",
+      "size_bytes": 15034,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-1.2.3-320w.avif",
+      "size_bytes": 5295,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-1.2.3-640w.avif",
+      "size_bytes": 10735,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-1.2.3-960w.avif",
+      "size_bytes": 15034,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-1.2.3.avif",
+      "size_bytes": 28465,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-2.3-1280w.avif",
+      "size_bytes": 15045,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-2.3-320w.avif",
+      "size_bytes": 4808,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-2.3-640w.avif",
+      "size_bytes": 10842,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-2.3-960w.avif",
+      "size_bytes": 15045,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-2.3.avif",
+      "size_bytes": 27963,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-4.3-1280w.avif",
+      "size_bytes": 11354,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-4.3-320w.avif",
+      "size_bytes": 3838,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-4.3-640w.avif",
+      "size_bytes": 8596,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-4.3-960w.avif",
+      "size_bytes": 11354,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/blog/tarun-m/blog-2/subchapter-4.3.avif",
+      "size_bytes": 19809,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/about-hero-bg-1280w.avif",
+      "size_bytes": 8072,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/about-hero-bg-320w.avif",
+      "size_bytes": 1464,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/about-hero-bg-640w.avif",
+      "size_bytes": 3328,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/about-hero-bg-960w.avif",
+      "size_bytes": 5365,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/about-hero-bg.avif",
+      "size_bytes": 48689,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/decorator-hero-section.svg",
+      "size_bytes": 384,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/who-rectangle-3-1280w.avif",
+      "size_bytes": 54879,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/who-rectangle-3-320w.avif",
+      "size_bytes": 8280,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/who-rectangle-3-640w.avif",
+      "size_bytes": 20930,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/who-rectangle-3-960w.avif",
+      "size_bytes": 37225,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/figma/about/who-rectangle-3.avif",
+      "size_bytes": 964379,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/gmail-icon.svg",
+      "size_bytes": 896,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/logo-malli.svg",
+      "size_bytes": 269192,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/BiMap.svg",
+      "size_bytes": 1037,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/BiSupport.svg",
+      "size_bytes": 919,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/FaChalkboardUser.svg",
+      "size_bytes": 1250,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/FcProcess.svg",
+      "size_bytes": 1547,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/PiStrategyBold.svg",
+      "size_bytes": 3912,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/SiGoogleanalytics.svg",
+      "size_bytes": 1117,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/Assets/react-icons/SiTaxbuzz.svg",
+      "size_bytes": 2912,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/ai.txt",
+      "size_bytes": 2475,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-1-1280w.avif",
+      "size_bytes": 4220,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-1-320w.avif",
+      "size_bytes": 1144,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-1-640w.avif",
+      "size_bytes": 2200,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-1-960w.avif",
+      "size_bytes": 3083,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-1.avif",
+      "size_bytes": 14393,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-2-1280w.avif",
+      "size_bytes": 2565,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-2-320w.avif",
+      "size_bytes": 988,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-2-640w.avif",
+      "size_bytes": 1689,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-2-960w.avif",
+      "size_bytes": 2128,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-2.avif",
+      "size_bytes": 6145,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-3-1280w.avif",
+      "size_bytes": 4138,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-3-320w.avif",
+      "size_bytes": 969,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-3-640w.avif",
+      "size_bytes": 2148,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-3-960w.avif",
+      "size_bytes": 3002,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/hero-img/hero-3.avif",
+      "size_bytes": 9071,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/humans.txt",
+      "size_bytes": 552,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/site.webmanifest",
+      "size_bytes": 1058,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "public/web.config",
+      "size_bytes": 6090,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "scripts/optimize-images.mjs",
+      "size_bytes": 5872,
+      "language": "javascript",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "tailwind.config.ts",
+      "size_bytes": 3358,
+      "language": "javascript",
+      "exports": [
+        "default"
+      ],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "test-nav.mjs",
+      "size_bytes": 4624,
+      "language": "javascript",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "tsconfig.json",
+      "size_bytes": 595,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "path": "tsconfig.tsbuildinfo",
+      "size_bytes": 167464,
+      "language": "other",
+      "exports": [],
+      "routes": [],
+      "in_degree": 0,
+      "out_degree": 0
+    }
+  ],
+  "edges": [
+    {
+      "from_path": "app/about-sections/AboutHeroSection.tsx",
+      "to_path": "app/components/BlurText.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/AboutHeroSection.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/CoreValuesSection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/CoreValuesSection.tsx",
+      "to_path": "app/data/about.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/MeetTheExpertsSection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/MeetTheExpertsSection.tsx",
+      "to_path": "app/data/about.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/OurJourneySection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/OurJourneySection.tsx",
+      "to_path": "app/data/about.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/WhoWeAreSection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/WhoWeAreSection.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about-sections/WhoWeAreSection.tsx",
+      "to_path": "app/data/about.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about/loading.tsx",
+      "to_path": "app/components/PageLoader.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about/page.tsx",
+      "to_path": "app/about-sections/AboutHeroSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about/page.tsx",
+      "to_path": "app/components/AnimatedSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about/page.tsx",
+      "to_path": "app/components/BottomFadeBlurOverlay.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about/page.tsx",
+      "to_path": "app/components/Footer.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/about/page.tsx",
+      "to_path": "app/components/Navbar.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/BlogContent.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/BlogContent.tsx",
+      "to_path": "app/data/blogData.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/[slug]/page.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/[slug]/page.tsx",
+      "to_path": "app/data/blogData.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/layout.tsx",
+      "to_path": "app/components/BottomFadeBlurOverlay.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/layout.tsx",
+      "to_path": "app/components/Footer.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/layout.tsx",
+      "to_path": "app/components/Navbar.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/blog/page.tsx",
+      "to_path": "app/blog/BlogContent.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/components/ServicePageTemplate.tsx",
+      "to_path": "app/components/BottomFadeBlurOverlay.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/components/ServicePageTemplate.tsx",
+      "to_path": "app/components/GetFreeQuote.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/components/ServicePageTemplate.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/components/ServicesPage.tsx",
+      "to_path": "app/components/BlurText.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/components/ServicesPage.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/components/ServicesPage.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/ContactHero.tsx",
+      "to_path": "app/components/BlurText.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/ContactHero.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/loading.tsx",
+      "to_path": "app/components/PageLoader.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/components/BottomFadeBlurOverlay.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/components/Footer.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/components/Navbar.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/connect/ContactFAQ.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/connect/ContactFormSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/connect/ContactHero.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/connect/page.tsx",
+      "to_path": "app/connect/MapSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/data/about.ts",
+      "to_path": "app/data/about.json",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/data/blogData.ts",
+      "to_path": "app/data/article_structured_chapters_numbered.json",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/data/blogData.ts",
+      "to_path": "app/data/director_loans_companies_income_tax_structured.json",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/layout.tsx",
+      "to_path": "app/components/SmoothScroller.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/layout.tsx",
+      "to_path": "app/globals.css",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/layout.tsx",
+      "to_path": "app/store/AppStore.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/loading.tsx",
+      "to_path": "app/components/PageLoader.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/components/AnimatedSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/components/BottomFadeBlurOverlay.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/components/Footer.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/components/Navbar.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/sections/GetInTouchSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/sections/HeroSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/sections/MissionSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/sections/StrategicApproachSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/page.tsx",
+      "to_path": "app/sections/WhatWeDoSection.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sections/HeroSection.tsx",
+      "to_path": "app/components/BlurText.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sections/HeroSection.tsx",
+      "to_path": "app/components/OptimizedImage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sections/MissionSection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sections/StrategicApproachSection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sections/WhatWeDoSection.tsx",
+      "to_path": "app/components/HeadingReveal.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/AnnualFiling.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/BankLoans.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/BusinessPlan.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/BusinessValuation.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/CMAReport.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/Copyright.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/CostAudit.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/DirectorKYC.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/DueDiligence.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ESIFiling.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ESOP.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/FDIAdvisory.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/FDIFilings.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/FEMACompliance.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/FSSAILicense.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/FinancialInstitutionLoans.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/GSTAudits.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/GSTConsultation.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/GSTRefunds.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/GSTRegistration.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/GSTReturns.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/GiftDeed.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ImportExportCode.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/IncomeTaxAppeals.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/IncomeTaxReturn.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/IndianSubsidiary.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/InternalAudits.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/JointVentureAgreement.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/LLPRegistration.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/LoanSyndication.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/MSMEUdyam.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/MergersAcquisitions.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/NRICompanyIncorporation.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/NidhiCompany.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/OnePersonCompany.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/PANForNRI.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/PFFiling.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/PartnershipFirm.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/Patent.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/PayrollProcessing.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/PrivateLimitedCompany.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ProducerCompany.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ProfessionalTax.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ProjectReport.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/PropertyManagement.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ROCCompliance.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ScrutinyAssessments.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/SecretarialServices.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/Section8Company.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ShareTransferFDI.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/ShareholderAgreement.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/SoleProprietorship.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/StatutoryAudits.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/TANRegistration.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/TDSReturns.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/TaxAudits.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/TaxLitigation.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/Trademark.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/TransferPricing.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/VirtualCFO.tsx",
+      "to_path": "components/ServicePageTemplate.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/AnnualFiling.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/BankLoans.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/BusinessPlan.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/BusinessValuation.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/CMAReport.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/Copyright.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/CostAudit.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/DirectorKYC.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/DueDiligence.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ESIFiling.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ESOP.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/FDIAdvisory.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/FDIFilings.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/FEMACompliance.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/FSSAILicense.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/FinancialInstitutionLoans.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/GSTAudits.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/GSTConsultation.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/GSTRefunds.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/GSTRegistration.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/GSTReturns.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/GiftDeed.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ImportExportCode.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/IncomeTaxAppeals.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/IncomeTaxReturn.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/IndianSubsidiary.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/InternalAudits.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/JointVentureAgreement.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/LLPRegistration.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/LoanSyndication.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/MSMEUdyam.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/MergersAcquisitions.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/NRICompanyIncorporation.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/NidhiCompany.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/OnePersonCompany.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/PANForNRI.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/PFFiling.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/PartnershipFirm.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/Patent.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/PayrollProcessing.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/PrivateLimitedCompany.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ProducerCompany.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ProfessionalTax.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ProjectReport.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/PropertyManagement.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ROCCompliance.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ScrutinyAssessments.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/SecretarialServices.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/Section8Company.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ShareTransferFDI.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/ShareholderAgreement.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/SoleProprietorship.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/StatutoryAudits.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/TANRegistration.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/TDSReturns.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/TaxAudits.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/TaxLitigation.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/Trademark.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/TransferPricing.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "to_path": "app/services/VirtualCFO.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/[slug]/page.tsx",
+      "to_path": "app/services/[slug]/ServiceRenderer.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/layout.tsx",
+      "to_path": "app/components/Footer.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/layout.tsx",
+      "to_path": "app/components/Navbar.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/loading.tsx",
+      "to_path": "app/components/PageLoader.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/services/page.tsx",
+      "to_path": "app/components/ServicesPage.tsx",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sitemap.ts",
+      "to_path": "app/data/blogData.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/sitemap.ts",
+      "to_path": "app/data/services-registry.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "app/store/AppStore.tsx",
+      "to_path": "app/data/about.ts",
+      "kind": "import"
+    },
+    {
+      "from_path": "components/ServicePageTemplate.tsx",
+      "to_path": "app/components/ServicePageTemplate.tsx",
+      "kind": "import"
+    }
+  ],
+  "external_dependencies": [
+    "@/app",
+    "@studio-freight/lenis",
+    "@tailwindcss/forms",
+    "framer-motion",
+    "fs",
+    "gsap",
+    "lucide-react",
+    "next",
+    "path",
+    "playwright",
+    "react",
+    "sharp",
+    "tailwindcss"
+  ],
+  "warnings": [
+    {
+      "path": "app/components/GetFreeQuote.tsx",
+      "kind": "unresolved_dynamic"
+    },
+    {
+      "path": "app/connect/ContactFormSection.tsx",
+      "kind": "unresolved_dynamic"
+    }
+  ]
+}

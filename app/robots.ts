@@ -2,12 +2,12 @@ import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const SITE_URL = "https://gmnrassociates.com";
+const SITE_URL = "https://www.cmkca.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ── Legitimate search engines: full access ──
+      // ── Search Engine Crawlers ──
       {
         userAgent: [
           "Googlebot",
@@ -25,36 +25,26 @@ export default function robots(): MetadataRoute.Robots {
         ],
         allow: "/",
       },
-      // ── AI search assistants: full access (drive referral traffic) ──
-      {
-        userAgent: ["PerplexityBot", "YouBot", "Diffbot", "cohere-ai"],
-        allow: "/",
-      },
-      // ── AI training crawlers: disallowed ──
-      // Content is proprietary professional advice; opt-out of model training.
+      // ── Generative AI & Search Engine Crawlers (AI Discovery Enabled) ──
       {
         userAgent: [
+          "PerplexityBot",
           "GPTBot",
           "ChatGPT-User",
           "OAI-SearchBot",
-          "CCBot",
-          "anthropic-ai",
-          "Claude-Web",
           "ClaudeBot",
-          "meta-externalagent",
-          "Meta-ExternalFetcher",
-          "Bytespider",
-          "Applebot-Extended",
+          "Claude-Web",
+          "anthropic-ai",
           "Google-Extended",
-          "omgili",
-          "omgilibot",
-          "imgproxy",
-          "DataForSeoBot",
-          "MJ12bot",
+          "YouBot",
+          "Diffbot",
+          "cohere-ai",
+          "Applebot-Extended",
+          "Meta-ExternalFetcher",
         ],
-        disallow: "/",
+        allow: "/",
       },
-      // ── Default for all other bots ──
+      // ── Default Rule for all other bots ──
       {
         userAgent: "*",
         allow: "/",

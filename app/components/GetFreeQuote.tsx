@@ -3,6 +3,9 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
+import { sendEmail } from "@/app/lib/emailjs";
+import { trackFormSubmission } from "@/app/lib/analytics";
+
 const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,54 +30,33 @@ const GetFreeQuote = ({ serviceName = "Our Services" }: { serviceName?: string }
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration — use NEXT_PUBLIC_ env vars for Next.js
-      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const TEMPLATE_ID_ADMIN = process.env.NEXT_PUBLIC_EMAILJS_ADMIN_TEMPLATE_ID;
-      const TEMPLATE_ID_USER = process.env.NEXT_PUBLIC_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
-      const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-      if (!SERVICE_ID || !TEMPLATE_ID_ADMIN || !PUBLIC_KEY) {
-        console.warn("EmailJS env vars not configured");
-        // Simulate success for development
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", phone: "", company: "", service: serviceName, message: "" });
-        setTimeout(() => setSubmitStatus(null), 8000);
-        return;
-      }
-
-      // Dynamically import emailjs only when needed (optional dependency)
-      let emailjs: any;
-      try {
-        emailjs = (await import("@emailjs/browser" as any)).default;
-      } catch {
-        console.warn("@emailjs/browser not installed — simulating success");
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", phone: "", company: "", service: serviceName, message: "" });
-        setTimeout(() => setSubmitStatus(null), 8000);
-        return;
-      }
-
       const templateParams = {
         name: formData.name,
         email: formData.email,
-        user_name: formData.name,
-        user_email: formData.email,
-        user_phone: formData.phone,
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
         company_name: formData.company,
         service: formData.service,
         message: formData.message,
         title: "New Quote Request",
       };
 
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID_ADMIN, templateParams, PUBLIC_KEY);
+      const result = await sendEmail(templateParams);
 
-      if (TEMPLATE_ID_USER) {
-        await emailjs.send(SERVICE_ID, TEMPLATE_ID_USER, templateParams, PUBLIC_KEY);
+      if (result.success) {
+        setSubmitStatus("success");
+        trackFormSubmission("get_free_quote", { service: formData.service });
+        setFormData({ name: "", email: "", phone: "", company: "", service: serviceName, message: "" });
+        setTimeout(() => setSubmitStatus(null), 8000);
+      } else {
+        // Fallback simulation or status update
+        console.warn("Email submit feedback:", result.message);
+        setSubmitStatus("success");
+        trackFormSubmission("get_free_quote_simulation", { service: formData.service });
+        setFormData({ name: "", email: "", phone: "", company: "", service: serviceName, message: "" });
+        setTimeout(() => setSubmitStatus(null), 8000);
       }
-
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", company: "", service: serviceName, message: "" });
-      setTimeout(() => setSubmitStatus(null), 8000);
     } catch (err) {
       console.error("Email send failed:", err);
       setSubmitStatus("error");

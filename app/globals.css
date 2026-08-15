@@ -69,3 +69,34 @@ html.lenis body {
   from { transform: rotate(0deg); }
   to   { transform: rotate(-360deg); }
 }
+
+/* ── View Transitions API Keyframes ── */
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vt-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+::view-transition-old(root) {
+  animation: 120ms cubic-bezier(0.4, 0, 1, 1) both vt-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 200ms cubic-bezier(0, 0, 0.2, 1) 60ms both vt-fade-in;
+}
