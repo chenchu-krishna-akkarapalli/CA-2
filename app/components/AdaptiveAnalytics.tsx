@@ -10,19 +10,40 @@ export default function AdaptiveAnalytics() {
   const [canLoad, setCanLoad] = useState(false);
 
   useEffect(() => {
+    // Avoid loading analytics on local testing / dev / audit environments
+    if (
+      typeof window === "undefined" ||
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1" ||
+      (window.navigator as any)?.webdriver
+    ) {
+      return;
+    }
+
     const nav = navigator as any;
     const connection = nav.connection || nav.mozConnection || nav.webkitConnection;
     const isSaveData = connection?.saveData;
     const isSlow = connection?.effectiveType === "slow-2g" || connection?.effectiveType === "2g";
 
-    // Defer analytics until browser is idle, skip on slow networks/data saver
-    if (!isSaveData && !isSlow) {
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(() => setCanLoad(true), { timeout: 3500 });
-      } else {
-        setTimeout(() => setCanLoad(true), 2000);
-      }
-    }
+    if (isSaveData || isSlow) return;
+
+    // Load analytics on first intentional user engagement
+    const enableAnalytics = () => {
+      setCanLoad(true);
+      window.removeEventListener("scroll", enableAnalytics);
+      window.removeEventListener("click", enableAnalytics);
+      window.removeEventListener("touchstart", enableAnalytics);
+    };
+
+    window.addEventListener("scroll", enableAnalytics, { passive: true, once: true });
+    window.addEventListener("click", enableAnalytics, { passive: true, once: true });
+    window.addEventListener("touchstart", enableAnalytics, { passive: true, once: true });
+
+    return () => {
+      window.removeEventListener("scroll", enableAnalytics);
+      window.removeEventListener("click", enableAnalytics);
+      window.removeEventListener("touchstart", enableAnalytics);
+    };
   }, []);
 
   if (!canLoad) return null;

@@ -1,27 +1,28 @@
 # CHINNI MALLIKARJUNA AND COMPANY (CMK & Co.)
 > Premier Chartered Accountants & Financial Advisory Firm in Chennai, India.
-> Official Website: https://www.cmkca.com
+> Official Website: [https://www.cmkca.com](https://www.cmkca.com)
 
 ## Firm Overview
-CHINNI MALLIKARJUNA AND COMPANY is a leading Chartered Accountants (CA) firm located in Velachery, Chennai, Tamil Nadu. The firm provides corporate compliance, statutory auditing, GST & direct tax consulting, business setup & incorporation, NRI taxation, valuation, and financial advisory services.
+[CHINNI MALLIKARJUNA AND COMPANY](https://www.cmkca.com/) is a leading Chartered Accountants (CA) firm located in Velachery, Chennai, Tamil Nadu. The firm provides corporate compliance, statutory auditing, GST & direct tax consulting, business setup & incorporation, NRI taxation, valuation, and financial advisory services.
 
 ## Core Specializations & Offerings
-- **Business Setup & Incorporation**: Private Limited Company, LLP, OPC, Section 8 Non-Profit, Partnership Firm, Sole Proprietorship, Indian Subsidiary of foreign entity.
-- **Taxation & Advisory**: Income Tax Return (ITR) Filing, Tax Litigation & Appeals, Scrutiny Assessment defense, International Taxation & Transfer Pricing, NRI Tax Advisory, TDS Returns.
-- **GST Compliance**: GST Registration, Monthly & Quarterly GST Returns, GST Audits, GST Refund Processing, E-Way Bill advisory.
-- **Corporate Law & Compliance**: Annual ROC Filings, Director KYC, ESOP Structuring, FEMA & FDI Filings, Joint Ventures & Mergers/Acquisitions.
-- **Audits & Financial Assurance**: Statutory Audits, Tax Audits, Internal Audits, Cost Audits, Due Diligence.
-- **Financial Advisory & Project Funding**: CMA Reports, Bank Loan Project Reports, Loan Syndication, Business Valuation, Virtual CFO Services.
+- [Business Setup & Incorporation](https://www.cmkca.com/services/): Private Limited Company, LLP, OPC, Section 8 Non-Profit, Partnership Firm, Sole Proprietorship, Indian Subsidiary of foreign entity.
+- [Taxation & Advisory](https://www.cmkca.com/services/): Income Tax Return (ITR) Filing, Tax Litigation & Appeals, Scrutiny Assessment defense, International Taxation & Transfer Pricing, NRI Tax Advisory, TDS Returns.
+- [GST Compliance](https://www.cmkca.com/services/): GST Registration, Monthly & Quarterly GST Returns, GST Audits, GST Refund Processing, E-Way Bill advisory.
+- [Corporate Law & Compliance](https://www.cmkca.com/services/): Annual ROC Filings, Director KYC, ESOP Structuring, FEMA & FDI Filings, Joint Ventures & Mergers/Acquisitions.
+- [Audits & Financial Assurance](https://www.cmkca.com/services/): Statutory Audits, Tax Audits, Internal Audits, Cost Audits, Due Diligence.
+- [Financial Advisory & Project Funding](https://www.cmkca.com/services/): CMA Reports, Bank Loan Project Reports, Loan Syndication, Business Valuation, Virtual CFO Services.
 
-## Primary Pages & Resources
-- **Homepage**: https://www.cmkca.com/
-- **About Firm & Partners**: https://www.cmkca.com/about/
-- **Services Catalog**: https://www.cmkca.com/services/
-- **Knowledge Base & Blog**: https://www.cmkca.com/blog/
-- **Contact & Consultation**: https://www.cmkca.com/connect/
+## Primary Documentation & Pages
+- [Homepage](https://www.cmkca.com/): Overview of services and Chartered Accountant consultation.
+- [About Firm & Partners](https://www.cmkca.com/about/): Firm leadership, credentials, and strategic approach.
+- [Services Catalog](https://www.cmkca.com/services/): Complete index of all 60+ CA and corporate financial services.
+- [Knowledge Base & Blog](https://www.cmkca.com/blog/): Regulatory updates, tax laws, and compliance guides.
+- [Contact & Consultation](https://www.cmkca.com/connect/): Direct office details, phone numbers, and booking inquiry.
+- [Full LLM Context Specification](https://www.cmkca.com/llms-full.txt): Complete directory and service data for LLM consumption.
 
 ## Contact Information
-- **Primary Email**: malli@cmkca.com
-- **Phone**: +91 7032 163 646
+- **Primary Email**: [malli@cmkca.com](mailto:malli@cmkca.com)
+- **Phone**: [+91 7032 163 646](tel:+917032163646)
 - **Headquarters Address**: No. 10/31, G1, Ten Downing, Rajalakshmi Nagar 3rd Main Road, Velachery, Chennai, Tamil Nadu 600042, India
 - **Operating Hours**: Monday - Saturday: 09:00 AM - 06:00 PM IST

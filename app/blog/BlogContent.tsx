@@ -41,30 +41,30 @@ const BlogHero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center min-h-[65vh] pt-[240px] pb-[160px] px-[5%]">
+            <div className="relative z-10 flex flex-col items-center justify-center min-h-[50vh] sm:min-h-[65vh] pt-[130px] sm:pt-[240px] pb-[90px] sm:pb-[160px] px-4 sm:px-[5%]">
                 {/* Breadcrumb */}
                 <div
-                    className={`flex items-center gap-2 mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    className={`flex items-center gap-2 mb-4 sm:mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                         }`}
                 >
-                    <Link href="/" className="font-outfit text-[14px] text-white/70 hover:text-white transition-colors">
+                    <Link href="/" className="font-outfit text-[12px] sm:text-[14px] text-white/70 hover:text-white transition-colors">
                         Home
                     </Link>
                     <span className="text-white/50">/</span>
-                    <span className="font-outfit text-[14px] text-white">Blog</span>
+                    <span className="font-outfit text-[12px] sm:text-[14px] text-white">Blog</span>
                 </div>
 
                 {/* Title */}
                 <h1
-                    className={`font-outfit font-bold text-[clamp(32px,5vw,64px)] leading-[1.1] text-center text-white drop-shadow-lg transition-all duration-1000 delay-200 max-w-[900px] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    className={`font-outfit font-extrabold text-[28px] sm:text-[clamp(32px,5vw,64px)] leading-[1.15] sm:leading-[1.1] text-center text-white drop-shadow-lg transition-all duration-1000 delay-200 max-w-[900px] text-balance ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
                 >
-                    Insights & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">Updates</span>
+                    Insights &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">Updates</span>
                 </h1>
 
                 {/* Subtitle */}
                 <p
-                    className={`max-w-[700px] mt-6 font-inter font-normal text-[clamp(16px,1.4vw,20px)] leading-[1.6] text-center text-white/90 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    className={`max-w-xs sm:max-w-[700px] mt-3 sm:mt-6 font-inter font-normal text-[13.5px] sm:text-[clamp(16px,1.4vw,20px)] leading-[1.6] text-center text-white/90 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
                 >
                     Stay informed with the latest trends, expert advice, and financial news to help your business grow.

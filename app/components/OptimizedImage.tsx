@@ -26,11 +26,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
 
     const basePath = src.substring(0, lastDotIndex);
-
-    // Encode paths to handle spaces in filenames
-    // We use encodeURI because src is a partial URL path like "/folder/My Image.png"
     const encodedBasePath = encodeURI(basePath);
-    const encodedSrc = encodeURI(src);
 
     // Define responsive widths matching our optimization script
     const widths = [320, 640, 960, 1280];
@@ -55,7 +51,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
                 className={`w-full h-full object-cover ${className || ""}`}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0, ...props.style }}
                 loading={priority ? "eager" : "lazy"}
-                decoding="async"
+                decoding={priority ? "sync" : "async"}
+                // @ts-ignore
+                fetchPriority={priority ? "high" : "auto"}
             />
         </picture>
     );

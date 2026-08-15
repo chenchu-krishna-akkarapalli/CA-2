@@ -10,7 +10,6 @@ import {
   Users,
   Briefcase,
   ShieldCheck,
-  ChevronRight
 } from "lucide-react";
 import aboutData from "../data/about";
 import HeadingReveal from "../components/HeadingReveal";
@@ -51,7 +50,7 @@ function GlassCard({
       className={`relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:bg-white/20 hover:border-white/30 transition-all duration-300 group ${className}`}
     >
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-brand-accent/20 blur-2xl group-hover:bg-brand-accent/30 transition-colors duration-500" />
-      
+
       <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-white to-white/60 shadow-sm mb-4 group-hover:scale-110 transition-transform duration-300">
         <Icon className="h-6 w-6 text-brand-primary" strokeWidth={2} />
       </div>
@@ -71,18 +70,18 @@ function ExperienceBadge({ mobile = false }: { mobile?: boolean }) {
       viewport={{ once: true }}
       transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
       className={`absolute z-20 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-brand-primary to-brand-accent text-white shadow-[0_16px_40px_rgba(2,79,49,0.4)] ${
-        mobile 
-          ? "bottom-4 right-4 h-28 w-28 border-4 border-white" 
+        mobile
+          ? "bottom-3 right-3 h-24 w-24 border-2 border-white"
           : "-bottom-12 -right-12 h-40 w-40 border-8 border-white lg:bottom-10 lg:-right-16 lg:h-48 lg:w-48"
       }`}
     >
-      <span className={`font-outfit font-bold tracking-tight ${mobile ? "text-3xl" : "text-5xl lg:text-6xl"}`}>
+      <span className={`font-outfit font-bold tracking-tight ${mobile ? "text-2xl" : "text-5xl lg:text-6xl"}`}>
         8+
       </span>
-      <span className={`font-outfit font-medium opacity-90 ${mobile ? "text-sm mt-0.5" : "text-lg lg:text-xl mt-1"}`}>
+      <span className={`font-outfit font-medium opacity-90 ${mobile ? "text-[11px] mt-0" : "text-lg lg:text-xl mt-1"}`}>
         Years
       </span>
-      <span className={`font-inter font-light opacity-70 ${mobile ? "text-[10px]" : "text-sm"}`}>
+      <span className={`font-inter font-light opacity-70 ${mobile ? "text-[9px]" : "text-sm"}`}>
         Experience
       </span>
     </motion.div>
@@ -94,8 +93,15 @@ function ContentSide() {
     <div className="flex flex-col justify-center w-full lg:w-1/2 lg:pr-12">
       <HeadingReveal>
         <h2 className="font-outfit font-bold text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[56px] leading-[1.1] text-brand-primary mb-6 text-center lg:text-left">
-          {data.title.split(' ').map((word, i) => (
-            <span key={i} className={i >= data.title.split(' ').length - 2 ? "text-brand-accent" : ""}>
+          {data.title.split(" ").map((word, i) => (
+            <span
+              key={i}
+              className={
+                i >= data.title.split(" ").length - 2
+                  ? "text-brand-accent"
+                  : ""
+              }
+            >
               {word}{" "}
             </span>
           ))}
@@ -120,11 +126,11 @@ function ContentSide() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         {data.features.map((feature, index) => (
-          <GlassCard 
-            key={feature.title} 
-            title={feature.title} 
-            icon={feature.icon} 
-            delay={0.3 + (index * 0.1)} 
+          <GlassCard
+            key={feature.title}
+            title={feature.title}
+            icon={feature.icon}
+            delay={0.3 + index * 0.1}
           />
         ))}
       </div>
@@ -135,7 +141,7 @@ function ContentSide() {
 function ImageSide() {
   return (
     <div className="relative w-full lg:w-1/2 mt-16 lg:mt-0 flex items-center justify-center">
-      <motion.div 
+      <motion.div
         className="relative w-full max-w-[500px] aspect-[4/5] rounded-[2.5rem] bg-gradient-to-br from-brand-primary/5 to-brand-accent/20 p-2 sm:p-4"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -170,8 +176,12 @@ function ImageSide() {
             <Handshake className="w-5 h-5 text-brand-accent" />
           </div>
           <div>
-            <p className="font-outfit font-bold text-sm text-brand-primary">Trusted Partners</p>
-            <p className="font-inter text-xs text-slate-500">For Your Business</p>
+            <p className="font-outfit font-bold text-sm text-brand-primary">
+              Trusted Partners
+            </p>
+            <p className="font-inter text-xs text-slate-500">
+              For Your Business
+            </p>
           </div>
         </motion.div>
       </motion.div>
@@ -181,24 +191,109 @@ function ImageSide() {
 
 export default function WhoWeAreSection() {
   return (
-    <section className="relative w-full max-w-[1440px] mx-auto py-12 lg:py-20 overflow-hidden" aria-label="Who We Are">
+    <section
+      className="relative w-full max-w-[1440px] mx-auto py-8 sm:py-12 lg:py-20 overflow-hidden"
+      aria-label="Who We Are"
+    >
       {/* Background abstract shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
         <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-brand-accent/5 to-transparent blur-3xl" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-brand-primary/5 to-transparent blur-3xl" />
       </div>
 
-      <div className="flex flex-col items-center mb-8 lg:mb-16">
+      {/* Section Header */}
+      <div className="flex flex-col items-center mb-6 sm:mb-8 lg:mb-16 px-4">
         <HeadingReveal>
-          <h2 className="font-outfit font-bold text-[30px] sm:text-[40px] lg:text-[50px] leading-[36px] sm:leading-[44px] lg:leading-[55px] text-center tracking-tight">
+          <h2 className="font-outfit font-bold text-[24px] sm:text-[40px] lg:text-[50px] leading-[30px] sm:leading-[44px] lg:leading-[55px] text-center tracking-tight">
             <span className="text-brand-primary">WHO</span>{" "}
             <span className="text-brand-accent">WE ARE</span>
           </h2>
         </HeadingReveal>
-        <div className="h-[6px] w-[180px] sm:w-[240px] rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mt-4" />
+        <div className="h-[4px] sm:h-[6px] w-[140px] sm:w-[240px] rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mt-3 sm:mt-4" />
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 gap-12 lg:gap-0">
+      {/* ── MOBILE BENTO GRID (< 1024px) ── */}
+      <div className="grid lg:hidden grid-cols-2 gap-3 px-3.5 sm:px-6">
+        {/* Mobile Bento Cell 1: Team Photo & 8+ Years Pill (Span 2) */}
+        <motion.div
+          className="col-span-2 relative h-[210px] sm:h-[260px] rounded-2xl overflow-hidden border border-slate-200 shadow-sm"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <OptimizedImage
+            src="/Assets/figma/about/who-rectangle-3.avif"
+            alt="Professional CA Team"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-brand-primary/20 to-transparent" />
+          
+          <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+            <div>
+              <p className="font-outfit font-bold text-white text-[15px] leading-tight drop-shadow">
+                CA Mallikarjuna CH &amp; Team
+              </p>
+              <p className="font-inter text-slate-200 text-[11.5px] drop-shadow">
+                Chartered Accountants &amp; Advisors
+              </p>
+            </div>
+            <div className="bg-brand-accent text-white px-2.5 py-1 rounded-xl flex items-center gap-1 shadow-lg shrink-0">
+              <span className="font-outfit font-bold text-[14px] leading-none">8+</span>
+              <span className="font-inter text-[10px] uppercase font-semibold tracking-wider">Yrs Exp</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Mobile Bento Cell 2: Mission Narrative (Span 2) */}
+        <motion.div
+          className="col-span-2 bg-white border border-slate-200/90 rounded-2xl p-4 shadow-sm"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-2 h-2 rounded-full bg-brand-accent" />
+            <span className="font-outfit font-bold text-[12px] uppercase text-brand-accent tracking-wider">
+              {data.title}
+            </span>
+          </div>
+          <p className="font-inter text-[12.5px] leading-relaxed text-slate-700 mb-2">
+            {data.description1}
+          </p>
+          <p className="font-inter text-[12px] leading-relaxed text-slate-500">
+            {data.description2}
+          </p>
+        </motion.div>
+
+        {/* Mobile Bento 2x2: Core Pillars */}
+        {data.features.map((feature, i) => {
+          const Icon = iconMap[feature.icon] || Target;
+          return (
+            <motion.div
+              key={feature.title}
+              className="col-span-1 bg-white border border-slate-200/90 rounded-2xl p-3.5 shadow-sm flex flex-col justify-between min-h-[110px]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.15 + i * 0.05 }}
+            >
+              <div className="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-primary mb-2">
+                <Icon className="w-4 h-4 text-brand-accent" strokeWidth={2} />
+              </div>
+              <h4 className="font-outfit font-bold text-[13px] leading-tight text-brand-primary">
+                {feature.title}
+              </h4>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* ── DESKTOP SPLIT VIEW (lg: and above) ── */}
+      <div className="hidden lg:flex items-center justify-between px-8 lg:px-16 gap-12 lg:gap-0">
         <ContentSide />
         <ImageSide />
       </div>

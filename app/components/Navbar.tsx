@@ -9,6 +9,8 @@ import {
   Menu,
   X,
   Phone,
+  MapPin,
+  Mail,
   Building2,
   Users,
   User,
@@ -552,38 +554,47 @@ export default function Navbar() {
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* ── Location Bar (all screen sizes) ── */}
-        <div className="w-full bg-brand-primary border-b border-white/10 flex items-center h-[28px] md:h-[31px]">
-          <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between md:justify-end px-4 lg:px-10 xl:px-20 gap-4">
+        {/* ── Top Info Notification Bar (Location, Mobile Phone & Email) ── */}
+        <div className="w-full bg-brand-primary border-b border-white/10 flex items-center min-h-[30px] md:min-h-[32px] py-1 md:py-0">
+          <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between sm:justify-end px-2.5 sm:px-6 lg:px-10 xl:px-20 gap-2 sm:gap-4 md:gap-6 text-white/90">
+            {/* Location */}
             <a
               href="https://www.google.com/maps/search/?api=1&query=No.+10%2F31,+G1,+Ten+Downing,+Rajalakshmi+Nagar+3rd+Main+Road,+Velachery,+Chennai+%E2%80%93+600+042"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:opacity-100 opacity-80 transition-opacity"
+              className="flex items-center gap-1 sm:gap-1.5 hover:text-white transition-colors shrink-0"
+              aria-label="Office Location: Chennai, India"
             >
-              <Image
-                src="/Assets/react-icons/BiMap.svg"
-                alt="Location"
-                width={14}
-                height={14}
-                className="md:w-4 md:h-4 brightness-0 invert"
-              />
-              <span className="font-arial text-[11px] md:text-[13px] text-white">
+              <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-sky-400 shrink-0" />
+              <span className="font-inter text-[10.5px] sm:text-[11.5px] md:text-[12.5px] font-medium tracking-tight">
                 Chennai
               </span>
             </a>
+
+            <div className="w-px h-2.5 bg-white/20" aria-hidden="true" />
+
+            {/* Mobile / Phone */}
+            <a
+              href="tel:+917032163646"
+              className="flex items-center gap-1 sm:gap-1.5 hover:text-white transition-colors shrink-0"
+              aria-label="Call Mobile: +91 7032 163 646"
+            >
+              <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 shrink-0" />
+              <span className="font-inter text-[10.5px] sm:text-[11.5px] md:text-[12.5px] font-medium tracking-tight">
+                +91 7032 163 646
+              </span>
+            </a>
+
+            <div className="w-px h-2.5 bg-white/20" aria-hidden="true" />
+
+            {/* Email */}
             <a
               href="mailto:malli@cmkca.com"
-              className="flex items-center gap-1 hover:opacity-100 opacity-80 transition-opacity"
+              className="flex items-center gap-1 sm:gap-1.5 hover:text-white transition-colors shrink-0 truncate max-w-[130px] xs:max-w-none"
+              aria-label="Email: malli@cmkca.com"
             >
-              <Image
-                src="/Assets/gmail-icon.svg"
-                alt="Email"
-                width={10}
-                height={8}
-                className="md:w-[11px] md:h-[9px] brightness-0 invert"
-              />
-              <span className="font-arial text-[11px] md:text-[13px] text-white">
+              <Mail className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-sky-400 shrink-0" />
+              <span className="font-inter text-[10.5px] sm:text-[11.5px] md:text-[12.5px] font-medium tracking-tight truncate">
                 malli@cmkca.com
               </span>
             </a>
@@ -591,7 +602,7 @@ export default function Navbar() {
         </div>
 
         {/* ── Main Navbar Row ── */}
-        <div className="w-full max-w-[1440px] mx-auto h-[56px] flex items-center justify-between px-4 lg:px-6 xl:px-8">
+        <div className="w-full max-w-[1440px] mx-auto h-[54px] sm:h-[56px] flex items-center justify-between px-3.5 sm:px-6 xl:px-8">
           {/* Left: Logo + ICAI */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <Link href="/" className="flex items-center">
@@ -600,7 +611,7 @@ export default function Navbar() {
                 alt="Chinni Mallikarjuna & Co. - Chartered Accountants"
                 width={220}
                 height={48}
-                className="h-7 sm:h-10 md:h-11 w-auto object-contain"
+                className="h-8 sm:h-10 md:h-11 w-auto object-contain"
                 priority
               />
             </Link>
@@ -651,8 +662,8 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right: Blog button (desktop) + Mobile hamburger */}
-          <div className="flex items-center gap-3 flex-shrink-0">
+          {/* Right CTA / Mobile Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <Link
               href="/blog"
               className="hidden xl:flex w-16 h-9 rounded-md bg-gradient-btn-blog items-center justify-center hover:opacity-90 transition-opacity"
@@ -662,15 +673,15 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Hamburger — Minimum 44x44px touch target */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="xl:hidden w-10 h-10 flex items-center justify-center rounded-md hover:bg-gray-50 transition-colors"
+              className="xl:hidden min-w-[44px] min-h-[44px] p-2.5 flex items-center justify-center rounded-lg hover:bg-gray-100 active:scale-95 transition-all text-brand-primary"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
             >
               {mobileOpen ? (
-                <X className="w-6 h-6 text-brand-primary" />
+                <X className="w-6 h-6" />
               ) : (
                 <Menu className="w-6 h-6 text-brand-primary" />
               )}

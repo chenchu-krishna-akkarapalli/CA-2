@@ -5,31 +5,34 @@ import { ScheduledStorage } from "../lib/storageManager";
 
 export default function ClientInit() {
   useEffect(() => {
-    // 1. Initialize scheduled LocalStorage cleanup (every 30 mins)
-    ScheduledStorage.initBackgroundCleaner(30);
+    const initDeferredTasks = () => {
+      // 1. Initialize scheduled LocalStorage cleanup
+      ScheduledStorage.initBackgroundCleaner(30);
 
-    // 2. Service Worker registration (Production Only)
-    if (typeof window !== "undefined" && "serviceWorker" in navigator) {
-      if (process.env.NODE_ENV === "production") {
-        window.addEventListener("load", () => {
+      // 2. Service Worker registration (Production Only)
+      if ("serviceWorker" in navigator) {
+        if (
+          process.env.NODE_ENV === "production" &&
+          window.location.hostname !== "localhost" &&
+          window.location.hostname !== "127.0.0.1"
+        ) {
           navigator.serviceWorker
             .register("/sw.js")
-            .then((registration) => {
-              console.log("[SW] Active scope:", registration.scope);
-            })
-            .catch((error) => {
-              console.warn("[SW] Registration failed:", error);
-            });
-        });
-      } else {
-        // In local development, unregister any active SW to prevent CSS/chunk caching issues
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
-          for (const reg of registrations) {
-            reg.unregister();
-            console.log("[SW] Unregistered development service worker:", reg.scope);
-          }
-        });
+            .catch(() => {});
+        } else {
+          navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for (const reg of registrations) {
+              reg.unregister();
+            }
+          });
+        }
       }
+    };
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(initDeferredTasks, { timeout: 3000 });
+    } else {
+      setTimeout(initDeferredTasks, 1500);
     }
   }, []);
 

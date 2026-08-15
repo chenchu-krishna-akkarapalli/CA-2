@@ -10,14 +10,12 @@ const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["300", "400", "500"],
 });
 
 const SITE_DOMAIN = "https://www.cmkca.com";
@@ -53,6 +51,14 @@ export const metadata: Metadata = {
     address: true,
   },
   manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.svg",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     title: "CHINNI MALLIKARJUNA AND COMPANY | Chartered Accountants – Audit, Tax & Advisory",
     description:

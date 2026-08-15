@@ -26,7 +26,7 @@ export default function ContactHero() {
 
       {/* Bottom Decorator Wave */}
       <div
-        className="absolute bottom-0 h-[140px] sm:h-[170px] lg:h-[186px] w-full lg:w-[1440px] left-0 lg:left-1/2 lg:-translate-x-1/2"
+        className="absolute bottom-0 h-[120px] sm:h-[170px] lg:h-[186px] w-full lg:w-[1440px] left-0 lg:left-1/2 lg:-translate-x-1/2"
         aria-hidden="true"
       >
         <Image
@@ -39,11 +39,11 @@ export default function ContactHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start h-full px-4 sm:px-8 py-16 sm:py-20 lg:py-0 lg:pt-[80px]">
+      <div className="relative z-10 flex flex-col items-center justify-start h-full px-4 sm:px-8 pt-[96px] sm:pt-[110px] lg:pt-[140px] pb-12 sm:pb-20">
         <div className="w-full max-w-[848px] flex flex-col items-center text-center">
           {/* Breadcrumb */}
           <motion.div
-            className="font-outfit font-bold text-[12px] leading-[18px] text-brand-primary flex items-center gap-1"
+            className="font-outfit font-bold text-[11px] sm:text-[12px] leading-[18px] text-brand-primary flex items-center gap-1"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
@@ -53,8 +53,8 @@ export default function ContactHero() {
             <span>Contact Us</span>
           </motion.div>
 
-          {/* Title — BlurText word-by-word, Direction Bottom, 250 ms delay */}
-          <h1 className="mt-6 sm:mt-7 font-outfit font-bold text-[54px] sm:text-[72px] lg:text-[96px] leading-[44px] sm:leading-[55px] text-center">
+          {/* Title — Balanced Mobile Scaling */}
+          <h1 className="mt-4 sm:mt-7 font-outfit font-bold text-[34px] sm:text-[72px] lg:text-[96px] leading-[38px] sm:leading-[55px] text-center tracking-tight">
             <BlurText
               segments={[
                 { text: "Contact", className: "text-brand-primary" },
@@ -66,7 +66,7 @@ export default function ContactHero() {
 
           {/* Tagline */}
           <motion.p
-            className="mt-6 sm:mt-7 max-w-[734px] font-outfit font-bold text-[24px] sm:text-[34px] lg:text-[50px] leading-[30px] sm:leading-[44px] lg:leading-[55px]"
+            className="mt-3.5 sm:mt-7 max-w-[734px] font-outfit font-bold text-[20px] sm:text-[34px] lg:text-[50px] leading-[26px] sm:leading-[44px] lg:leading-[55px] text-balance tracking-tight"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.55, ease: [0.25, 0.4, 0.25, 1] }}
@@ -77,7 +77,7 @@ export default function ContactHero() {
 
           {/* Subtitle */}
           <motion.p
-            className="mt-6 sm:mt-7 font-inter font-light text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] sm:leading-[22px] lg:leading-[19px] text-brand-primary"
+            className="mt-3.5 sm:mt-7 max-w-xs sm:max-w-xl lg:max-w-[848px] font-inter font-normal sm:font-light text-[13.5px] sm:text-[15px] lg:text-[16px] leading-[22px] sm:leading-[22px] lg:leading-[19px] text-brand-primary/90"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
@@ -86,28 +86,28 @@ export default function ContactHero() {
             to our team and we&apos;ll get back to you promptly.
           </motion.p>
 
-          {/* Buttons — adaptive padding replaces fixed w/h */}
+          {/* Buttons — Mobile Ergonomic Touch Targets */}
           <motion.div
-            className="mt-9 flex flex-col sm:flex-row items-center gap-3.5 sm:gap-[41px]"
+            className="mt-6 sm:mt-9 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-[41px] w-full max-w-xs sm:max-w-none"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.85, ease: [0.25, 0.4, 0.25, 1] }}
           >
             <a
               href="#contact-form"
-              className="rounded-[6px] bg-gradient-btn-services inline-flex items-center justify-center px-5 py-[8px]"
+              className="w-full sm:w-auto min-h-[44px] rounded-xl sm:rounded-[6px] bg-gradient-btn-services inline-flex items-center justify-center px-6 py-2.5 sm:py-[8px] active:scale-95 transition-all shadow-sm"
               aria-label="Send us a message"
             >
-              <span className="font-outfit font-medium text-[14px] leading-[20px] text-white">
+              <span className="font-outfit font-semibold text-[14px] leading-[20px] text-white">
                 Send Message
               </span>
             </a>
             <a
               href="tel:+917032163646"
-              className="rounded-[6px] border border-brand-accent bg-white/50 backdrop-blur-[2px] inline-flex items-center justify-center px-5 py-[8px]"
+              className="w-full sm:w-auto min-h-[44px] rounded-xl sm:rounded-[6px] border border-brand-accent bg-white/70 backdrop-blur-[2px] inline-flex items-center justify-center px-6 py-2.5 sm:py-[8px] active:scale-95 transition-all"
               aria-label="Call us now"
             >
-              <span className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary">
+              <span className="font-outfit font-semibold text-[14px] leading-[20px] text-brand-primary">
                 Call Now
               </span>
             </a>

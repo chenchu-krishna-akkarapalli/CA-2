@@ -11,26 +11,15 @@ type BlurLayer = {
 const LAYERS: BlurLayer[] = [
   {
     zIndex: 5,
-    blurPx: 1.75,
+    blurPx: 2,
     mask:
-      "linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 87.5%)",
+      "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%)",
   },
   {
     zIndex: 6,
-    blurPx: 3.5,
+    blurPx: 6,
     mask:
-      "linear-gradient(to bottom, rgba(0,0,0,0) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,1) 100%)",
-  },
-  {
-    zIndex: 7,
-    blurPx: 7,
-    mask:
-      "linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,1) 100%)",
-  },
-  {
-    zIndex: 8,
-    blurPx: 14,
-    mask: "linear-gradient(to bottom, rgba(0,0,0,0) 87.5%, rgba(0,0,0,1) 100%)",
+      "linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 100%)",
   },
 ];
 
@@ -39,6 +28,11 @@ export default function BottomFadeBlurOverlay() {
   const footerRef = useRef<Element | null>(null);
 
   useEffect(() => {
+    // Only run on desktop screens to preserve mobile FPS and paint performance
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      return;
+    }
+
     footerRef.current = document.querySelector("footer");
 
     const handleScroll = () => {
@@ -67,7 +61,7 @@ export default function BottomFadeBlurOverlay() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 bottom-0 z-40 h-[330px] transition-opacity duration-300 ease-out"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-40 h-[220px] transition-opacity duration-300 ease-out hidden md:block"
       style={{ opacity }}
     >
       {LAYERS.map((layer) => (

@@ -22,12 +22,12 @@ export default function AnimatedSection({
     <motion.section
       id={id}
       ref={ref}
-      className={className}
-      initial={{ opacity: 0, y: 40 }}
+      className={`${className} will-change-transform`}
+      initial={{ opacity: 0.9, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{
-        duration: 0.7,
+        duration: 0.5,
         delay,
         ease: [0.25, 0.4, 0.25, 1],
       }}

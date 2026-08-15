@@ -1,34 +1,18 @@
-﻿import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AnimatedSection from "../components/AnimatedSection";
 import BottomFadeBlurOverlay from "../components/BottomFadeBlurOverlay";
 import AboutHeroSection from "../about-sections/AboutHeroSection";
-
-const WhoWeAreSection = dynamic(() => import("@/app/about-sections/WhoWeAreSection"), {
-  loading: () => <div className="w-full max-w-[1132px] h-[520px]" aria-hidden="true" />,
-});
-
-const OurJourneySection = dynamic(() => import("@/app/about-sections/OurJourneySection"), {
-  loading: () => <div className="w-full h-[560px]" aria-hidden="true" />,
-});
-
-const CoreValuesSection = dynamic(() => import("@/app/about-sections/CoreValuesSection"), {
-  loading: () => <div className="w-full max-w-[1132px] h-[760px]" aria-hidden="true" />,
-});
-
-const MeetTheExpertsSection = dynamic(
-  () => import("@/app/about-sections/MeetTheExpertsSection"),
-  {
-    loading: () => <div className="w-full max-w-[1087px] h-[980px]" aria-hidden="true" />,
-  }
-);
+import WhoWeAreSection from "../about-sections/WhoWeAreSection";
+import OurJourneySection from "../about-sections/OurJourneySection";
+import CoreValuesSection from "../about-sections/CoreValuesSection";
+import MeetTheExpertsSection from "../about-sections/MeetTheExpertsSection";
 
 export const metadata: Metadata = {
-  title: "About Us | CHINNI MALLIKARJUNA AND COMPANY â€“ Chartered Accountants",
+  title: "About Us | CHINNI MALLIKARJUNA AND COMPANY – Chartered Accountants",
   description:
-    "Learn about CHINNI MALLIKARJUNA AND COMPANY â€” a trusted CA firm in Chennai. Meet our expert team of Chartered Accountants delivering audit, tax, and advisory services.",
+    "Learn about CHINNI MALLIKARJUNA AND COMPANY — a trusted CA firm in Chennai. Meet our expert team of Chartered Accountants delivering audit, tax, and advisory services.",
   keywords: [
     "About CHINNI MALLIKARJUNA AND COMPANY",
     "Chartered Accountants Chennai",
@@ -38,13 +22,13 @@ export const metadata: Metadata = {
     "Compliance Services",
   ],
   alternates: {
-    canonical: "https://gmnrassociates.com/about",
+    canonical: "https://www.cmkca.com/about",
   },
   openGraph: {
-    title: "About Us | CHINNI MALLIKARJUNA AND COMPANY â€“ Chartered Accountants",
+    title: "About Us | CHINNI MALLIKARJUNA AND COMPANY – Chartered Accountants",
     description:
       "A young and dynamic CA firm built on integrity, expertise, and a commitment to quality financial services.",
-    url: "https://gmnrassociates.com/about",
+    url: "https://www.cmkca.com/about",
     siteName: "CHINNI MALLIKARJUNA AND COMPANY",
     locale: "en_IN",
     type: "website",
@@ -53,7 +37,7 @@ export const metadata: Metadata = {
         url: "/hero-img/hero-1.avif",
         width: 1200,
         height: 630,
-        alt: "CHINNI MALLIKARJUNA AND COMPANY â€“ Chartered Accountants",
+        alt: "CHINNI MALLIKARJUNA AND COMPANY – Chartered Accountants",
       },
     ],
   },
@@ -61,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | CHINNI MALLIKARJUNA AND COMPANY",
     description:
-      "Meet the team behind CHINNI MALLIKARJUNA AND COMPANY â€” a trusted Chartered Accountants firm in Chennai.",
+      "Meet the team behind CHINNI MALLIKARJUNA AND COMPANY — a trusted Chartered Accountants firm in Chennai.",
     images: ["/hero-img/hero-1.avif"],
   },
 };
@@ -70,9 +54,9 @@ export default function AboutPage() {
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://gmnrassociates.com/#organization",
+    "@id": "https://www.cmkca.com/#organization",
     name: "CHINNI MALLIKARJUNA AND COMPANY",
-    url: "https://gmnrassociates.com",
+    url: "https://www.cmkca.com",
     email: "malli@cmkca.com",
     telephone: ["+91 7032 163 646"],
     address: {
@@ -89,9 +73,9 @@ export default function AboutPage() {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://gmnrassociates.com/#localbusiness",
+    "@id": "https://www.cmkca.com/#localbusiness",
     name: "CHINNI MALLIKARJUNA AND COMPANY",
-    url: "https://gmnrassociates.com",
+    url: "https://www.cmkca.com",
     description:
       "Chartered Accountants firm delivering audit, taxation, and advisory services in Chennai.",
     email: "malli@cmkca.com",

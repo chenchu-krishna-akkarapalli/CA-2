@@ -13,7 +13,7 @@ export default function SmoothScroller({
     // Disable smooth-scroll overhead on mobile/touch devices or reduced-motion preference
     const isTouch =
       typeof window !== "undefined" &&
-      ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0 || window.innerWidth < 768);
     const prefersReducedMotion =
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -23,23 +23,31 @@ export default function SmoothScroller({
     let isCancelled = false;
     let rafId: number;
 
-    import("@studio-freight/lenis").then(({ default: Lenis }) => {
-      if (isCancelled) return;
+    const initLenis = () => {
+      import("@studio-freight/lenis").then(({ default: Lenis }) => {
+        if (isCancelled) return;
 
-      const lenis = new Lenis({
-        duration: 1.0,
-        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-      });
+        const lenis = new Lenis({
+          duration: 1.0,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+        });
 
-      lenisRef.current = lenis;
+        lenisRef.current = lenis;
 
-      function raf(time: number) {
-        lenis.raf(time);
+        function raf(time: number) {
+          lenis.raf(time);
+          rafId = requestAnimationFrame(raf);
+        }
         rafId = requestAnimationFrame(raf);
-      }
-      rafId = requestAnimationFrame(raf);
-    });
+      });
+    };
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(initLenis, { timeout: 4000 });
+    } else {
+      setTimeout(initLenis, 2000);
+    }
 
     return () => {
       isCancelled = true;

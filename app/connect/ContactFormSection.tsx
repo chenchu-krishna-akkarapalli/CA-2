@@ -2,14 +2,14 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { ArrowRight, MapPin, Phone, Mail, Clock, Send, CheckCircle2, ChevronDown } from "lucide-react";
 import { sendEmail } from "@/app/lib/emailjs";
 import { trackFormSubmission } from "@/app/lib/analytics";
 
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Visit Us",
+    title: "Visit Our Office",
     details: [
       "No. 10/31, G1, Ten Downing, Rajalakshmi Nagar,",
       "3rd Main Road, Velachery, Chennai – 600 042",
@@ -18,20 +18,20 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    title: "Call Us",
+    title: "Direct Phone Line",
     details: ["+91 7032 163 646"],
     href: "tel:+917032163646",
   },
   {
     icon: Mail,
-    title: "Email Us",
+    title: "Email Inquiries",
     details: ["malli@cmkca.com"],
     href: "mailto:malli@cmkca.com",
   },
   {
     icon: Clock,
-    title: "Operating Hours",
-    details: ["Monday – Saturday", "9:00 AM – 6:00 PM"],
+    title: "Working Hours",
+    details: ["Mon – Sat: 9:00 AM – 6:00 PM"],
     href: undefined,
   },
 ];
@@ -96,22 +96,22 @@ export default function ContactFormSection() {
   return (
     <section
       id="contact-form"
-      className="w-full py-[60px] md:py-[80px] px-4 sm:px-8 lg:px-[5%]"
+      className="w-full py-8 sm:py-[60px] md:py-[80px] px-3.5 sm:px-8 lg:px-[5%]"
       aria-label="Contact Form"
     >
       <div className="max-w-[1232px] mx-auto">
         {/* Section Heading */}
         <motion.div
-          className="text-center mb-10 md:mb-14"
-          initial={{ opacity: 0, y: 22, filter: "blur(6px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.65, ease: [0.25, 0.4, 0.25, 1] }}
+          className="text-center mb-6 sm:mb-10 md:mb-14"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <p className="font-inter font-semibold text-[14px] tracking-[3px] uppercase text-brand-accent mb-4">
+          <p className="font-inter font-semibold text-[12px] sm:text-[14px] tracking-[2px] sm:tracking-[3px] uppercase text-brand-accent mb-2 sm:mb-4">
             Get In Touch
           </p>
-          <h2 className="font-outfit font-bold text-[clamp(28px,3vw,40px)] leading-[1.2]">
+          <h2 className="font-outfit font-bold text-[24px] sm:text-[clamp(28px,3vw,40px)] leading-[1.2] tracking-tight">
             <span className="text-brand-primary">We&apos;d Love to </span>
             <span className="text-brand-accent">Hear From You</span>
           </h2>
@@ -119,262 +119,229 @@ export default function ContactFormSection() {
 
         {/* Contact Container */}
         <motion.div
-          className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] shadow-contact overflow-hidden flex flex-col lg:flex-row"
-          initial={{ opacity: 0, y: 30 }}
+          className="w-full rounded-2xl sm:rounded-[32px] lg:rounded-[40px] shadow-card overflow-hidden flex flex-col lg:flex-row border border-slate-200/90"
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.65 }}
         >
           {/* Left Panel — Contact Info */}
-          <div className="w-full lg:w-[45%] bg-gradient-contact p-6 sm:p-8 lg:p-[48px] flex flex-col">
-            <h3 className="font-outfit font-bold text-[22px] sm:text-[26px] lg:text-[28px] leading-[30px] sm:leading-[34px] lg:leading-[36px] text-white">
-              Contact Information
-            </h3>
-            <p className="mt-2 sm:mt-3 font-inter font-light text-[14px] sm:text-[15px] lg:text-[16px] leading-[22px] sm:leading-[24px] text-white/80 max-w-[480px]">
-              Reach out to us for any queries related to audit, taxation, compliance, or advisory services.
-            </p>
+          <div className="w-full lg:w-[42%] bg-gradient-contact p-5 sm:p-8 lg:p-[48px] flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] sm:text-[11px] font-outfit font-bold uppercase tracking-wider text-brand-accent bg-white/10 px-2.5 py-1 rounded-full inline-block mb-3">
+                DIRECT CONTACT
+              </span>
+              <h3 className="font-outfit font-bold text-[20px] sm:text-[26px] lg:text-[28px] text-white leading-tight">
+                Contact Information
+              </h3>
+              <p className="mt-2 font-inter font-normal text-[13px] sm:text-[15px] leading-relaxed text-white/80 max-w-[480px]">
+                Reach out to us for audit, taxation, compliance, and strategic financial consultation.
+              </p>
 
-            {/* Contact Items */}
-            <div className="mt-8 sm:mt-10 lg:mt-14 flex flex-col gap-6 sm:gap-8">
-              {contactInfo.map((item, i) => {
-                const Icon = item.icon;
-                const Wrapper = item.href ? "a" : "div";
-                const wrapperProps = item.href
-                  ? { href: item.href, target: item.href.startsWith("http") ? "_blank" : undefined, rel: item.href.startsWith("http") ? "noopener noreferrer" : undefined }
-                  : {};
+              {/* Contact Bento Items */}
+              <div className="mt-5 sm:mt-8 flex flex-col gap-3 sm:gap-5">
+                {contactInfo.map((item, i) => {
+                  const Icon = item.icon;
+                  const Wrapper = item.href ? "a" : "div";
+                  const wrapperProps = item.href
+                    ? { href: item.href, target: item.href.startsWith("http") ? "_blank" : undefined, rel: item.href.startsWith("http") ? "noopener noreferrer" : undefined }
+                    : {};
 
-                return (
-                  <Wrapper
-                    key={i}
-                    {...(wrapperProps as any)}
-                    className="flex items-start gap-4 sm:gap-5 group"
-                  >
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition-colors">
-                      <Icon className="w-5 h-5 text-white/90" />
-                    </div>
-                    <div>
-                      <h4 className="font-outfit font-semibold text-[15px] sm:text-[16px] leading-[22px] text-white">
-                        {item.title}
-                      </h4>
-                      {item.details.map((line, j) => (
-                        <p
-                          key={j}
-                          className="mt-0.5 font-inter font-light text-[13px] sm:text-[14px] leading-[20px] text-white/70"
-                        >
-                          {line}
-                        </p>
-                      ))}
-                    </div>
-                  </Wrapper>
-                );
-              })}
+                  return (
+                    <Wrapper
+                      key={i}
+                      {...(wrapperProps as any)}
+                      className="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-3 sm:p-3.5 flex items-start gap-3 group active:scale-[0.99] transition-all"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-brand-accent/30 text-brand-accent flex items-center justify-center shrink-0">
+                        <Icon className="w-4 h-4 text-emerald-300" />
+                      </div>
+                      <div>
+                        <h4 className="font-outfit font-bold text-[13.5px] sm:text-[15px] text-white leading-tight">
+                          {item.title}
+                        </h4>
+                        {item.details.map((line, j) => (
+                          <p key={j} className="font-inter text-[12px] sm:text-[13px] text-white/70 leading-snug mt-0.5">
+                            {line}
+                          </p>
+                        ))}
+                      </div>
+                    </Wrapper>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Social Links */}
-            <div className="mt-8 sm:mt-10 lg:mt-auto pt-6 flex items-center gap-4">
-              {[
-                {
-                  label: "LinkedIn",
-                  href: "#",
-                  svg: (
-                    <svg className="w-4 h-4 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Twitter",
-                  href: "#",
-                  svg: (
-                    <svg className="w-4 h-4 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Instagram",
-                  href: "#",
-                  svg: (
-                    <svg className="w-4 h-4 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                    </svg>
-                  ),
-                },
-              ].map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
-                >
-                  {social.svg}
-                </a>
-              ))}
+            <div className="mt-5 pt-4 border-t border-white/15 text-[12px] text-white/60 font-inter">
+              ✓ Verified Chartered Accountants Firm
             </div>
           </div>
 
-          {/* Right Panel — Form */}
-          <div className="flex-1 bg-white p-6 sm:p-8 lg:p-[48px] flex flex-col">
-            <form onSubmit={handleSubmit} className="flex flex-col h-full" aria-label="Contact form">
-              {/* Name Row */}
-              <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
-                <div className="flex-1 flex flex-col gap-2">
-                  <label
-                    htmlFor="firstName"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
-                  >
-                    First Name
+          {/* Right Panel — Professional Form */}
+          <div className="flex-1 bg-white p-5 sm:p-8 lg:p-[48px] flex flex-col justify-center">
+            <div className="mb-5 sm:mb-6">
+              <h3 className="font-outfit font-bold text-[20px] sm:text-[24px] text-brand-primary">
+                Send Us a Message
+              </h3>
+              <p className="font-inter text-[13px] sm:text-[14px] text-slate-500 mt-0.5">
+                We typically respond within a few business hours.
+              </p>
+            </div>
+
+            {submitStatus === "success" ? (
+              <div className="text-center py-10 flex flex-col items-center animate-fadeIn">
+                <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-brand-accent flex items-center justify-center mb-3">
+                  <CheckCircle2 className="w-8 h-8" />
+                </div>
+                <h4 className="font-outfit font-bold text-[20px] text-brand-primary mb-1">
+                  Message Sent Successfully!
+                </h4>
+                <p className="font-inter text-[13.5px] text-slate-600 max-w-[280px]">
+                  Thank you for reaching out. We will get back to you shortly.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4" aria-label="Contact form">
+                {/* Name Row */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="font-inter font-semibold text-[12.5px] text-slate-700 mb-1.5 block">
+                      First Name <span className="text-brand-accent">*</span>
+                    </label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      placeholder="John"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="w-full min-h-[46px] sm:min-h-[48px] bg-slate-50 border border-slate-200/90 rounded-xl px-4 font-inter text-[14px] text-brand-primary placeholder:text-slate-400 focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 outline-none transition-all"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="font-inter font-semibold text-[12.5px] text-slate-700 mb-1.5 block">
+                      Last Name <span className="text-brand-accent">*</span>
+                    </label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      placeholder="Doe"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full min-h-[46px] sm:min-h-[48px] bg-slate-50 border border-slate-200/90 rounded-xl px-4 font-inter text-[14px] text-brand-primary placeholder:text-slate-400 focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 outline-none transition-all"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Email & Phone Row */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                  <div>
+                    <label htmlFor="email" className="font-inter font-semibold text-[12.5px] text-slate-700 mb-1.5 block">
+                      Email Address <span className="text-brand-accent">*</span>
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="john@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full min-h-[46px] sm:min-h-[48px] bg-slate-50 border border-slate-200/90 rounded-xl px-4 font-inter text-[14px] text-brand-primary placeholder:text-slate-400 focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 outline-none transition-all"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="font-inter font-semibold text-[12.5px] text-slate-700 mb-1.5 block">
+                      Phone Number
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+91 7032 163 646"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full min-h-[46px] sm:min-h-[48px] bg-slate-50 border border-slate-200/90 rounded-xl px-4 font-inter text-[14px] text-brand-primary placeholder:text-slate-400 focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 outline-none transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* Subject Select */}
+                <div>
+                  <label htmlFor="subject" className="font-inter font-semibold text-[12.5px] text-slate-700 mb-1.5 block">
+                    Inquiry Subject <span className="text-brand-accent">*</span>
                   </label>
-                  <input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
-                    placeholder="John"
-                    value={formData.firstName}
+                  <div className="relative">
+                    <select
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className="w-full min-h-[46px] sm:min-h-[48px] bg-slate-50 border border-slate-200/90 rounded-xl px-4 font-inter text-[14px] text-brand-primary focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 outline-none transition-all appearance-none cursor-pointer pr-10"
+                      style={{ WebkitAppearance: "none", MozAppearance: "none", appearance: "none", backgroundImage: "none" }}
+                      required
+                    >
+                      <option value="">Select subject matter</option>
+                      <option value="Tax Advisory">Tax Advisory &amp; Filing</option>
+                      <option value="Audit & Assurance">Audit &amp; Assurance</option>
+                      <option value="Company Registration">Company &amp; LLP Registration</option>
+                      <option value="GST Services">GST Filing &amp; Compliance</option>
+                      <option value="NRI Services">NRI Advisory Services</option>
+                      <option value="Business Valuation">Business Advisory &amp; Valuation</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                    <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label htmlFor="message" className="font-inter font-semibold text-[12.5px] text-slate-700 mb-1.5 block">
+                    Your Message <span className="text-brand-accent">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your requirements..."
+                    rows={3}
+                    value={formData.message}
                     onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
+                    className="w-full bg-slate-50 border border-slate-200/90 rounded-xl p-3.5 font-inter text-[14px] text-brand-primary placeholder:text-slate-400 focus:border-brand-accent focus:bg-white focus:ring-4 focus:ring-brand-accent/10 outline-none transition-all resize-none"
                     required
                   />
                 </div>
-                <div className="flex-1 flex flex-col gap-2">
-                  <label
-                    htmlFor="lastName"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    id="lastName"
-                    name="lastName"
-                    type="text"
-                    placeholder="Doe"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
-                    required
-                  />
-                </div>
-              </div>
 
-              {/* Email & Phone Row */}
-              <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row gap-5 sm:gap-6">
-                <div className="flex-1 flex flex-col gap-2">
-                  <label
-                    htmlFor="email"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
-                    required
-                  />
-                </div>
-                <div className="flex-1 flex flex-col gap-2">
-                  <label
-                    htmlFor="phone"
-                    className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+91 7032 163 646"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors"
-                  />
-                </div>
-              </div>
+                {submitStatus === "error" && (
+                  <p className="font-inter text-[13px] text-red-500 font-medium">
+                    Something went wrong. Please try again or call us directly.
+                  </p>
+                )}
 
-              {/* Subject */}
-              <div className="mt-5 sm:mt-6 flex flex-col gap-2">
-                <label
-                  htmlFor="subject"
-                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full min-h-[48px] sm:min-h-[52px] rounded-xl bg-gradient-btn-submit text-white font-outfit font-bold text-[15px] sm:text-[16px] flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all disabled:opacity-60"
                 >
-                  Subject
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full h-[44px] border border-surface-input-border rounded-[8px] px-4 font-inter text-[14px] text-brand-primary focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors bg-white"
-                  required
-                >
-                  <option value="">Select a subject</option>
-                  <option value="Tax Advisory">Tax Advisory</option>
-                  <option value="Audit & Assurance">Audit & Assurance</option>
-                  <option value="Company Registration">Company Registration</option>
-                  <option value="GST Services">GST Services</option>
-                  <option value="Compliance">Compliance</option>
-                  <option value="NRI Services">NRI Services</option>
-                  <option value="Business Valuation">Business Valuation</option>
-                  <option value="General Inquiry">General Inquiry</option>
-                </select>
-              </div>
-
-              {/* Message */}
-              <div className="mt-5 sm:mt-6 flex flex-col gap-2 flex-1">
-                <label
-                  htmlFor="message"
-                  className="font-outfit font-medium text-[14px] leading-[20px] text-brand-primary"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Write your message..."
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full flex-1 min-h-[100px] border border-surface-input-border rounded-[8px] p-4 font-inter text-[14px] text-brand-primary placeholder:text-text-placeholder focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors resize-none"
-                  required
-                />
-              </div>
-
-              {/* Status Messages */}
-              {submitStatus === "success" && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 font-inter text-[14px] text-brand-accent font-medium"
-                >
-                  ✓ Message sent successfully! We&apos;ll get back to you soon.
-                </motion.p>
-              )}
-              {submitStatus === "error" && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 font-inter text-[14px] text-red-500 font-medium"
-                >
-                  Something went wrong. Please try again or call us directly.
-                </motion.p>
-              )}
-
-              {/* Submit Button */}
-              <motion.button
-                type="submit"
-                disabled={isSubmitting}
-                className="mt-5 sm:mt-6 w-full h-[48px] sm:h-[52px] rounded-[8px] bg-gradient-btn-submit text-white font-outfit font-semibold text-[16px] leading-[20px] flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-60"
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-                {!isSubmitting && <ArrowRight className="w-5 h-5" strokeWidth={2} />}
-              </motion.button>
-            </form>
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Sending Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Send Message</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 
 export interface TextSegment {
@@ -13,24 +14,18 @@ interface BlurTextProps {
   segments: TextSegment[];
   /** Extra classes on the outer <span> wrapper (e.g. "justify-center") */
   className?: string;
-  /** Delay between each word in seconds — default 0.25 (250 ms) */
+  /** Delay between each word in seconds */
   wordDelay?: number;
-  /** Overall start delay offset in seconds — default 0 */
+  /** Overall start delay offset in seconds */
   initialDelay?: number;
 }
 
-/**
- * BlurText — hero heading animation
- * Animates each word: blurred + from bottom → clear + in place.
- * Direction: Bottom  |  Word delay: 250 ms (configurable)
- */
 export default function BlurText({
   segments,
   className = "",
-  wordDelay = 0.25,
-  initialDelay = 0,
+  wordDelay = 0.05,
+  initialDelay = 0.02,
 }: BlurTextProps) {
-  /* Flatten all segments into a single word list preserving per-segment class */
   const words: { word: string; cls: string }[] = [];
   segments.forEach((seg) => {
     seg.text
@@ -47,11 +42,11 @@ export default function BlurText({
       {words.map((item, i) => (
         <motion.span
           key={i}
-          className={item.cls}
-          initial={{ opacity: 0, y: 24, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          className={`${item.cls} will-change-transform`}
+          initial={{ opacity: 0.85, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.55,
+            duration: 0.35,
             delay: initialDelay + i * wordDelay,
             ease: [0.25, 0.4, 0.25, 1],
           }}

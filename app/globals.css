@@ -35,6 +35,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Universal Select Reset ── */
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+}
+
+select::-ms-expand {
+  display: none !important;
+}
+
 /* ── Lenis Smooth Scroll ── */
 html.lenis,
 html.lenis body {
