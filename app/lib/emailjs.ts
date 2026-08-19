@@ -3,9 +3,16 @@ import emailjs from "@emailjs/browser";
 export interface EmailParams extends Record<string, unknown> {
   from_name?: string;
   from_email?: string;
+  email?: string;
+  name?: string;
   phone?: string;
   service?: string;
+  subject?: string;
   message?: string;
+  company_name?: string;
+  title?: string;
+  reply_to?: string;
+  to_email?: string;
 }
 
 export interface SendEmailResponse {
@@ -33,7 +40,7 @@ export function validatePhone(phone: string): boolean {
 
 /**
  * Sends an email using EmailJS SDK with environment variable fallbacks
- * and client-side validation.
+ * and auto-reply support.
  */
 export async function sendEmail(
   params: EmailParams,
@@ -41,6 +48,7 @@ export async function sendEmail(
 ): Promise<SendEmailResponse> {
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_default";
   const templateId = customTemplateId || process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const autoReplyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE_ID;
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
   // Validate presence of credentials
@@ -50,25 +58,57 @@ export async function sendEmail(
     );
     return {
       success: false,
-      message: "Email service configuration is incomplete. Please try calling or emailing directly.",
+      message: "Email service configuration is incomplete. Please check service ID.",
     };
   }
 
+  const clientEmail = params.from_email || params.email || "";
+  const clientName = params.from_name || params.name || "Client";
+
   // Validate required parameters if provided
-  if (params.from_email && !validateEmail(params.from_email)) {
+  if (clientEmail && !validateEmail(clientEmail)) {
     return {
       success: false,
       message: "Please enter a valid email address.",
     };
   }
 
+  // Normalize and enrich template params for both admin notifications and auto-replies
+  const enrichedParams: Record<string, unknown> = {
+    ...params,
+    from_name: clientName,
+    name: clientName,
+    user_name: clientName,
+    to_name: clientName,
+    from_email: clientEmail,
+    email: clientEmail,
+    user_email: clientEmail,
+    reply_to: clientEmail,
+    to_email: clientEmail,
+  };
+
   try {
+    // 1. Send Main Notification Email to Firm
     const response = await emailjs.send(
       serviceId,
       templateId,
-      params,
+      enrichedParams,
       publicKey
     );
+
+    // 2. If separate Auto-Reply template is configured, send auto-reply to client
+    if (autoReplyTemplateId && clientEmail) {
+      try {
+        await emailjs.send(
+          serviceId,
+          autoReplyTemplateId,
+          enrichedParams,
+          publicKey
+        );
+      } catch (autoReplyErr) {
+        console.warn("Auto-reply trigger warning:", autoReplyErr);
+      }
+    }
 
     if (response.status === 200) {
       return {
@@ -79,7 +119,7 @@ export async function sendEmail(
     } else {
       return {
         success: false,
-        message: `Failed to send email (Status: ${response.status}). Please try again later.`,
+        message: `Failed to send email (Status: ${response.status}).`,
         status: response.status,
       };
     }
